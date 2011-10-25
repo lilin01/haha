@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class Action</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> Action</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Action类</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> 张立冰 &lt;<a href="mailto:roast@php.net">roast@php.net</a>&gt;</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_core_Action_class_php.html">/core/Action.class.php</a> (line <span class="field"><a href="../..//__filesource/fsource_lib_core_coreAction.class.php.html#a10">10</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../lib/core/Application.html">Application</a></span>
+					<a href="#$app" title="details" class="var-name">$app</a>
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">Action</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type"><a href="../../lib/core/Application.html">Application</a></span>&nbsp;<span class="var-name">&$app</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">Action</span>
+										<a href="#Action" title="details" class="method-name">Action</a>
+											(<span class="var-type"><a href="../../lib/core/Application.html">Application</a></span>&nbsp;<span class="var-name">&$app</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#debug" title="details" class="method-name">debug</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#doCode" title="details" class="method-name">doCode</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#doDefault" title="details" class="method-name">doDefault</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#_checkCode" title="details" class="method-name">_checkCode</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$code</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">Array|false</span>
+										<a href="#_soap" title="details" class="method-name">_soap</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$interface</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$uri</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$op</span>, <span class="var-type">Array</span>&nbsp;<span class="var-name">$args</span>)
+									</div>
+							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$app" id="$app"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../lib/core/Application.html">Application</a></span>
+			<span class="var-name">$app</span>
+						(line <span class="line-number"><a href="../..//__filesource/fsource_lib_core_coreAction.class.php.html#a17">17</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">应用程序类</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../..//__filesource/fsource_lib_core_coreAction.class.php.html#a32">32</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">构造函数</p>
+	
+	<div class="method-signature">
+		<span class="method-result">Action</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type"><a href="../../lib/core/Application.html">Application</a></span>&nbsp;<span class="var-name">&$app</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../lib/core/Application.html">Application</a></span>
+				<span class="var-name">&$app</span><span class="var-description">: 应用程序类</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodAction" id="Action"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor Action</span> (line <span class="line-number"><a href="../..//__filesource/fsource_lib_core_coreAction.class.php.html#a23">23</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">构造函数(兼容PHP4)</p>
+	
+	<div class="method-signature">
+		<span class="method-result">Action</span>
+		<span class="method-name">
+			Action
+		</span>
+					(<span class="var-type"><a href="../../lib/core/Application.html">Application</a></span>&nbsp;<span class="var-name">&$app</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../lib/core/Application.html">Application</a></span>
+				<span class="var-name">&$app</span><span class="var-description">: 应用程序类</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methoddebug" id="debug"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">debug</span> (line <span class="line-number"><a href="../..//__filesource/fsource_lib_core_coreAction.class.php.html#a54">54</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">通过FriePHP进行调试，将调试信息输出到头消息中</p>
+<p class="description"><p>相关链接：http://www.firephp.org/</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			debug
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methoddoCode" id="doCode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">doCode</span> (line <span class="line-number"><a href="../..//__filesource/fsource_lib_core_coreAction.class.php.html#a71">71</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">输出验证输出处理</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			doCode
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methoddoDefault" id="doDefault"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">doDefault</span> (line <span class="line-number"><a href="../..//__filesource/fsource_lib_core_coreAction.class.php.html#a44">44</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">默认Action</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			doDefault
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="method_checkCode" id="_checkCode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_checkCode</span> (line <span class="line-number"><a href="../..//__filesource/fsource_lib_core_coreAction.class.php.html#a99">99</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">验证验证码是否正确</p>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			_checkCode
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$code</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="method_soap" id="_soap"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_soap</span> (line <span class="line-number"><a href="../..//__filesource/fsource_lib_core_coreAction.class.php.html#a115">115</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">执行SOAP请求，返回请求得到的数据段切分为数组,简单方法</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> false表示调用失败，否则返回查询到的数据数组</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array|false</span>
+		<span class="method-name">
+			_soap
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$interface</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$uri</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$op</span>, <span class="var-type">Array</span>&nbsp;<span class="var-name">$args</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$interface</span><span class="var-description">: WS接口地址</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$uri</span><span class="var-description">: SOAP调用的地址</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$op</span><span class="var-description">: SOAP调用的方法</span>			</li>
+					<li>
+				<span class="var-type">Array</span>
+				<span class="var-name">$args</span><span class="var-description">: 传递的参数数据</span>			</li>
+				</ul>
+		
+		
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 05 Aug 2009 07:45:23 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</div></body>
+</html>

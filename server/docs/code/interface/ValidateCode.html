@@ -1,0 +1,1421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class ValidateCode</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> ValidateCode</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">动态验证码生成类</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> 张立冰</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_util_ValidateCode_class_php.html">/util/ValidateCode.class.php</a> (line <span class="field"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a16">16</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$auto_lower" title="details" class="var-name">$auto_lower</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$auto_upper" title="details" class="var-name">$auto_upper</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$color" title="details" class="var-name">$color</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$draw_ellipse" title="details" class="var-name">$draw_ellipse</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$font_array" title="details" class="var-name">$font_array</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$font_dir" title="details" class="var-name">$font_dir</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$font_size" title="details" class="var-name">$font_size</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$frame_delay" title="details" class="var-name">$frame_delay</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$frame_number" title="details" class="var-name">$frame_number</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$grid_density" title="details" class="var-name">$grid_density</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$magic_words" title="details" class="var-name">$magic_words</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$overlap_text" title="details" class="var-name">$overlap_text</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$overlap_text_factor" title="details" class="var-name">$overlap_text_factor</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$randomize_grid" title="details" class="var-name">$randomize_grid</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$random_angle_factor" title="details" class="var-name">$random_angle_factor</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$random_y_factor" title="details" class="var-name">$random_y_factor</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$secret" title="details" class="var-name">$secret</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$session_name" title="details" class="var-name">$session_name</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$string_length" title="details" class="var-name">$string_length</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$temp_dir" title="details" class="var-name">$temp_dir</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$text_space" title="details" class="var-name">$text_space</a>
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">ValidateCode</span>
+										<a href="#ValidateCode" title="details" class="method-name">ValidateCode</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#background_color" title="details" class="method-name">background_color</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ar</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#check" title="details" class="method-name">check</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#clean_captcha_string" title="details" class="method-name">clean_captcha_string</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$s</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#draw_ellipse" title="details" class="method-name">draw_ellipse</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$b</span> = <span class="var-default">true</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#font_size" title="details" class="method-name">font_size</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#frame_delay" title="details" class="method-name">frame_delay</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#frame_number" title="details" class="method-name">frame_number</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#generate" title="details" class="method-name">generate</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getRGBCode" title="details" class="method-name">getRGBCode</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$s</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_color_complement" title="details" class="method-name">get_color_complement</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$color</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$factor1</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$factor2</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$factor3</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#grid_color" title="details" class="method-name">grid_color</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ar</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#grid_density" title="details" class="method-name">grid_density</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#magic_words" title="details" class="method-name">magic_words</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$s</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#microseconds" title="details" class="method-name">microseconds</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#no_cache" title="details" class="method-name">no_cache</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#overlap_text" title="details" class="method-name">overlap_text</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$b</span> = <span class="var-default">true</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#overlap_text_factor" title="details" class="method-name">overlap_text_factor</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i1</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$i2</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#randomize_grid" title="details" class="method-name">randomize_grid</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$b</span> = <span class="var-default">true</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#random_angle" title="details" class="method-name">random_angle</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#random_font" title="details" class="method-name">random_font</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#random_overlap_factor" title="details" class="method-name">random_overlap_factor</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#random_y_factor" title="details" class="method-name">random_y_factor</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#string_length" title="details" class="method-name">string_length</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#text_color" title="details" class="method-name">text_color</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ar</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#text_space" title="details" class="method-name">text_space</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+									</div>
+							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$auto_lower" id="$auto_lower"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$auto_lower</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a19">19</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$auto_upper" id="$auto_upper"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$auto_upper</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a20">20</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$color" id="$color"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$color</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a21">21</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$draw_ellipse" id="$draw_ellipse"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$draw_ellipse</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a22">22</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$font_array" id="$font_array"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$font_array</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a25">25</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$font_dir" id="$font_dir"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$font_dir</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a26">26</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$font_size" id="$font_size"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$font_size</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a27">27</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$frame_delay" id="$frame_delay"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$frame_delay</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a23">23</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$frame_number" id="$frame_number"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$frame_number</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a24">24</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$grid_density" id="$grid_density"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$grid_density</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a28">28</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$magic_words" id="$magic_words"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$magic_words</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a29">29</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$overlap_text" id="$overlap_text"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$overlap_text</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a30">30</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$overlap_text_factor" id="$overlap_text_factor"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$overlap_text_factor</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$randomize_grid" id="$randomize_grid"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$randomize_grid</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$random_angle_factor" id="$random_angle_factor"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$random_angle_factor</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$random_y_factor" id="$random_y_factor"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$random_y_factor</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$secret" id="$secret"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$secret</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a18">18</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$session_name" id="$session_name"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$session_name</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$string_length" id="$string_length"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$string_length</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$temp_dir" id="$temp_dir"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$temp_dir</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$text_space" id="$text_space"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$text_space</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodValidateCode" id="ValidateCode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor ValidateCode</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a40">40</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">ValidateCode</span>
+		<span class="method-name">
+			ValidateCode
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodbackground_color" id="background_color"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">background_color</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a70">70</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			background_color
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ar</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodcheck" id="check"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">check</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a323">323</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodclean_captcha_string" id="clean_captcha_string"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">clean_captcha_string</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a358">358</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			clean_captcha_string
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$s</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methoddraw_ellipse" id="draw_ellipse"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">draw_ellipse</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a78">78</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			draw_ellipse
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$b</span> = <span class="var-default">true</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methodfont_size" id="font_size"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">font_size</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a243">243</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			font_size
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodframe_delay" id="frame_delay"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">frame_delay</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a247">247</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			frame_delay
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodframe_number" id="frame_number"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">frame_number</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a256">256</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			frame_number
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgenerate" id="generate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">generate</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a86">86</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			generate
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetRGBCode" id="getRGBCode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getRGBCode</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a387">387</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getRGBCode
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$s</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_color_complement" id="get_color_complement"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_color_complement</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a367">367</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_color_complement
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$color</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$factor1</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$factor2</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$factor3</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgrid_color" id="grid_color"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">grid_color</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a265">265</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			grid_color
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ar</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgrid_density" id="grid_density"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">grid_density</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a273">273</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			grid_density
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodmagic_words" id="magic_words"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">magic_words</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a277">277</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			magic_words
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$s</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodmicroseconds" id="microseconds"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">microseconds</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a398">398</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			microseconds
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodno_cache" id="no_cache"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">no_cache</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a402">402</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			no_cache
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodoverlap_text" id="overlap_text"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">overlap_text</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a281">281</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			overlap_text
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$b</span> = <span class="var-default">true</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methodoverlap_text_factor" id="overlap_text_factor"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">overlap_text_factor</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a289">289</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			overlap_text_factor
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i1</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$i2</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodrandomize_grid" id="randomize_grid"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">randomize_grid</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a299">299</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			randomize_grid
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$b</span> = <span class="var-default">true</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methodrandom_angle" id="random_angle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">random_angle</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a411">411</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			random_angle
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodrandom_font" id="random_font"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">random_font</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a415">415</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			random_font
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodrandom_overlap_factor" id="random_overlap_factor"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">random_overlap_factor</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a426">426</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			random_overlap_factor
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodrandom_y_factor" id="random_y_factor"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">random_y_factor</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a295">295</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			random_y_factor
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodstring_length" id="string_length"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">string_length</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a303">303</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			string_length
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodtext_color" id="text_color"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">text_color</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a308">308</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			text_color
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ar</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodtext_space" id="text_space"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">text_space</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__utilValidateCode.class.php.html#a316">316</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			text_space
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+			</div>
+	
+		
+		
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 14 Aug 2008 09:51:05 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</div></body>
+</html>

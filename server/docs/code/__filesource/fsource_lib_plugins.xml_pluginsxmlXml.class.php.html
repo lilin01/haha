@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for Xml.class.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		</head>
+		<body>
+						<h1>Source for file Xml.class.php</h1>
+<p>Documentation is available at <a href="../lib/plugins.xml/_plugins_xml_Xml_class_php.html">Xml.class.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?php</span></li>
+<li><a name="a2"></a>&nbsp;</li>
+<li><a name="a3"></a><span class="src-doc">/**</span></li>
+<li><a name="a4"></a><span class="src-doc"> *  xml 类</span></li>
+<li><a name="a5"></a><span class="src-doc"> *</span></li>
+<li><a name="a6"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@package</span><span class="src-doc"> lib</span></li>
+<li><a name="a7"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@subpackage</span><span class="src-doc"> plugins.xml</span></li>
+<li><a name="a8"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@author</span><span class="src-doc"> 张立冰</span></li>
+<li><a name="a9"></a><span class="src-doc"> */</span></li>
+<li><a name="a10"></a> <span class="src-key">class </span><a href="../lib/plugins.xml/Xml.html">Xml</a> <span class="src-key">extends </span><span class="src-id">DOMDocument </span><span class="src-sym">{</span></li>
+<li><a name="a11"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a12"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">string </span><span class="src-doc-var">$fileName </span><span class="src-doc">xml文件名</span></li>
+<li><a name="a13"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc"> private</span></li>
+<li><a name="a14"></a><span class="src-doc">     */</span></li>
+<li><a name="a15"></a>    <span class="src-key">private </span><span class="src-var">$fileName </span>= <span class="src-str">''</span><span class="src-sym">;</span></li>
+<li><a name="a16"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a17"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">bool　$isSax </span><span class="src-doc">是否存储成SimpleXMLElement对象</span></li>
+<li><a name="a18"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc"> private</span></li>
+<li><a name="a19"></a><span class="src-doc">     */</span></li>
+<li><a name="a20"></a>    <span class="src-key">private </span><span class="src-var">$isSax </span>= <span class="src-id">false</span><span class="src-sym">;</span></li>
+<li><a name="a21"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a22"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">SimpleXMLElement　$saxData　SimpleXMLElement对象 </span></li>
+<li><a name="a23"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc"> private</span></li>
+<li><a name="a24"></a><span class="src-doc">     */</span></li>
+<li><a name="a25"></a>    <span class="src-key">public </span><a href="../lib/plugins.xml/Xml.html#var$saxData">$saxData</a> = <span class="src-id">NULL</span><span class="src-sym">;</span></li>
+<li><a name="a26"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a27"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">DOMXPath　$XPath　DOMXPath对象 </span></li>
+<li><a name="a28"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc"> private</span></li>
+<li><a name="a29"></a><span class="src-doc">     */</span></li>
+<li><a name="a30"></a>    <span class="src-key">private </span><span class="src-var">$XPath </span>= <span class="src-id">NULL</span><span class="src-sym">;</span></li>
+<li><a name="a31"></a>    </li>
+<li><a name="a32"></a>    <span class="src-key">public </span><a href="../lib/plugins.xml/Xml.html#var$i">$i</a> = <span class="src-num">0</span><span class="src-sym">;</span></li>
+<li><a name="a33"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a34"></a><span class="src-doc">     * 构造函数</span></li>
+<li><a name="a35"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$fileName </span><span class="src-doc">xml文件名</span></li>
+<li><a name="a36"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">bool </span><span class="src-doc-var">$isSax </span><span class="src-doc">是否存储成SimpleXMLElement对象</span></li>
+<li><a name="a37"></a><span class="src-doc">     */</span></li>
+<li><a name="a38"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#method__construct">__construct</a> <span class="src-sym">(</span><span class="src-var">$fileName </span>= <span class="src-str">''</span><span class="src-sym">, </span><span class="src-var">$isSax </span>= <span class="src-id">true</span><span class="src-sym">, </span><span class="src-var">$version </span>= <span class="src-str">'1.0' </span><span class="src-sym">,</span><span class="src-var">$encoding </span>= <span class="src-str">'utf-8'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a39"></a>        <span class="src-id">parent</span><span class="src-sym">::</span><span class="src-id">__construct</span><span class="src-sym">(</span><span class="src-var">$version</span><span class="src-sym">, </span><span class="src-var">$encoding</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a40"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">fileName </span>= <span class="src-var">$fileName</span><span class="src-sym">;</span></li>
+<li><a name="a41"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">isSax </span>= <span class="src-var">$isSax</span><span class="src-sym">;</span></li>
+<li><a name="a42"></a>        <span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">fileName</span><span class="src-sym">) </span>&amp;&amp; <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.xml/Xml.html#methodloadFromFile">loadFromFile</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a43"></a>    <span class="src-sym">}</span></li>
+<li><a name="a44"></a>    </li>
+<li><a name="a45"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a46"></a><span class="src-doc">     * 加载xml文件</span></li>
+<li><a name="a47"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc"> public</span></li>
+<li><a name="a48"></a><span class="src-doc">     */</span></li>
+<li><a name="a49"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methodloadFromFile">loadFromFile</a><span class="src-sym">(</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a50"></a>        <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/is_file">is_file</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">fileName</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a51"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">preserveWhiteSpace </span>= <span class="src-id">false</span><span class="src-sym">;</span></li>
+<li><a name="a52"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">load</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">fileName</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a53"></a>        <span class="src-sym">}</span></li>
+<li><a name="a54"></a>        <span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">isSax</span><span class="src-sym">) </span>&amp;&amp; <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.xml/Xml.html#methoddomToSax">domToSax</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a55"></a>    <span class="src-sym">}</span></li>
+<li><a name="a56"></a>    </li>
+<li><a name="a57"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a58"></a><span class="src-doc">     * 加载xml字符串</span></li>
+<li><a name="a59"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc"> public</span></li>
+<li><a name="a60"></a><span class="src-doc">     */</span></li>
+<li><a name="a61"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methodloadFromString">loadFromString</a><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a62"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">preserveWhiteSpace </span>= <span class="src-id">false</span><span class="src-sym">;</span></li>
+<li><a name="a63"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">loadXML</span><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a64"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">isSax</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a65"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.xml/Xml.html#methoddomToSax">domToSax</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a66"></a>        <span class="src-sym">}</span></li>
+<li><a name="a67"></a>    <span class="src-sym">}</span></li>
+<li><a name="a68"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a69"></a><span class="src-doc">     * 将dom对象转换成SimpleXMLElement对象</span></li>
+<li><a name="a70"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc"> public</span></li>
+<li><a name="a71"></a><span class="src-doc">     */</span></li>
+<li><a name="a72"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methoddomToSax">domToSax</a><span class="src-sym">(</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a73"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.xml/Xml.html#var$saxData">saxData</a> = <a href="http://www.php.net/simplexml_import_dom">simplexml_import_dom</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a74"></a>    <span class="src-sym">}</span></li>
+<li><a name="a75"></a>    </li>
+<li><a name="a76"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a77"></a><span class="src-doc">     * 把SimpleXMLElement对象转换成DOMElement对象</span></li>
+<li><a name="a78"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc"> public</span></li>
+<li><a name="a79"></a><span class="src-doc">     */</span></li>
+<li><a name="a80"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methodsaxToDom">saxToDom</a> <span class="src-sym">(</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a81"></a>        <span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.xml/Xml.html#var$saxData">saxData</a><span class="src-sym">) </span>&amp;&amp; <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">dom </span>= <a href="http://www.php.net/dom_import_simplexml">dom_import_simplexml</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.xml/Xml.html#var$saxData">saxData</a><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a82"></a>    <span class="src-sym">}</span></li>
+<li><a name="a83"></a>    </li>
+<li><a name="a84"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a85"></a><span class="src-doc">     * 插入节点</span></li>
+<li><a name="a86"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">DOMNode </span><span class="src-doc-var">$node </span><span class="src-doc">XML节点</span></li>
+<li><a name="a87"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">DOMNode </span><span class="src-doc-var">$newNode </span><span class="src-doc">新建XML节点</span></li>
+<li><a name="a88"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">DOMNode </span><span class="src-doc-var">$oldNode </span><span class="src-doc">XML节点 如果指定此参数新节点插入在此节点之前</span></li>
+<li><a name="a89"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">void </span></li>
+<li><a name="a90"></a><span class="src-doc">     */</span></li>
+<li><a name="a91"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methodinsertNode">insertNode</a><span class="src-sym">(</span><span class="src-sym">&amp;</span><span class="src-var">$node</span><span class="src-sym">, </span><span class="src-var">$newNode</span><span class="src-sym">,</span><span class="src-var">$srcNode </span>= <span class="src-id">NULL</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a92"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$srcNode</span>==<span class="src-id">NULL</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a93"></a>            <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">appendChild</span><span class="src-sym">(</span><span class="src-var">$newNode</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a94"></a>        <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a95"></a>            <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">insertBefore</span><span class="src-sym">(</span><span class="src-var">$newNode</span><span class="src-sym">,</span><span class="src-var">$srcNode</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a96"></a>        <span class="src-sym">}</span></li>
+<li><a name="a97"></a>    <span class="src-sym">}</span></li>
+<li><a name="a98"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a99"></a><span class="src-doc">     * 向上移动节点</span></li>
+<li><a name="a100"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">DOMNode </span><span class="src-doc-var">$moveNode </span><span class="src-doc">要移动的XML节点</span></li>
+<li><a name="a101"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">void </span></li>
+<li><a name="a102"></a><span class="src-doc">     */</span></li>
+<li><a name="a103"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methodmoveUp">moveUp</a><span class="src-sym">(</span><span class="src-sym">&amp;</span><span class="src-var">$moveNode</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a104"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">moveNodeUpOrDown</span><span class="src-sym">(</span><span class="src-var">$moveNode</span><span class="src-sym">, </span><span class="src-str">'up'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a105"></a>    <span class="src-sym">}</span></li>
+<li><a name="a106"></a>    </li>
+<li><a name="a107"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a108"></a><span class="src-doc">     * 向下移动节点</span></li>
+<li><a name="a109"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">DOMNode </span><span class="src-doc-var">$moveNode </span><span class="src-doc">要移动的XML节点</span></li>
+<li><a name="a110"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">void </span></li>
+<li><a name="a111"></a><span class="src-doc">     */</span></li>
+<li><a name="a112"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methodmoveDown">moveDown</a><span class="src-sym">(</span><span class="src-sym">&amp;</span><span class="src-var">$moveNode</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a113"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">moveNodeUpOrDown</span><span class="src-sym">(</span><span class="src-var">$moveNode</span><span class="src-sym">, </span><span class="src-str">'down'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a114"></a>    <span class="src-sym">}</span></li>
+<li><a name="a115"></a>    </li>
+<li><a name="a116"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a117"></a><span class="src-doc">     * 上下移动节点</span></li>
+<li><a name="a118"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">DOMNode </span><span class="src-doc-var">$moveNode </span><span class="src-doc">要移动的XML节点</span></li>
+<li><a name="a119"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$direction </span><span class="src-doc">移动的方向</span></li>
+<li><a name="a120"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">void </span></li>
+<li><a name="a121"></a><span class="src-doc">     */</span></li>
+<li><a name="a122"></a>    <span class="src-key">private </span><span class="src-key">function </span><span class="src-id">moveNodeUpOrDown</span><span class="src-sym">(</span><span class="src-sym">&amp;</span><span class="src-var">$moveNode</span><span class="src-sym">, </span><span class="src-var">$direction </span>= <span class="src-str">'down'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a123"></a>        <span class="src-var">$index </span>= -<span class="src-num">1</span><span class="src-sym">;</span></li>
+<li><a name="a124"></a>        <span class="src-var">$node </span>= <span class="src-sym">&amp; </span><span class="src-var">$moveNode</span><span class="src-sym">-&gt;</span><span class="src-id">parentNode</span><span class="src-sym">;</span></li>
+<li><a name="a125"></a>        <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i</span>&lt;<span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">childNodes</span><span class="src-sym">-&gt;</span><span class="src-id">length</span><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a126"></a>            <span class="src-var">$child </span>= <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">childNodes</span><span class="src-sym">-&gt;</span><span class="src-id">item</span><span class="src-sym">(</span><span class="src-var">$i</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a127"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$child</span><span class="src-sym">-&gt;</span><span class="src-id">isSameNode</span><span class="src-sym">(</span><span class="src-var">$moveNode</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a128"></a>                <span class="src-var">$index</span>= <span class="src-var">$i</span><span class="src-sym">;</span></li>
+<li><a name="a129"></a>                <span class="src-key">break</span><span class="src-sym">;</span></li>
+<li><a name="a130"></a>            <span class="src-sym">}</span></li>
+<li><a name="a131"></a>        <span class="src-sym">}</span></li>
+<li><a name="a132"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$index</span>==-<span class="src-num">1</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a133"></a>            <span class="src-key">return </span><span class="src-num">0</span><span class="src-sym">;</span></li>
+<li><a name="a134"></a>        <span class="src-sym">}</span></li>
+<li><a name="a135"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$direction</span>==<span class="src-str">'down'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a136"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$index</span>==<span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">childNodes</span><span class="src-sym">-&gt;</span><span class="src-id">length</span>-<span class="src-num">1</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a137"></a>                <span class="src-key">return </span><span class="src-num">0</span><span class="src-sym">;</span></li>
+<li><a name="a138"></a>            <span class="src-sym">}</span></li>
+<li><a name="a139"></a>            <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">removeChild</span><span class="src-sym">(</span><span class="src-var">$moveNode</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a140"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$index</span>==<span class="src-sym">(</span><span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">childNodes</span><span class="src-sym">-&gt;</span><span class="src-id">length</span>-<span class="src-num">1</span><span class="src-sym">))</span><span class="src-sym">{</span></li>
+<li><a name="a141"></a>                <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">appendChild</span><span class="src-sym">(</span><span class="src-var">$moveNode</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a142"></a>            <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a143"></a>                <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">insertBefore</span><span class="src-sym">(</span><span class="src-var">$moveNode</span><span class="src-sym">,</span><span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">childNodes</span><span class="src-sym">-&gt;</span><span class="src-id">item</span><span class="src-sym">(</span><span class="src-var">$index</span>+<span class="src-num">1</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a144"></a>            <span class="src-sym">}</span></li>
+<li><a name="a145"></a>        <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a146"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$index</span>==<span class="src-num">0</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a147"></a>                <span class="src-key">return </span><span class="src-num">0</span><span class="src-sym">;</span></li>
+<li><a name="a148"></a>            <span class="src-sym">}</span></li>
+<li><a name="a149"></a>        </li>
+<li><a name="a150"></a>            <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">removeChild</span><span class="src-sym">(</span><span class="src-var">$moveNode</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a151"></a>            <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">insertBefore</span><span class="src-sym">(</span><span class="src-var">$moveNode</span><span class="src-sym">,</span><span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">childNodes</span><span class="src-sym">-&gt;</span><span class="src-id">item</span><span class="src-sym">(</span><span class="src-var">$index</span>-<span class="src-num">1</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a152"></a>        <span class="src-sym">}</span></li>
+<li><a name="a153"></a>        <span class="src-key">return </span><span class="src-num">1</span><span class="src-sym">;</span></li>
+<li><a name="a154"></a>    <span class="src-sym">}</span></li>
+<li><a name="a155"></a>    </li>
+<li><a name="a156"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a157"></a><span class="src-doc">     * 移动节点</span></li>
+<li><a name="a158"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">DOMNode </span><span class="src-doc-var">$srcNode </span><span class="src-doc">要移动的XML节点</span></li>
+<li><a name="a159"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">DOMNode </span><span class="src-doc-var">$destNode </span><span class="src-doc">移动到的目标节点</span></li>
+<li><a name="a160"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$position </span><span class="src-doc">位置参数 before after NULL</span></li>
+<li><a name="a161"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">bool </span></li>
+<li><a name="a162"></a><span class="src-doc">     */</span></li>
+<li><a name="a163"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methodmoveNode">moveNode</a><span class="src-sym">(</span><span class="src-sym">&amp;</span><span class="src-var">$srcNode</span><span class="src-sym">, </span><span class="src-sym">&amp;</span><span class="src-var">$destNode</span><span class="src-sym">, </span><span class="src-var">$position </span>= <span class="src-id">NULL</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a164"></a>        <span class="src-var">$node </span>= <span class="src-sym">&amp;</span><span class="src-var">$srcNode</span><span class="src-sym">-&gt;</span><span class="src-id">parentNode</span><span class="src-sym">;</span></li>
+<li><a name="a165"></a>        <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">removeChild</span><span class="src-sym">(</span><span class="src-var">$srcNode</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a166"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$position</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a167"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$position</span>==<span class="src-str">'before'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a168"></a>                <span class="src-var">$destNode</span><span class="src-sym">-&gt;</span><span class="src-id">parentNode</span><span class="src-sym">-&gt;</span><span class="src-id">insertBefore</span><span class="src-sym">(</span><span class="src-var">$srcNode</span><span class="src-sym">, </span><span class="src-var">$destNode</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a169"></a>            <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a170"></a>                <span class="src-var">$index </span>= -<span class="src-num">1</span><span class="src-sym">;</span></li>
+<li><a name="a171"></a>                <span class="src-var">$parentNode </span>= <span class="src-sym">&amp;</span><span class="src-var">$destNode</span><span class="src-sym">-&gt;</span><span class="src-id">parentNode</span><span class="src-sym">;</span></li>
+<li><a name="a172"></a>                <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i</span>&lt;<span class="src-var">$parentNode</span><span class="src-sym">-&gt;</span><span class="src-id">childNodes</span><span class="src-sym">-&gt;</span><span class="src-id">length</span><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a173"></a>                    <span class="src-var">$child </span>= <span class="src-var">$parentNode</span><span class="src-sym">-&gt;</span><span class="src-id">childNodes</span><span class="src-sym">-&gt;</span><span class="src-id">item</span><span class="src-sym">(</span><span class="src-var">$i</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a174"></a>                    <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$child</span><span class="src-sym">-&gt;</span><span class="src-id">isSameNode</span><span class="src-sym">(</span><span class="src-var">$destNode</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a175"></a>                        <span class="src-var">$index</span>= <span class="src-var">$i</span><span class="src-sym">;</span></li>
+<li><a name="a176"></a>                        <span class="src-key">break</span><span class="src-sym">;</span></li>
+<li><a name="a177"></a>                    <span class="src-sym">}</span></li>
+<li><a name="a178"></a>                <span class="src-sym">}</span></li>
+<li><a name="a179"></a>                <span class="src-var">$parentNode</span><span class="src-sym">-&gt;</span><span class="src-id">insertBefore</span><span class="src-sym">(</span><span class="src-var">$srcNode</span><span class="src-sym">, </span><span class="src-var">$parentNode</span><span class="src-sym">-&gt;</span><span class="src-id">childNodes</span><span class="src-sym">-&gt;</span><span class="src-id">item</span><span class="src-sym">(</span><span class="src-var">$index</span>+<span class="src-num">1</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a180"></a>            <span class="src-sym">}</span></li>
+<li><a name="a181"></a>        <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a182"></a>            <span class="src-var">$destNode</span><span class="src-sym">-&gt;</span><span class="src-id">appendChild</span><span class="src-sym">(</span><span class="src-var">$srcNode</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a183"></a>        <span class="src-sym">}</span></li>
+<li><a name="a184"></a>    <span class="src-sym">}</span></li>
+<li><a name="a185"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a186"></a><span class="src-doc">     * 删除节点</span></li>
+<li><a name="a187"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">DOMNode </span><span class="src-doc-var">$node </span><span class="src-doc">XML节点</span></li>
+<li><a name="a188"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">DOMNode </span><span class="src-doc-var">$oldNode </span><span class="src-doc">要删除的XML节点</span></li>
+<li><a name="a189"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">void </span></li>
+<li><a name="a190"></a><span class="src-doc">     */</span></li>
+<li><a name="a191"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methodremoveNode">removeNode</a><span class="src-sym">(</span><span class="src-sym">&amp;</span><span class="src-var">$oldNode</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a192"></a>        <span class="src-var">$node </span>= <span class="src-sym">&amp;</span><span class="src-var">$oldNode</span><span class="src-sym">-&gt;</span><span class="src-id">parentNode</span><span class="src-sym">;</span></li>
+<li><a name="a193"></a>        <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">removeChild</span><span class="src-sym">(</span><span class="src-var">$oldNode</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a194"></a>    <span class="src-sym">}</span></li>
+<li><a name="a195"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a196"></a><span class="src-doc">     * xPath方法</span></li>
+<li><a name="a197"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc">查询表达式</span></li>
+<li><a name="a198"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">DOMNodeList </span></li>
+<li><a name="a199"></a><span class="src-doc">     */</span></li>
+<li><a name="a200"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methodXPath">XPath</a><span class="src-sym">(</span><span class="src-var">$query</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a201"></a>        <span class="src-sym">(</span><span class="src-sym">!</span><a href="http://www.php.net/is_object">is_object</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">XPath</span><span class="src-sym">)) </span>&amp;&amp; <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">XPath </span>= <span class="src-key">new </span><span class="src-id">domXPath</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a202"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">XPath</span><span class="src-sym">-&gt;</span><span class="src-id">query</span><span class="src-sym">(</span><span class="src-var">$query</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a203"></a>    <span class="src-sym">}</span></li>
+<li><a name="a204"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a205"></a><span class="src-doc">     * 创建新的节点</span></li>
+<li><a name="a206"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$tagName </span><span class="src-doc">标签名</span></li>
+<li><a name="a207"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">mixed </span><span class="src-doc-var">$value </span><span class="src-doc">值</span></li>
+<li><a name="a208"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">array </span><span class="src-doc-var">$attr </span><span class="src-doc">要删除的XML节点</span></li>
+<li><a name="a209"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">DOMNode </span></li>
+<li><a name="a210"></a><span class="src-doc">     */</span></li>
+<li><a name="a211"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methodnewNode">newNode</a><span class="src-sym">(</span><span class="src-var">$tagName</span><span class="src-sym">,</span><span class="src-var">$value</span><span class="src-sym">,</span><span class="src-var">$attr</span>=<span class="src-id">NULL</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a212"></a>        <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/is_array">is_array</a><span class="src-sym">(</span><span class="src-var">$value</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a213"></a>            <span class="src-var">$node </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">createElement</span><span class="src-sym">(</span><span class="src-var">$tagName</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a214"></a>            <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$value </span><span class="src-key">as </span><span class="src-var">$key </span>=&gt; <span class="src-var">$value</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a215"></a>                <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">appendChild</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">createElement</span><span class="src-sym">(</span><span class="src-var">$key</span><span class="src-sym">,</span><span class="src-var">$value</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a216"></a>            <span class="src-sym">}</span></li>
+<li><a name="a217"></a>        <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a218"></a>            <span class="src-var">$node </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">createElement</span><span class="src-sym">(</span><span class="src-var">$tagName</span><span class="src-sym">,</span><span class="src-var">$value</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a219"></a>        <span class="src-sym">}</span></li>
+<li><a name="a220"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$attr </span>&amp;&amp; <a href="http://www.php.net/is_array">is_array</a><span class="src-sym">(</span><span class="src-var">$attr</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a221"></a>            <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$attr </span><span class="src-key">as </span><span class="src-var">$key </span>=&gt; <span class="src-var">$value</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a222"></a>                <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">setAttribute</span><span class="src-sym">(</span><span class="src-var">$key</span><span class="src-sym">,</span><span class="src-var">$value</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a223"></a>            <span class="src-sym">}</span></li>
+<li><a name="a224"></a>        <span class="src-sym">}</span></li>
+<li><a name="a225"></a>        <span class="src-key">return </span><span class="src-var">$node</span><span class="src-sym">;</span></li>
+<li><a name="a226"></a>    <span class="src-sym">}</span></li>
+<li><a name="a227"></a>    </li>
+<li><a name="a228"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a229"></a><span class="src-doc">     * 将一个数组创建为DOMNode对象</span></li>
+<li><a name="a230"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">array </span><span class="src-doc-var">$array </span><span class="src-doc">标签名</span></li>
+<li><a name="a231"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">DOMNode </span></li>
+<li><a name="a232"></a><span class="src-doc">     */</span></li>
+<li><a name="a233"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methodnewNodeFormArray">newNodeFormArray</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a234"></a>        <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/is_array">is_array</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a235"></a>            <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$array </span><span class="src-key">as </span><span class="src-var">$key </span>=&gt; <span class="src-var">$value</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a236"></a>                <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/substr">substr</a><span class="src-sym">(</span><span class="src-var">$key</span><span class="src-sym">,</span>-<span class="src-num">5</span><span class="src-sym">)</span>==<span class="src-str">' attr'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a237"></a>                    <span class="src-key">continue</span><span class="src-sym">;</span></li>
+<li><a name="a238"></a>                <span class="src-sym">}</span></li>
+<li><a name="a239"></a>                <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><a href="http://www.php.net/is_array">is_array</a><span class="src-sym">(</span><span class="src-var">$value</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a240"></a>                    <span class="src-var">$node </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">createElement</span><span class="src-sym">(</span><span class="src-var">$key</span><span class="src-sym">,</span><span class="src-var">$value</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a241"></a>                <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a242"></a>                    <span class="src-var">$node </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">createElement</span><span class="src-sym">(</span><span class="src-var">$key</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a243"></a>                    <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$value </span><span class="src-key">as </span><span class="src-var">$key_1 </span>=&gt; <span class="src-var">$value_1</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a244"></a>                        <span class="src-key">if</span><span class="src-sym">(</span><a href="http://www.php.net/is_array">is_array</a><span class="src-sym">(</span><span class="src-var">$value_1</span><span class="src-sym">) </span>&amp;&amp; <a href="http://www.php.net/array_key_exists">array_key_exists</a><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,</span><span class="src-var">$value_1</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a245"></a>                            <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$value_1 </span><span class="src-key">as </span><span class="src-var">$key_2 </span>=&gt; <span class="src-var">$value_2</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a246"></a>                                <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/substr">substr</a><span class="src-sym">(</span><span class="src-var">$key_2</span><span class="src-sym">,</span>-<span class="src-num">5</span><span class="src-sym">)</span>!=<span class="src-str">' attr'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a247"></a>                                    <span class="src-var">$newNode </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.xml/Xml.html#methodnewNodeFormArray">newNodeFormArray</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-var">$key_1 </span>=&gt; <span class="src-var">$value_2</span><span class="src-sym">,</span><span class="src-var">$key_1 </span>.<span class="src-str">' attr' </span>=&gt; <span class="src-var">$value_1</span><span class="src-sym">[</span><span class="src-var">$key_2 </span>.<span class="src-str">' attr'</span><span class="src-sym">]</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a248"></a>                                    <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">appendChild</span><span class="src-sym">(</span><span class="src-var">$newNode</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a249"></a>                </li>
+<li><a name="a250"></a>                                <span class="src-sym">}</span></li>
+<li><a name="a251"></a>                                </li>
+<li><a name="a252"></a>                            <span class="src-sym">}</span></li>
+<li><a name="a253"></a>                        <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a254"></a>                            <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">appendChild</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.xml/Xml.html#methodnewNodeFormArray">newNodeFormArray</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-var">$key_1 </span>=&gt; <span class="src-var">$value_1</span><span class="src-sym">,</span><span class="src-var">$key_1 </span>.<span class="src-str">' attr' </span>=&gt; <span class="src-var">$value</span><span class="src-sym">[</span><span class="src-var">$key_1 </span>.<span class="src-str">' attr'</span><span class="src-sym">]</span><span class="src-sym">)))</span><span class="src-sym">;</span></li>
+<li><a name="a255"></a>                        <span class="src-sym">}</span></li>
+<li><a name="a256"></a>                    <span class="src-sym">}</span></li>
+<li><a name="a257"></a>                <span class="src-sym">}</span></li>
+<li><a name="a258"></a>                <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/is_array">is_array</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">[</span><span class="src-var">$key </span>.<span class="src-str">' attr'</span><span class="src-sym">]</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a259"></a>                    <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">[</span><span class="src-var">$key </span>.<span class="src-str">' attr'</span><span class="src-sym">] </span><span class="src-key">as </span><span class="src-var">$attrKey </span>=&gt; <span class="src-var">$attrValue</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a260"></a>                        <span class="src-var">$node</span><span class="src-sym">-&gt;</span><span class="src-id">setAttribute</span><span class="src-sym">(</span><span class="src-var">$attrKey</span><span class="src-sym">,</span><span class="src-var">$attrValue</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a261"></a>                    <span class="src-sym">}</span></li>
+<li><a name="a262"></a>                <span class="src-sym">}</span></li>
+<li><a name="a263"></a>                <span class="src-key">break</span><span class="src-sym">;</span></li>
+<li><a name="a264"></a>            <span class="src-sym">}</span></li>
+<li><a name="a265"></a>        <span class="src-sym">}</span></li>
+<li><a name="a266"></a>        <span class="src-key">return </span><span class="src-var">$node</span><span class="src-sym">;</span></li>
+<li><a name="a267"></a>        </li>
+<li><a name="a268"></a>    <span class="src-sym">}</span></li>
+<li><a name="a269"></a>    </li>
+<li><a name="a270"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a271"></a><span class="src-doc">     * 将xml转换成数组</span></li>
+<li><a name="a272"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">DOMNode </span><span class="src-doc-var">$node </span><span class="src-doc">标签名</span></li>
+<li><a name="a273"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">array </span></li>
+<li><a name="a274"></a><span class="src-doc">     */</span></li>
+<li><a name="a275"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methodtoArray">toArray</a><span class="src-sym">(</span><span class="src-var">$node </span>= <span class="src-id">NULL</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a276"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$node</span>===<span class="src-id">NULL</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a277"></a>            <span class="src-var">$node </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.xml/Xml.html#var$saxData">saxData</a><span class="src-sym">;</span></li>
+<li><a name="a278"></a>        <span class="src-sym">}</span></li>
+<li><a name="a279"></a>        <span class="src-var">$array </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">simplexml2array</span><span class="src-sym">(</span><span class="src-var">$node</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a280"></a>        <span class="src-comm">//print_r($array);</span></li>
+<li><a name="a281"></a>        <span class="src-key">return </span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">firstChild</span><span class="src-sym">-&gt;</span><span class="src-id">tagName </span>=&gt; <span class="src-var">$array</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a282"></a>    <span class="src-sym">}</span></li>
+<li><a name="a283"></a>    </li>
+<li><a name="a284"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a285"></a><span class="src-doc">     * 将simplexml转换成数组</span></li>
+<li><a name="a286"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">SimpleXMLElement </span><span class="src-doc-var">$xml </span><span class="src-doc">SimpleXMLElement对象</span></li>
+<li><a name="a287"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">array </span></li>
+<li><a name="a288"></a><span class="src-doc">     */</span></li>
+<li><a name="a289"></a>    <span class="src-key">private </span><span class="src-key">function </span><span class="src-id">simplexml2array</span><span class="src-sym">(</span><span class="src-var">$xml</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a290"></a>        <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/get_class">get_class</a><span class="src-sym">(</span><span class="src-var">$xml</span><span class="src-sym">)</span>==<span class="src-str">'SimpleXMLElement'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a291"></a>            <span class="src-var">$attributes </span>= <span class="src-var">$xml</span><span class="src-sym">-&gt;</span><span class="src-id">attributes</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a292"></a>            <span class="src-key">foreach</span><span class="src-sym">(</span><span class="src-var">$attributes </span><span class="src-key">as </span><span class="src-var">$k</span>=&gt;<span class="src-var">$v</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a293"></a>                <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$v</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a294"></a>                       <span class="src-var">$a</span><span class="src-sym">[</span><span class="src-var">$k</span><span class="src-sym">] </span>= (string) <span class="src-var">$v</span><span class="src-sym">;</span></li>
+<li><a name="a295"></a>                <span class="src-sym">}</span></li>
+<li><a name="a296"></a>            <span class="src-sym">}</span></li>
+<li><a name="a297"></a>            <span class="src-var">$x </span>= <span class="src-var">$xml</span><span class="src-sym">;</span></li>
+<li><a name="a298"></a>            <span class="src-var">$xml </span>= <a href="http://www.php.net/get_object_vars">get_object_vars</a><span class="src-sym">(</span><span class="src-var">$xml</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a299"></a>       <span class="src-sym">}</span></li>
+<li><a name="a300"></a>       <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/is_array">is_array</a><span class="src-sym">(</span><span class="src-var">$xml</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a301"></a>            <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$xml</span><span class="src-sym">) </span>== <span class="src-num">0</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a302"></a>                   <span class="src-key">return </span>(string) <span class="src-var">$x</span><span class="src-sym">;</span></li>
+<li><a name="a303"></a>            <span class="src-sym">}</span></li>
+<li><a name="a304"></a>            <span class="src-key">foreach</span><span class="src-sym">(</span><span class="src-var">$xml </span><span class="src-key">as </span><span class="src-var">$key</span>=&gt;<span class="src-var">$value</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a305"></a>                <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$key</span>!==<span class="src-str">'@attributes'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a306"></a>                    <span class="src-var">$r</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">] </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">simplexml2array</span><span class="src-sym">(</span><span class="src-var">$value</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a307"></a>                    <span class="src-key">if </span><span class="src-sym">( </span><span class="src-sym">!</span><a href="http://www.php.net/is_array">is_array</a><span class="src-sym">( </span><span class="src-var">$r</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">] </span><span class="src-sym">) ) </span><span class="src-sym">{</span></li>
+<li><a name="a308"></a>                        <span class="src-var">$r</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">] </span>= <span class="src-var">$r</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a309"></a>                    <span class="src-sym">}</span></li>
+<li><a name="a310"></a>                <span class="src-sym">}</span></li>
+<li><a name="a311"></a>           <span class="src-sym">}</span></li>
+<li><a name="a312"></a>           <span class="src-key">if </span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$a</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a313"></a>                <span class="src-var">$r</span><span class="src-sym">[</span><span class="src-str">'@attr'</span><span class="src-sym">] </span>= <span class="src-var">$a</span><span class="src-sym">;</span></li>
+<li><a name="a314"></a>            <span class="src-sym">}</span></li>
+<li><a name="a315"></a>            <span class="src-key">return </span><span class="src-var">$r</span><span class="src-sym">;</span></li>
+<li><a name="a316"></a>       <span class="src-sym">}</span></li>
+<li><a name="a317"></a>       <span class="src-key">return </span>(string) <span class="src-var">$xml</span><span class="src-sym">;</span></li>
+<li><a name="a318"></a>    <span class="src-sym">}</span></li>
+<li><a name="a319"></a>    </li>
+<li><a name="a320"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a321"></a><span class="src-doc">     * 把DOM对象保存成文件</span></li>
+<li><a name="a322"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc"> public</span></li>
+<li><a name="a323"></a><span class="src-doc">     */</span></li>
+<li><a name="a324"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methodsaveToFile">saveToFile</a><span class="src-sym">(</span><span class="src-var">$fileName </span>= <span class="src-id">NULL</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a325"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">formatOutput </span>= <span class="src-id">true</span><span class="src-sym">;</span></li>
+<li><a name="a326"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$fileName</span>!==<span class="src-id">NULL</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a327"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">fileName </span>= <span class="src-var">$fileName</span><span class="src-sym">;</span></li>
+<li><a name="a328"></a>        <span class="src-sym">}</span></li>
+<li><a name="a329"></a>        <span class="src-var">$f </span>= <a href="http://www.php.net/fopen">fopen</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">fileName</span><span class="src-sym">,</span><span class="src-str">'w'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a330"></a>        <a href="http://www.php.net/fwrite">fwrite</a><span class="src-sym">(</span><span class="src-var">$f</span><span class="src-sym">,</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">saveXML</span><span class="src-sym">(</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a331"></a>        <a href="http://www.php.net/fclose">fclose</a><span class="src-sym">(</span><span class="src-var">$f</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a332"></a>    <span class="src-sym">}</span></li>
+<li><a name="a333"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a334"></a><span class="src-doc">     * 把SimpleXMLElement对象保存成文件</span></li>
+<li><a name="a335"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc"> public</span></li>
+<li><a name="a336"></a><span class="src-doc">     */</span></li>
+<li><a name="a337"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../lib/plugins.xml/Xml.html#methodsaxToFile">saxToFile</a> <span class="src-sym">(</span><span class="src-var">$fileName </span>= <span class="src-id">NULL</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a338"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$fileName</span>!==<span class="src-id">NULL</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a339"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">fileName </span>= <span class="src-var">$fileName</span><span class="src-sym">;</span></li>
+<li><a name="a340"></a>        <span class="src-sym">}</span></li>
+<li><a name="a341"></a>        <span class="src-var">$f </span>= <a href="http://www.php.net/fopen">fopen</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">fileName</span><span class="src-sym">,</span><span class="src-str">'w'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a342"></a>        <a href="http://www.php.net/fwrite">fwrite</a><span class="src-sym">(</span><span class="src-var">$f</span><span class="src-sym">,</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.xml/Xml.html#var$saxData">saxData</a><span class="src-sym">-&gt;</span><span class="src-id">asXML</span><span class="src-sym">(</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a343"></a>        <a href="http://www.php.net/fclose">fclose</a><span class="src-sym">(</span><span class="src-var">$f</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a344"></a>    <span class="src-sym">}</span></li>
+<li><a name="a345"></a><span class="src-sym">}</span></li>
+<li><a name="a346"></a><span class="src-php">?&gt;</span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 05 Aug 2009 07:41:22 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

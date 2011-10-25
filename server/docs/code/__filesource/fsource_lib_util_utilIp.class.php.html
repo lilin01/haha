@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for Ip.class.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file Ip.class.php</h1>
+<p>Documentation is available at <a href="../lib/util/_util_Ip_class_php.html">Ip.class.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?php</span></li>
+<li><a name="a2"></a>&nbsp;</li>
+<li><a name="a3"></a><span class="src-doc">/**</span></li>
+<li><a name="a4"></a><span class="src-doc"> *  IP 类</span></li>
+<li><a name="a5"></a><span class="src-doc"> *</span></li>
+<li><a name="a6"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@package</span><span class="src-doc"> lib</span></li>
+<li><a name="a7"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@subpackage</span><span class="src-doc"> util</span></li>
+<li><a name="a8"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@author</span><span class="src-doc"> 张立冰 &lt;roast@php.net&gt;</span></li>
+<li><a name="a9"></a><span class="src-doc"> */</span></li>
+<li><a name="a10"></a><span class="src-key">class </span><a href="../lib/util/Ip.html">Ip</a> <span class="src-sym">{</span></li>
+<li><a name="a11"></a>    </li>
+<li><a name="a12"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a13"></a><span class="src-doc">     * 获取客户端IP</span></li>
+<li><a name="a14"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span></li>
+<li><a name="a15"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@static</span></li>
+<li><a name="a16"></a><span class="src-doc">     */</span></li>
+<li><a name="a17"></a>    <span class="src-key">function </span><a href="../lib/util/Ip.html#methodget">get</a><span class="src-sym">(</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a18"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$_SERVER</span><span class="src-sym">[</span><span class="src-str">'HTTP_CLIENT_IP'</span><span class="src-sym">] </span>&amp;&amp; <span class="src-var">$_SERVER</span><span class="src-sym">[</span><span class="src-str">'HTTP_CLIENT_IP'</span><span class="src-sym">]</span>!=<span class="src-str">'unknown'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a19"></a>            <span class="src-var">$ip </span>= <span class="src-var">$_SERVER</span><span class="src-sym">[</span><span class="src-str">'HTTP_CLIENT_IP'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a20"></a>        <span class="src-sym">} </span><span class="src-key">elseif </span><span class="src-sym">(</span><span class="src-var">$_SERVER</span><span class="src-sym">[</span><span class="src-str">'HTTP_X_FORWARDED_FOR'</span><span class="src-sym">] </span>&amp;&amp; <span class="src-var">$_SERVER</span><span class="src-sym">[</span><span class="src-str">'HTTP_X_FORWARDED_FOR'</span><span class="src-sym">]</span>!=<span class="src-str">'unknown'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a21"></a>            <span class="src-var">$ip </span>= <span class="src-var">$_SERVER</span><span class="src-sym">[</span><span class="src-str">'HTTP_X_FORWARDED_FOR'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a22"></a>        <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a23"></a>            <span class="src-var">$ip </span>= <span class="src-var">$_SERVER</span><span class="src-sym">[</span><span class="src-str">'REMOTE_ADDR'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a24"></a>        <span class="src-sym">}</span></li>
+<li><a name="a25"></a>        <span class="src-key">return </span><span class="src-var">$ip</span><span class="src-sym">;</span></li>
+<li><a name="a26"></a>    <span class="src-sym">}</span></li>
+<li><a name="a27"></a>    </li>
+<li><a name="a28"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a29"></a><span class="src-doc">     * 判断$ip是否在指定IP范围内</span></li>
+<li><a name="a30"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$ip </span></li>
+<li><a name="a31"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$startIp </span></li>
+<li><a name="a32"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$endIp </span></li>
+<li><a name="a33"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">boolean </span></li>
+<li><a name="a34"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@static</span></li>
+<li><a name="a35"></a><span class="src-doc">     */</span></li>
+<li><a name="a36"></a>    <span class="src-key">function </span><a href="../lib/util/Ip.html#methodisIn">isIn</a><span class="src-sym">(</span><span class="src-var">$ip</span><span class="src-sym">, </span><span class="src-var">$startIp</span><span class="src-sym">, </span><span class="src-var">$endIp</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a37"></a>        <span class="src-var">$ip </span>= <a href="http://www.php.net/ip2long">ip2long</a><span class="src-sym">(</span><span class="src-var">$ip</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a38"></a>        <span class="src-key">return </span><span class="src-sym">(</span><span class="src-var">$ip</span>&gt;=<a href="http://www.php.net/ip2long">ip2long</a><span class="src-sym">(</span><span class="src-var">$startIp</span><span class="src-sym">) </span>&amp;&amp; <span class="src-var">$ip</span>&lt;=<a href="http://www.php.net/ip2long">ip2long</a><span class="src-sym">(</span><span class="src-var">$endIp</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a39"></a>    <span class="src-sym">}</span></li>
+<li><a name="a40"></a><span class="src-sym">}</span></li>
+<li><a name="a41"></a><span class="src-php">?&gt;</span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 05 Aug 2009 07:45:42 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

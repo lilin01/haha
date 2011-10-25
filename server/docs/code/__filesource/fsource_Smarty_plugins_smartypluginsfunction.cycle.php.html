@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for function.cycle.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file function.cycle.php</h1>
+<p>Documentation is available at <a href="../Smarty/plugins/_smarty_plugins_function_cycle_php.html">function.cycle.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?php</span></li>
+<li><a name="a2"></a><span class="src-doc">/**</span></li>
+<li><a name="a3"></a><span class="src-doc"> * Smarty plugin</span></li>
+<li><a name="a4"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@package</span><span class="src-doc"> Smarty</span></li>
+<li><a name="a5"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@subpackage</span><span class="src-doc"> plugins</span></li>
+<li><a name="a6"></a><span class="src-doc"> */</span></li>
+<li><a name="a7"></a>&nbsp;</li>
+<li><a name="a8"></a><span class="src-doc">/**</span></li>
+<li><a name="a9"></a><span class="src-doc"> * Smarty {cycle} function plugin</span></li>
+<li><a name="a10"></a><span class="src-doc"> *</span></li>
+<li><a name="a11"></a><span class="src-doc"> * Type:     function&lt;br&gt;</span></li>
+<li><a name="a12"></a><span class="src-doc"> * Name:     cycle&lt;br&gt;</span></li>
+<li><a name="a13"></a><span class="src-doc"> * Date:     May 3, 2002&lt;br&gt;</span></li>
+<li><a name="a14"></a><span class="src-doc"> * Purpose:  cycle through given values&lt;br&gt;</span></li>
+<li><a name="a15"></a><span class="src-doc"> * Input:</span></li>
+<li><a name="a16"></a><span class="src-doc"> *         - name = name of cycle (optional)</span></li>
+<li><a name="a17"></a><span class="src-doc"> *         - values = comma separated list of values to cycle,</span></li>
+<li><a name="a18"></a><span class="src-doc"> *                    or an array of values to cycle</span></li>
+<li><a name="a19"></a><span class="src-doc"> *                    (this can be left out for subsequent calls)</span></li>
+<li><a name="a20"></a><span class="src-doc"> *         - reset = boolean - resets given var to true</span></li>
+<li><a name="a21"></a><span class="src-doc"> *         - print = boolean - print var or not. default is true</span></li>
+<li><a name="a22"></a><span class="src-doc"> *         - advance = boolean - whether or not to advance the cycle</span></li>
+<li><a name="a23"></a><span class="src-doc"> *         - delimiter = the value delimiter, default is &quot;,&quot;</span></li>
+<li><a name="a24"></a><span class="src-doc"> *         - assign = boolean, assigns to template var instead of</span></li>
+<li><a name="a25"></a><span class="src-doc"> *                    printed.</span></li>
+<li><a name="a26"></a><span class="src-doc"> *</span></li>
+<li><a name="a27"></a><span class="src-doc"> * Examples:&lt;br&gt;</span></li>
+<li><a name="a28"></a><span class="src-doc"> * &lt;pre&gt;</span></li>
+<li><a name="a29"></a><span class="src-doc"> * {cycle values=&quot;#eeeeee,#d0d0d0d&quot;}</span></li>
+<li><a name="a30"></a><span class="src-doc"> * {cycle name=row values=&quot;one,two,three&quot; reset=true}</span></li>
+<li><a name="a31"></a><span class="src-doc"> * {cycle name=row}</span></li>
+<li><a name="a32"></a><span class="src-doc"> * &lt;/pre&gt;</span></li>
+<li><a name="a33"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@link</span><span class="src-doc"> http://smarty.php.net/manual/en/language.function.cycle.php {cycle}</span></li>
+<li><a name="a34"></a><span class="src-doc"> *        (Smarty online manual)</span></li>
+<li><a name="a35"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@author</span><span class="src-doc"> Monte Ohrt &lt;monte at ohrt dot com&gt;</span></li>
+<li><a name="a36"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@author</span><span class="src-doc"> credit to Mark Priatel &lt;mpriatel@rogers.com&gt;</span></li>
+<li><a name="a37"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@author</span><span class="src-doc"> credit to Gerard &lt;gerard@interfold.com&gt;</span></li>
+<li><a name="a38"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@author</span><span class="src-doc"> credit to Jason Sweat &lt;jsweat_php@yahoo.com&gt;</span></li>
+<li><a name="a39"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@version</span><span class="src-doc">  1.3</span></li>
+<li><a name="a40"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">array </span></li>
+<li><a name="a41"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">Smarty </span></li>
+<li><a name="a42"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string</span><span class="src-doc">|</span><span class="src-doc-type">null</span></li>
+<li><a name="a43"></a><span class="src-doc"> */</span></li>
+<li><a name="a44"></a><span class="src-key">function </span><a href="../Smarty/plugins/_smarty_plugins_function_cycle_php.html#functionsmarty_function_cycle">smarty_function_cycle</a><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">, </span><span class="src-sym">&amp;</span><span class="src-var">$smarty</span><span class="src-sym">)</span></li>
+<li><a name="a45"></a><span class="src-sym">{</span></li>
+<li><a name="a46"></a>    <span class="src-key">static </span><span class="src-var">$cycle_vars</span><span class="src-sym">;</span></li>
+<li><a name="a47"></a>    </li>
+<li><a name="a48"></a>    <span class="src-var">$name </span>= <span class="src-sym">(</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'name'</span><span class="src-sym">]</span><span class="src-sym">)) </span>? <span class="src-str">'default' </span>: <span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'name'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a49"></a>    <span class="src-var">$print </span>= <span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'print'</span><span class="src-sym">]</span><span class="src-sym">)) </span>? (bool)<span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'print'</span><span class="src-sym">] </span>: <span class="src-id">true</span><span class="src-sym">;</span></li>
+<li><a name="a50"></a>    <span class="src-var">$advance </span>= <span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'advance'</span><span class="src-sym">]</span><span class="src-sym">)) </span>? (bool)<span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'advance'</span><span class="src-sym">] </span>: <span class="src-id">true</span><span class="src-sym">;</span></li>
+<li><a name="a51"></a>    <span class="src-var">$reset </span>= <span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'reset'</span><span class="src-sym">]</span><span class="src-sym">)) </span>? (bool)<span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'reset'</span><span class="src-sym">] </span>: <span class="src-id">false</span><span class="src-sym">;</span></li>
+<li><a name="a52"></a>            </li>
+<li><a name="a53"></a>    <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><a href="http://www.php.net/in_array">in_array</a><span class="src-sym">(</span><span class="src-str">'values'</span><span class="src-sym">, </span><a href="http://www.php.net/array_keys">array_keys</a><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">))) </span><span class="src-sym">{</span></li>
+<li><a name="a54"></a>        <span class="src-key">if</span><span class="src-sym">(</span><span class="src-sym">!</span>isset<span class="src-sym">(</span><span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'values'</span><span class="src-sym">]</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a55"></a>            <span class="src-var">$smarty</span><span class="src-sym">-&gt;</span><a href="http://www.php.net/trigger_error">trigger_error</a><span class="src-sym">(</span><span class="src-str">&quot;cycle: missing 'values' parameter&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a56"></a>            <span class="src-key">return</span><span class="src-sym">;</span></li>
+<li><a name="a57"></a>        <span class="src-sym">}</span></li>
+<li><a name="a58"></a>    <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a59"></a>        <span class="src-key">if</span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'values'</span><span class="src-sym">]</span><span class="src-sym">)</span></li>
+<li><a name="a60"></a>            &amp;&amp; <span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'values'</span><span class="src-sym">] </span>!= <span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'values'</span><span class="src-sym">] </span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a61"></a>            <span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'index'</span><span class="src-sym">] </span>= <span class="src-num">0</span><span class="src-sym">;</span></li>
+<li><a name="a62"></a>        <span class="src-sym">}</span></li>
+<li><a name="a63"></a>        <span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'values'</span><span class="src-sym">] </span>= <span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'values'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a64"></a>    <span class="src-sym">}</span></li>
+<li><a name="a65"></a>&nbsp;</li>
+<li><a name="a66"></a>    <span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'delimiter'</span><span class="src-sym">] </span>= <span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'delimiter'</span><span class="src-sym">]</span><span class="src-sym">)) </span>? <span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'delimiter'</span><span class="src-sym">] </span>: <span class="src-str">','</span><span class="src-sym">;</span></li>
+<li><a name="a67"></a>    </li>
+<li><a name="a68"></a>    <span class="src-key">if</span><span class="src-sym">(</span><a href="http://www.php.net/is_array">is_array</a><span class="src-sym">(</span><span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'values'</span><span class="src-sym">]</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a69"></a>        <span class="src-var">$cycle_array </span>= <span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'values'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a70"></a>    <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a71"></a>        <span class="src-var">$cycle_array </span>= <a href="http://www.php.net/explode">explode</a><span class="src-sym">(</span><span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'delimiter'</span><span class="src-sym">]</span><span class="src-sym">,</span><span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'values'</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a72"></a>    <span class="src-sym">}</span></li>
+<li><a name="a73"></a>    </li>
+<li><a name="a74"></a>    <span class="src-key">if</span><span class="src-sym">(</span><span class="src-sym">!</span>isset<span class="src-sym">(</span><span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'index'</span><span class="src-sym">]</span><span class="src-sym">) </span>|| <span class="src-var">$reset </span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a75"></a>        <span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'index'</span><span class="src-sym">] </span>= <span class="src-num">0</span><span class="src-sym">;</span></li>
+<li><a name="a76"></a>    <span class="src-sym">}</span></li>
+<li><a name="a77"></a>    </li>
+<li><a name="a78"></a>    <span class="src-key">if </span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'assign'</span><span class="src-sym">]</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a79"></a>        <span class="src-var">$print </span>= <span class="src-id">false</span><span class="src-sym">;</span></li>
+<li><a name="a80"></a>        <span class="src-var">$smarty</span><span class="src-sym">-&gt;</span><span class="src-id">assign</span><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'assign'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-var">$cycle_array</span><span class="src-sym">[</span><span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'index'</span><span class="src-sym">]]</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a81"></a>    <span class="src-sym">}</span></li>
+<li><a name="a82"></a>        </li>
+<li><a name="a83"></a>    <span class="src-key">if</span><span class="src-sym">(</span><span class="src-var">$print</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a84"></a>        <span class="src-var">$retval </span>= <span class="src-var">$cycle_array</span><span class="src-sym">[</span><span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'index'</span><span class="src-sym">]]</span><span class="src-sym">;</span></li>
+<li><a name="a85"></a>    <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a86"></a>        <span class="src-var">$retval </span>= <span class="src-id">null</span><span class="src-sym">;</span></li>
+<li><a name="a87"></a>    <span class="src-sym">}</span></li>
+<li><a name="a88"></a>&nbsp;</li>
+<li><a name="a89"></a>    <span class="src-key">if</span><span class="src-sym">(</span><span class="src-var">$advance</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a90"></a>        <span class="src-key">if </span><span class="src-sym">( </span><span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'index'</span><span class="src-sym">] </span>&gt;= <a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$cycle_array</span><span class="src-sym">) </span>-<span class="src-num">1 </span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a91"></a>            <span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'index'</span><span class="src-sym">] </span>= <span class="src-num">0</span><span class="src-sym">;</span></li>
+<li><a name="a92"></a>        <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a93"></a>            <span class="src-var">$cycle_vars</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'index'</span><span class="src-sym">]</span>++<span class="src-sym">;</span></li>
+<li><a name="a94"></a>        <span class="src-sym">}</span></li>
+<li><a name="a95"></a>    <span class="src-sym">}</span></li>
+<li><a name="a96"></a>    </li>
+<li><a name="a97"></a>    <span class="src-key">return </span><span class="src-var">$retval</span><span class="src-sym">;</span></li>
+<li><a name="a98"></a><span class="src-sym">}</span></li>
+<li><a name="a99"></a>&nbsp;</li>
+<li><a name="a100"></a><span class="src-comm">/* vim: set expandtab: */</span></li>
+<li><a name="a101"></a>&nbsp;</li>
+<li><a name="a102"></a><span class="src-php">?&gt;</span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 05 Aug 2009 07:45:37 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

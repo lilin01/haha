@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for PageExtjsResponse.class.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file PageExtjsResponse.class.php</h1>
+<p>Documentation is available at <a href="../lib/core.page/_plugins_page_PageExtjsResponse_class_php.html">PageExtjsResponse.class.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?php</span></li>
+<li><a name="a2"></a>&nbsp;</li>
+<li><a name="a3"></a><span class="src-inc">require_once</span><span class="src-sym">(</span><span class="src-str">'PageXml.class.php'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a4"></a><span class="src-doc">/**</span></li>
+<li><a name="a5"></a><span class="src-doc"> * Extjs 回复的Page类</span></li>
+<li><a name="a6"></a><span class="src-doc"> *</span></li>
+<li><a name="a7"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@package</span><span class="src-doc"> lib</span></li>
+<li><a name="a8"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@subpackage</span><span class="src-doc"> core.page</span></li>
+<li><a name="a9"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@author</span><span class="src-doc"> 张立冰 &lt;roast@php.net&gt;</span></li>
+<li><a name="a10"></a><span class="src-doc"> */</span></li>
+<li><a name="a11"></a><span class="src-key">class </span><a href="../lib/core.page/PageExtjsResponse.html">PageExtjsResponse</a> <span class="src-key">extends </span><a href="../lib/core.page/PageXml.html">PageXml</a> <span class="src-sym">{</span></li>
+<li><a name="a12"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a13"></a><span class="src-doc">     * 值</span></li>
+<li><a name="a14"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">array </span><span class="src-doc-var">$value </span></li>
+<li><a name="a15"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc"> private</span></li>
+<li><a name="a16"></a><span class="src-doc">     */</span></li>
+<li><a name="a17"></a>    <span class="src-key">var </span><span class="src-var">$value </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a18"></a>    </li>
+<li><a name="a19"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a20"></a><span class="src-doc">     * 构造函数(兼容PHP4)</span></li>
+<li><a name="a21"></a><span class="src-doc">     *</span></li>
+<li><a name="a22"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">Application </span><span class="src-doc-var">$app </span></li>
+<li><a name="a23"></a><span class="src-doc">     */</span></li>
+<li><a name="a24"></a>    <span class="src-key">function </span><a href="../lib/core.page/PageExtjsResponse.html#methodPageExtjsResponse">PageExtjsResponse</a><span class="src-sym">(</span><span class="src-sym">&amp; </span><span class="src-var">$app</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a25"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/core.page/PageExtjsResponse.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-sym">&amp; </span><span class="src-var">$app</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a26"></a>    <span class="src-sym">}</span></li>
+<li><a name="a27"></a>    </li>
+<li><a name="a28"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a29"></a><span class="src-doc">     * 构造函数</span></li>
+<li><a name="a30"></a><span class="src-doc">     *</span></li>
+<li><a name="a31"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">Application </span><span class="src-doc-var">$app </span></li>
+<li><a name="a32"></a><span class="src-doc">     */</span></li>
+<li><a name="a33"></a>    <span class="src-key">function </span><a href="../lib/core.page/PageExtjsResponse.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-sym">&amp; </span><span class="src-var">$app</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a34"></a>        <span class="src-id">parent</span><span class="src-sym">::</span><a href="../lib/core.page/PageXml.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-sym">&amp; </span><span class="src-var">$app</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a35"></a>        </li>
+<li><a name="a36"></a>    <span class="src-sym">}</span></li>
+<li><a name="a37"></a>    </li>
+<li><a name="a38"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a39"></a><span class="src-doc">     * 返回调用成功结果</span></li>
+<li><a name="a40"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">array </span><span class="src-doc-var">$data </span><span class="src-doc">返回数据</span></li>
+<li><a name="a41"></a><span class="src-doc">     */</span></li>
+<li><a name="a42"></a>    <span class="src-key">function </span><a href="../lib/core.page/PageExtjsResponse.html#methodsuccess">success</a><span class="src-sym">(</span><span class="src-var">$data </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a43"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">value </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'response' </span>=&gt; <span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'data' </span>=&gt; <span class="src-var">$data</span><span class="src-sym">)</span><span class="src-sym">, </span></li>
+<li><a name="a44"></a>                               <span class="src-str">'response attr' </span>=&gt; <span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'success' </span>=&gt; <span class="src-str">'true'</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a45"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/core.page/PageXml.html#methodoutput">output</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a46"></a>    <span class="src-sym">}</span></li>
+<li><a name="a47"></a>    </li>
+<li><a name="a48"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a49"></a><span class="src-doc">     * 返回调用失败结果</span></li>
+<li><a name="a50"></a><span class="src-doc">     * 可带多个参数,每个参数分别代表一个错误,格式为array('id'=&gt;xxx, 'msg'=&gt;xxx)</span></li>
+<li><a name="a51"></a><span class="src-doc">     */</span></li>
+<li><a name="a52"></a>    <span class="src-key">function </span><a href="../lib/core.page/PageExtjsResponse.html#methodfailure">failure</a><span class="src-sym">(</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a53"></a>        <span class="src-var">$fields </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a54"></a>        <span class="src-var">$args </span>= <a href="http://www.php.net/func_get_args">func_get_args</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a55"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$args</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a56"></a>            <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i</span>&lt;<a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$args</span><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a57"></a>                <span class="src-key">if </span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$args</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a58"></a>                    <span class="src-var">$fields </span>= <a href="http://www.php.net/array_merge">array_merge</a><span class="src-sym">(</span><span class="src-var">$fields</span><span class="src-sym">, </span><span class="src-var">$args</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a59"></a>                <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a60"></a>                    <span class="src-var">$fields</span><span class="src-sym">[</span><span class="src-sym">] </span>= <span class="src-var">$args</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a61"></a>                <span class="src-sym">}</span></li>
+<li><a name="a62"></a>            <span class="src-sym">}</span></li>
+<li><a name="a63"></a>        <span class="src-sym">}</span></li>
+<li><a name="a64"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">value </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'response' </span>=&gt; <span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'errors' </span>=&gt; </li>
+<li><a name="a65"></a>                                            <span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'field' </span>=&gt; <span class="src-var">$fields</span><span class="src-sym">))</span><span class="src-sym">, </span></li>
+<li><a name="a66"></a>                               <span class="src-str">'response attr' </span>=&gt; <span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'success' </span>=&gt; <span class="src-str">'false'</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a67"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/core.page/PageXml.html#methodoutput">output</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a68"></a>    <span class="src-sym">}</span></li>
+<li><a name="a69"></a><span class="src-sym">}</span></li>
+<li><a name="a70"></a><span class="src-php">?&gt;</span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 05 Aug 2009 07:45:55 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>示例页面</title>
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="js/ui.core.js"></script>
+<script type="text/javascript" src="js/ui.tabs.js"></script>
+<script type="text/javascript" src="js/ui.draggable.js"></script>
+<script type="text/javascript" src="js/tip.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.tabsEx1 > ul').tabs();
+	$('#exp_1').tip();
+	$('.exp_2').tip();
+	$('#exp_3_1').tip( {
+		position: ['right', 'center'],
+		width:450,
+		heigh:300
+	});
+	$( '#exp_3_2' ).tip( { position : 'bottomnear' } );
+	$( '#exp_3_3' ).tip( { position : [100,100] } );
+	$( '#exp_3_4' ).tip( { position : [100,'bottom'] } );
+	$( '#exp_3_5' ).tip( { position : ['rightnear',15] } );
+	$( '#exp_3_6' ).tip( { position : ['bottomnear',15,20] } );
+	$('#exp_4').tip( 
+		{
+			title : 'Hello exp_4',
+			content : 'This is local content' 
+		}
+	);
+	$('#exp_5').tip(
+		{
+			title : 'Hello exp_5',
+			content : '<p>This is local content</p><p>This is another paragraph.</p>',
+			draggable : true
+		}
+	);
+	$('#exp_6').tip(
+		{
+			show : 'slideDown'
+		}
+	);
+	$('#exp_7').tip(
+		{
+			trigger : 'mouseover'
+		}
+	);
+	var options =
+		{
+			run: function()
+				{
+					$(this).fadeOut('slow')
+						   .slideDown()
+						   .slideUp()
+						   .show('slow')
+						   .animate({left:0});
+				}
+		};
+	$('#exp_8').tip(options);
+	var _btns=[
+		{
+			value:"警告",
+			onclick : function()
+					  {
+						alert("警告");
+					  }
+		},
+		{
+			value:"记过",
+			onclick: function()
+					{
+						alert("记过");
+					}
+		},
+		{
+			value:"开除",
+			onclick: function()
+					{
+						$('#tip_position,#tip_mask').remove();
+					}
+		}
+	];
+	$('#exp_9').tip({buttons:_btns});
+	$('#exp_11').tip({mask:true});
+});
+</script>
+<link rel="stylesheet" type="text/css" href="flora.tabs.css" />
+<link rel="stylesheet" type="text/css" href="flora.tip.css" />
+</head>
+<body>
+<div style="width:1000px;margin:auto;">
+  <div class="tabsEx1">
+    <ul style="height: 30px;">
+      <li><a href="#fragment-11"><span>Demo</span></a></li>
+      <li><a href="#fragment-12"><span>Javascript</span></a></li>
+      <li><a href="#fragment-13"><span>HTML</span></a></li>
+    </ul>
+    <div id="fragment-11">
+      <p>无参数的例子</p>
+      <p>将链接地址写入html代码(a.href)中,系统调用了hello1.php获取内容</p>
+      <p><a id='exp_1' href="#hello1">click me</a></p>
+    </div>
+    <div id="fragment-12">
+      <xmp>$('#exp_1').tip();</xmp>
+    </div>
+    <div id="fragment-13">
+      <xmp><a id='exp_2' href="#hello1">click me</a></xmp>
+    </div>
+  </div>
+  <div class="tabsEx1">
+    <ul style="height: 30px;">
+      <li><a href="#fragment-21"><span>Demo</span></a></li>
+      <li><a href="#fragment-22"><span>Javascript</span></a></li>
+      <li><a href="#fragment-23"><span>HTML</span></a></li>
+    </ul>
+    <div id="fragment-21">
+      <p>多元素绑定</p>
+      <p>当对象中包含多个元素时，可以一次性分别绑定弹窗事件</p>
+      <p> <a class='exp_2' href="#hello1">显示hello1.php的内容</a>
+        <button class='exp_2' alt="#hello2">显示hello2.php的内容</button>
+      </p>
+    </div>
+    <div id="fragment-22">
+      <xmp>javascript:$('.exp_2').tip();</xmp>
+    </div>
+    <div id="fragment-23">
+      <xmp> <a class='exp_2' href="#hello1">click me</a>
+        <button class='exp_2' alt="#hello2">click me</button>
+      </xmp>
+    </div>
+  </div>
+  <div class="tabsEx1">
+    <ul style="height: 30px;">
+      <li><a href="#fragment-31"><span>Demo</span></a></li>
+      <li><a href="#fragment-32"><span>Javascript</span></a></li>
+      <li><a href="#fragment-33"><span>HTML</span></a></li>
+    </ul>
+    <div id="fragment-31">
+      <p>高宽、定位控制</p>
+      <p>width、height、position可以设定高宽和定位</p>
+	  <p>position可以按如下方式定义:</p>
+	  <ul>
+		<li>字符串,可以为top,left,right,bottom,center,middle,对齐屏幕。</li>
+		<li>字符串,可以是rightnear,bottomnear,对齐点击元素。</li>
+		<li>二元数组,数组元素可以为数字或字符串,第一个表示X轴方向的定位，第二个表示Y轴方向的定位。</li>
+		<li>二元数组,数组元素第一个为rightnear或bottomnear,第二个随rightnear和bottomnear的不同分别表示X轴或Y轴的偏移量。</li>
+		<li>三元数组,前两个数组元素同上，第三个随rightnear和bottomnear的不同分别表示Y轴和X轴的偏移量。</li>
+	  </ul>
+      <p><a id='exp_3_1' href="#hello1">改成扁长方形，靠右显示</a></p>
+	  <p><a id='exp_3_2' href="#hello2">本链接下方显示bottomnear</a></p>
+	  <p><a id='exp_3_3' href="#hello1">[100,100]</a></p>
+	  <p><a id='exp_3_4' href="#hello2">[100,'bottom']</a></p>
+	  <p><a id='exp_3_5' href="#hello1">['rightnear',15]</a></p>
+	  <p><a id='exp_3_6' href="#hello2">['bottomnear',15,20]</a></p>
+    </div>
+    <div id="fragment-32">
+      <xmp>$('#exp_3_1').tip({
+        width: 600,
+        height:300,
+        position: ['right', 'top']
+        });
+		$( '#exp_3_2' ).tip( { position : 'bottomnear' } );
+	  </xmp>
+    </div>
+    <div id="fragment-33">
+	<xmp>
+      <p><a id='exp_3_1' href="#hello1">改成扁长方形，靠右显示</a></p>
+	  <p><a id='exp_3_2' href="#hello2">本链接下方显示bottomnear</a></p>
+	  <p><a id='exp_3_3' href="#hello1">[100,100]</a></p>
+	  <p><a id='exp_3_4' href="#hello2">[100,'bottom']</a></p>
+	  <p><a id='exp_3_5' href="#hello1">['rightnear',15]</a></p>
+	  <p><a id='exp_3_6' href="#hello2">['bottomnear',15,20]</a></p>
+    </xmp>
+	</div>
+  </div>
+  <div class="tabsEx1">
+    <ul style="height: 30px;">
+      <li><a href="#fragment-41"><span>Demo</span></a></li>
+      <li><a href="#fragment-42"><span>Javascript</span></a></li>
+      <li><a href="#fragment-43"><span>HTML</span></a></li>
+    </ul>
+    <div id="fragment-41">
+      <p>本地连接</p>
+      <p>如果content不为空，就会调用里面的字符串作为弹窗内容</p>
+      <p>如果为空，则会依次调用link属性、html代码中链接的href属性或按钮的alt属性
+      <p>
+        <button id='exp_4'>内容在本地js中</button>
+      </p>
+    </div>
+    <div id="fragment-42">
+      <xmp>$('#exp_4').tip( { title:'Hello exp_4', content:'This is local content' } );</xmp>
+    </div>
+    <div id="fragment-43">
+      <xmp>
+        <button id='exp_4'>click me</button>
+      </xmp>
+    </div>
+  </div>
+  <div class="tabsEx1">
+    <ul style="height: 30px;">
+      <li><a href="#fragment-51"><span>Demo</span></a></li>
+      <li><a href="#fragment-52"><span>Javascript</span></a></li>
+      <li><a href="#fragment-53"><span>HTML</span></a></li>
+    </ul>
+    <div id="fragment-51">
+      <p>设定拖动</p>
+      <p>draggable属性如果设为true,就可以通过拖动标题栏来移动弹出窗口。需要载入ui.core.js和ui.draggable.js</p>
+      <p>
+        <button id='exp_5' alt="#hello2">click me</button>
+      </p>
+    </div>
+    <div id="fragment-52">
+      <xmp>$('#exp_5').tip( { title:'Hello exp_5', content : '
+        <p>This is local content</p>
+        <p>This is another paragraph.</p>
+        ',draggable:true});</xmp>
+    </div>
+    <div id="fragment-53">
+      <xmp>
+        <button id='exp_5' alt="#hello2">click me</button>
+      </xmp>
+    </div>
+  </div>
+  <div class="tabsEx1">
+    <ul style="height: 30px;">
+      <li><a href="#fragment-61"><span>Demo</span></a></li>
+      <li><a href="#fragment-62"><span>Javascript</span></a></li>
+      <li><a href="#fragment-63"><span>HTML</span></a></li>
+    </ul>
+    <div id="fragment-61">
+      <p>改变显示动画</p>
+      <p>show可以改变显示动画,显示方法有show、slideDown、fadeIn等jQuery中有的动画函数</p>
+      <p>
+        <button id='exp_6' alt="#hello1">下拉效果</button>
+      </p>
+    </div>
+    <div id="fragment-62">
+      <xmp>$('#exp_6').tip( { show:'slideDown'} );</xmp>
+    </div>
+    <div id="fragment-63">
+      <xmp>
+        <button id='exp_6' alt="#hello1">slideDown</button>
+      </xmp>
+    </div>
+  </div>
+  <div class="tabsEx1">
+    <ul style="height: 30px;">
+      <li><a href="#fragment-71"><span>Demo</span></a></li>
+      <li><a href="#fragment-72"><span>Javascript</span></a></li>
+      <li><a href="#fragment-73"><span>HTML</span></a></li>
+    </ul>
+    <div id="fragment-71">
+      <p>设定触发事件方式</p>
+      <p>trigger属性默认为'click'</p>
+      <p>
+        <button id='exp_7' alt="#hello2">鼠标移动到这里</button>
+      </p>
+    </div>
+    <div id="fragment-72">
+      <xmp>$('#exp_7').tip( { trigger:'mouseover'} );</xmp>
+    </div>
+    <div id="fragment-73">
+      <xmp>
+        <button id='exp_7' alt="#hello2">click me</button>
+      </xmp>
+    </div>
+  </div>
+  <div class="tabsEx1">
+    <ul style="height: 30px;">
+      <li><a href="#fragment-81"><span>Demo</span></a></li>
+      <li><a href="#fragment-82"><span>Javascript</span></a></li>
+      <li><a href="#fragment-83"><span>HTML</span></a></li>
+    </ul>
+    <div id="fragment-81">
+      <p>设定回执函数</p>
+      <p>run属性可以设定触发的事件,this为弹出窗口的HTMLElement对象</p>
+      <p>run可以用来从服务器传执行函数在客户端运行，也可以在客户端预设一些函数在窗口显示后运行</p>
+      <p>
+        <button id='exp_8' alt="#hello1">利用run设定复杂的动画效果演示</button>
+      </p>
+    </div>
+    <div id="fragment-82">
+      <xmp>var options = { run: function(){
+        $(this).fadeOut('slow').slideDown().slideUp().show('slow').animate({left:0});
+        }};
+        $('#exp_8').tip(options);</xmp>
+    </div>
+    <div id="fragment-83">
+      <xmp>
+        <button id='exp_8' alt="#hello1">click me</button>
+      </xmp>
+    </div>
+  </div>
+  <div class="tabsEx1">
+    <ul style="height: 30px;">
+      <li><a href="#fragment-91"><span>Demo</span></a></li>
+      <li><a href="#fragment-92"><span>Javascript</span></a></li>
+      <li><a href="#fragment-93"><span>HTML</span></a></li>
+    </ul>
+    <div id="fragment-91">
+      <p>设置底部按钮</p>
+      <p>btns为一个数组,每个数组元素有两对键值组成:value和onclick</p>
+      <p>
+        <button id='exp_9' alt="#hello1">slideDown</button>
+      </p>
+    </div>
+    <div id="fragment-92">
+      <xmp> var _btns=[
+        {value:"警告",onclick: function(){
+        alert("警告");
+        }},
+        {value:"记过",onclick: function(){
+        alert("记过");
+        }},
+        {value:"开除",onclick: function(){
+        $('#tip_position,#tip_mask').remove();
+        }}
+        ];
+        $('#exp_9').tip({buttons:_btns});</xmp>
+    </div>
+    <div id="fragment-93">
+      <xmp>
+        <button id='exp_9' alt="#hello1">slideDown</button>
+      </xmp>
+    </div>
+  </div>
+  <div class="tabsEx1">
+    <ul style="height: 30px;">
+      <li><a href="#fragment-101"><span>Demo</span></a></li>
+      <li><a href="#fragment-102"><span>HTML</span></a></li>
+    </ul>
+    <div id="fragment-101">
+      <p>页面内绑定</p>
+      <p>可以直接在页面内绑定</p>
+      <p>
+        <button id='exp_10' alt="#hello1" onclick="$.tip()">这个是页面内绑定效果</button>
+      </p>
+    </div>
+    <div id="fragment-102">
+      <xmp>
+        <button id='exp_10' alt="#hello1" onclick="$.tip()">这个是页面内绑定效果</button>
+      </xmp>
+    </div>
+  </div>
+  <div class="tabsEx1">
+    <ul style="height: 30px;">
+      <li><a href="#fragment-111"><span>Demo</span></a></li>
+      <li><a href="#fragment-112"><span>Javascript</span></a></li>
+	  <li><a href="#fragment-113"><span>HTML</span></a><li>
+    </ul>
+    <div id="fragment-111">
+      <p>遮罩层</p>
+      <p>使用mask参数设置遮罩层</p>
+      <p>
+        <button id='exp_11' alt="#hello1">带遮罩的弹出窗口</button>
+      </p>
+    </div>
+    <div id="fragment-112">
+      <xmp>
+        <button id='exp_11' alt="#hello1">带遮罩的弹出窗口</button>
+      </xmp>
+    </div>
+  </div>
+</div>
+</body>
+</html>

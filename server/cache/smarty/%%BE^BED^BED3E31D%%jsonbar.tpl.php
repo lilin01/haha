@@ -1,0 +1,3 @@
+<?php /* Smarty version 2.6.10, created on 2010-11-10 21:30:21
+         compiled from delivery/jsonbar.tpl */ ?>
+<?php echo '({"g":[{"i":"http:\\/\\/localhost\\/ads\\/f9e52f2d491912fafaed8027fbb972d6fc142fe0.jpg","h":"http:\\/\\/localhost\\/ads\\/0fd526bf44906e9b965f7f277bfb8b0c2b62cc18.jpg","l":"http:\\/\\/localhost\\/delivery\\/link.php?apid=153&amp;adid=1162&amp;iid=4cd66a24a62b8f824a621000","d":"Make Cupcakes & Sweet Treats with Friends!","u":1,"m":[]}],"f":[],"t":{"b":"#26addc","h":"#2ec2f6","nh":"#fa913b","s":"http:\\/\\/cdn.applifier.com\\/images\\/a-blue.png"},"l":{"p":"Try new games and apps with The9","f":"Favorites","i":"http:\\/\\/cdn.applifier.com\\/images\\/identity-mask.png"},"os":false})'; ?>

@@ -1,0 +1,133 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="title" content="Applifier" />
+        <title>Applifier</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <script type="text/javascript" src="/admin/js/menu.js"></script>
+<script type="text/javascript" src="/admin/js/FusionCharts.js"></script>
+<script type="text/javascript" src="/admin/js/javascripts.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/admin/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/admin/js/jquery.qtip.js"></script>
+                <link rel="stylesheet" type="text/css" media="screen" href="/admin/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/admin/css/styles.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/admin/css/redmond/jquery-ui-1.8.5.custom.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://yui.yahooapis.com/3.1.2/build/cssreset/reset-min.css" />
+    </head>
+    <body>
+
+	<div id="header">
+		<div class="wrapper">                    
+                 <img id="bgimg" src="/images/title-bg.png" />
+   		<div class="innerwrapper">
+                    <div id="logo"><a href="/"><img src="/admin/images/applifier-logo.png" border="0" alt="Applifier" class="one" /></a></div>
+                            <ul id="mainmenu">
+                                                                <li id="50000" itemIcon="images/menu/home.png"><a href="/">Home</a></li>
+                                <li id="50002" itemIcon="images/menu/user_login.gif"><a href="/admin/login">Login</a></li>
+                                <li id="50003" itemIcon="images/menu/user_join.gif"><a href="/admin/register/index">Sign up</a></li>
+                                                                <li><a href="#" onclick="Zenbox.render(); return false;">Contact us</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+
+            <div class="blok_header">
+                <div class="header">                    
+
+                    <div class="clr"></div>
+                    <div class="menu">
+                        <div class="menu_left">
+                            <ul id="menuModel5">
+
+                            </ul>
+
+                        </div>
+
+
+                        <div class="clr"></div>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+            </div>
+      	<div id="content">
+		<div class="wrapper">
+                    
+                    <div class="body_bg">
+                        
+						
+                        <div class="content">
+                            
+<form action="/admin/login" method="post">
+  <table class="signin_table">
+    <div class="field">
+                <label><span class="title"><label for="signin_username">Email</label></span><span class="hint"></span></label>
+                <input type="text" name="signin[username]" id="signin_username" />
+                <div class="spacer">&nbsp;</div>
+                
+        </div>
+        <div class="field">
+                <label><span class="title"><label for="signin_password">Password</label></span><span class="hint"></span></label>
+                <input type="password" name="signin[password]" id="signin_password" />
+                <div class="spacer">&nbsp;</div>
+                
+        </div>
+        <div class="field">
+                <label><span class="title"><label for="signin_remember">Remember</label></span><span class="hint"></span></label>
+                <input type="checkbox" name="signin[remember]" id="signin_remember" /><input type="hidden" name="signin[_csrf_token]" value="8dd03785e14103863655bdc0b0f349b2" id="signin__csrf_token" />
+                <div class="spacer">&nbsp;</div>
+                
+        </div>
+          </table>
+
+  <input type="submit" value="sign in" />
+  <a href="/admin/request_password">Forgot your password?</a>
+</form>
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+                </div>
+                <div class="clr"></div>
+            </div>
+
+                     	<div id="footer">
+		<div class="wrapper">
+			<table class="footer">
+				<tr>
+					<td>
+						<h3>Get started</h3>
+							<ul>
+								<li><a href="admin/register">Sign up</a></li>
+								<li><a href="admin/login">Log in</a></li>
+								<li><a href="#/a/forgotpass">Lost password?</a></li>
+							</ul>
+					</td>
+					<td>
+						<h3>Contact</h3>
+						<ul>
+                                                    <li><a href="mailto:support@applifier.zendesk.com">support@applifier.zendesk.com</a></li>
+                                                    <li><a href="mailto:support@applifier.zendesk.com">&copy; Copyright Applifier.<br/>All Rights Reserved.</a></li>
+						</ul>
+					</td>					
+				</tr>
+			</table>
+		</div>
+	</div>                <script type="text/javascript">
+            var zenbox_params = {};
+            zenbox_params.tab_id = "support";
+            zenbox_params.tab_color = "black";
+            zenbox_params.title = "Applifier support";
+            zenbox_params.text = "Having problems? Want to give feedback or ask questions? Fill in the form and a living, breathing human will get back you within a reasonable time.";
+            zenbox_params.tag = "dropbox";
+            zenbox_params.url = "applifier.zendesk.com";
+        </script>
+        <style type='text/css'>@import url('//assets0.zendesk.com/external/zenbox/overlay.css');</style>
+        <script type='text/javascript' src='//assets0.zendesk.com/external/zenbox/overlay.js'></script>
+
+    </body>
+</html>

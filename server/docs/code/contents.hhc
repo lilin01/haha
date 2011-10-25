@@ -1,0 +1,1412 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="phpDocumentor version 1.3.0RC3">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="lib">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="interface">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Source Code">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Account.class.php">
+		<param name="Local" value="__filesource\fsource_lib_interface_interfaceAccount.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GameInterface.class.php">
+		<param name="Local" value="__filesource\fsource_lib_interface_interfaceGameInterface.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Intergral.class.php">
+		<param name="Local" value="__filesource\fsource_lib_interface_interfaceIntergral.class.php.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Account.class.php">
+		<param name="Local" value="lib\interface\_interface_Account_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GameInterface.class.php">
+		<param name="Local" value="lib\interface\_interface_GameInterface_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Intergral.class.php">
+		<param name="Local" value="lib\interface\_interface_Intergral_class_php.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Source Code">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Action.class.php">
+		<param name="Local" value="__filesource\fsource_lib_core_coreAction.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Application.class.php">
+		<param name="Local" value="__filesource\fsource_lib_core_coreApplication.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FirePHP.class.php">
+		<param name="Local" value="__filesource\fsource_lib_core_coreFirePHP.class.php.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Classes">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Action">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\core\Action.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Application">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\core\Application.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FirePHP">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\core\FirePHP.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Action.class.php">
+		<param name="Local" value="lib\core\_core_Action_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Application.class.php">
+		<param name="Local" value="lib\core\_core_Application_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FirePHP.class.php">
+		<param name="Local" value="lib\core\_core_FirePHP_class_php.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.page">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Source Code">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="APageFactory.class.php">
+		<param name="Local" value="__filesource\fsource_lib_core.page_pluginspageAPageFactory.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageExcel.class.php">
+		<param name="Local" value="__filesource\fsource_lib_core.page_pluginspagePageExcel.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageExtjsResponse.class.php">
+		<param name="Local" value="__filesource\fsource_lib_core.page_pluginspagePageExtjsResponse.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageJson.class.php">
+		<param name="Local" value="__filesource\fsource_lib_core.page_pluginspagePageJson.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageSmarty.class.php">
+		<param name="Local" value="__filesource\fsource_lib_core.page_pluginspagePageSmarty.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageXml.class.php">
+		<param name="Local" value="__filesource\fsource_lib_core.page_pluginspagePageXml.class.php.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Classes">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="APageFactory">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\core.page\APageFactory.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageExcel">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\core.page\PageExcel.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageExtjsResponse">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\core.page\PageExtjsResponse.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageJson">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\core.page\PageJson.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageSmarty">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\core.page\PageSmarty.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageXml">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\core.page\PageXml.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="APageFactory.class.php">
+		<param name="Local" value="lib\core.page\_plugins_page_APageFactory_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageExcel.class.php">
+		<param name="Local" value="lib\core.page\_plugins_page_PageExcel_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageExtjsResponse.class.php">
+		<param name="Local" value="lib\core.page\_plugins_page_PageExtjsResponse_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageJson.class.php">
+		<param name="Local" value="lib\core.page\_plugins_page_PageJson_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageSmarty.class.php">
+		<param name="Local" value="lib\core.page\_plugins_page_PageSmarty_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PageXml.class.php">
+		<param name="Local" value="lib\core.page\_plugins_page_PageXml_class_php.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="util">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Source Code">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ArrayUtil.class.php">
+		<param name="Local" value="__filesource\fsource_lib_util_utilArrayUtil.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CamelString.class.php">
+		<param name="Local" value="__filesource\fsource_lib_util_utilCamelString.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ChineseSpell.class.php">
+		<param name="Local" value="__filesource\fsource_lib_util_utilChineseSpell.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DateTime.class.php">
+		<param name="Local" value="__filesource\fsource_lib_util_utilDateTime.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileSystem.class.php">
+		<param name="Local" value="__filesource\fsource_lib_util_utilFileSystem.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Html.class.php">
+		<param name="Local" value="__filesource\fsource_lib_util_utilHtml.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Image.class.php">
+		<param name="Local" value="__filesource\fsource_lib_util_utilImage.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Ip.class.php">
+		<param name="Local" value="__filesource\fsource_lib_util_utilIp.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Json.class.php">
+		<param name="Local" value="__filesource\fsource_lib_util_utilJson.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="UploadFile.class.php">
+		<param name="Local" value="__filesource\fsource_lib_util_utilUploadFile.class.php.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Classes">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ArrayUtil">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\util\ArrayUtil.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CamelString">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\util\CamelString.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ChineseSpell">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\util\ChineseSpell.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DateTime">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\util\DateTime.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileSystem">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\util\FileSystem.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Html">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\util\Html.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Image">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\util\Image.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Ip">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\util\Ip.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Json">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\util\Json.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Services_JSON_Error">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\util\Services_JSON_Error.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="UploadFile">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\util\UploadFile.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ArrayUtil.class.php">
+		<param name="Local" value="lib\util\_util_ArrayUtil_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CamelString.class.php">
+		<param name="Local" value="lib\util\_util_CamelString_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ChineseSpell.class.php">
+		<param name="Local" value="lib\util\_util_ChineseSpell_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DateTime.class.php">
+		<param name="Local" value="lib\util\_util_DateTime_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileSystem.class.php">
+		<param name="Local" value="lib\util\_util_FileSystem_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Html.class.php">
+		<param name="Local" value="lib\util\_util_Html_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Image.class.php">
+		<param name="Local" value="lib\util\_util_Image_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Ip.class.php">
+		<param name="Local" value="lib\util\_util_Ip_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Json.class.php">
+		<param name="Local" value="lib\util\_util_Json_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="UploadFile.class.php">
+		<param name="Local" value="lib\util\_util_UploadFile_class_php.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="plugins.xml">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Source Code">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ArrayXml.class.php">
+		<param name="Local" value="__filesource\fsource_lib_plugins.xml_pluginsxmlArrayXml.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SimpleXml.class.php">
+		<param name="Local" value="__filesource\fsource_lib_plugins.xml_pluginsxmlSimpleXml.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Xml.class.php">
+		<param name="Local" value="__filesource\fsource_lib_plugins.xml_pluginsxmlXml.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XmlParse.class.php">
+		<param name="Local" value="__filesource\fsource_lib_plugins.xml_pluginsxmlXmlParse.class.php.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Classes">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ArrayXml">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\plugins.xml\ArrayXml.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SimpleXml">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\plugins.xml\SimpleXml.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Xml">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\plugins.xml\Xml.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XmlParse">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\plugins.xml\XmlParse.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ArrayXml.class.php">
+		<param name="Local" value="lib\plugins.xml\_plugins_xml_ArrayXml_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SimpleXml.class.php">
+		<param name="Local" value="lib\plugins.xml\_plugins_xml_SimpleXml_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Xml.class.php">
+		<param name="Local" value="lib\plugins.xml\_plugins_xml_Xml_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XmlParse.class.php">
+		<param name="Local" value="lib\plugins.xml\_plugins_xml_XmlParse_class_php.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="plugins.cache">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Source Code">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CacheFactory.class.php">
+		<param name="Local" value="__filesource\fsource_lib_plugins.cache_pluginscacheCacheFactory.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileCache.class.php">
+		<param name="Local" value="__filesource\fsource_lib_plugins.cache_pluginscacheFileCache.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Memcached.class.php">
+		<param name="Local" value="__filesource\fsource_lib_plugins.cache_pluginscacheMemcached.class.php.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Classes">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CacheFactory">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\plugins.cache\CacheFactory.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileCache">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\plugins.cache\FileCache.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Memcached">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\plugins.cache\Memcached.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CacheFactory.class.php">
+		<param name="Local" value="lib\plugins.cache\_plugins_cache_CacheFactory_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileCache.class.php">
+		<param name="Local" value="lib\plugins.cache\_plugins_cache_FileCache_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Memcached.class.php">
+		<param name="Local" value="lib\plugins.cache\_plugins_cache_Memcached_class_php.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="smarty">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Source Code">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Config_File.class.php">
+		<param name="Local" value="__filesource\fsource_lib_smarty_smartyConfig_File.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Smarty.class.php">
+		<param name="Local" value="__filesource\fsource_lib_smarty_smartySmarty.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Smarty_Compiler.class.php">
+		<param name="Local" value="__filesource\fsource_lib_smarty_smartySmarty_Compiler.class.php.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Config_File.class.php">
+		<param name="Local" value="lib\smarty\_smarty_Config_File_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Smarty.class.php">
+		<param name="Local" value="lib\smarty\_smarty_Smarty_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Smarty_Compiler.class.php">
+		<param name="Local" value="lib\smarty\_smarty_Smarty_Compiler_class_php.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="plugins.orm">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Source Code">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="constant.inc.php">
+		<param name="Local" value="__filesource\fsource_lib_plugins.orm_pluginsormconstant.inc.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrmFactory.class.php">
+		<param name="Local" value="__filesource\fsource_lib_plugins.orm_pluginsormOrmFactory.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrmQuery.class.php">
+		<param name="Local" value="__filesource\fsource_lib_plugins.orm_pluginsormOrmQuery.class.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrmSession.class.php">
+		<param name="Local" value="__filesource\fsource_lib_plugins.orm_pluginsormOrmSession.class.php.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="constant.inc.php">
+		<param name="Local" value="lib\plugins.orm\_plugins_orm_constant_inc_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrmFactory.class.php">
+		<param name="Local" value="lib\plugins.orm\_plugins_orm_OrmFactory_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrmQuery.class.php">
+		<param name="Local" value="lib\plugins.orm\_plugins_orm_OrmQuery_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrmSession.class.php">
+		<param name="Local" value="lib\plugins.orm\_plugins_orm_OrmSession_class_php.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Classes">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrmFactory">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\plugins.orm\OrmFactory.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrmQuery">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\plugins.orm\OrmQuery.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrmSession">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\plugins.orm\OrmSession.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="plugins.orm.parser">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Source Code">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrmMysqlParser.class.php">
+		<param name="Local" value="__filesource\fsource_lib_plugins.orm.parser_pluginsormparserOrmMysqlParser.class.php.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Classes">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrmParser">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\plugins.orm.parser\OrmParser.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrmMysqlParser.class.php">
+		<param name="Local" value="lib\plugins.orm.parser\_plugins_orm_parser_OrmMysqlParser_class_php.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL>	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="lib Alphabetical Index">
+		<param name="Local" value="lib\elementindex_lib.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="lib Class Trees">
+		<param name="Local" value="classtrees_lib.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="base.inc.php">
+		<param name="Local" value="lib\_base_inc_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ValidateCode.class.php">
+		<param name="Local" value="lib\_util_ValidateCode_class_php.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Source Code">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="base.inc.php">
+		<param name="Local" value="__filesource\fsource_lib__base.inc.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ValidateCode.class.php">
+		<param name="Local" value="__filesource\fsource_lib__utilValidateCode.class.php.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Classes">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GIFEncoder">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="lib\GIFEncoder.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="interface">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="interface Alphabetical Index">
+		<param name="Local" value="interface\elementindex_interface.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="interface Class Trees">
+		<param name="Local" value="classtrees_interface.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Classes">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Account">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="interface\Account.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GameInterface">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="interface\GameInterface.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Intergral">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="interface\Intergral.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ValidateCode">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="interface\ValidateCode.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Smarty">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="plugins">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Source Code">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="block.textformat.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsblock.textformat.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="compiler.assign.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginscompiler.assign.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.assemble_plugin_filepath.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.assemble_plugin_filepath.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.assign_smarty_interface.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.assign_smarty_interface.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.create_dir_structure.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.create_dir_structure.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.display_debug_console.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.display_debug_console.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.get_include_path.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.get_include_path.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.get_microtime.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.get_microtime.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.get_php_resource.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.get_php_resource.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.is_secure.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.is_secure.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.is_trusted.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.is_trusted.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.load_plugins.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.load_plugins.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.load_resource_plugin.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.load_resource_plugin.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.process_cached_inserts.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.process_cached_inserts.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.process_compiled_include.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.process_compiled_include.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.read_cache_file.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.read_cache_file.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.rmdir.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.rmdir.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.rm_auto.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.rm_auto.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.run_insert_handler.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.run_insert_handler.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.smarty_include_php.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.smarty_include_php.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.write_cache_file.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.write_cache_file.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.write_compiled_include.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.write_compiled_include.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.write_compiled_resource.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.write_compiled_resource.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.write_file.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartyinternalscore.write_file.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.assign_debug_info.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.assign_debug_info.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.config_load.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.config_load.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.counter.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.counter.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.cycle.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.cycle.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.debug.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.debug.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.eval.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.eval.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.fetch.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.fetch.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.html_checkboxes.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.html_checkboxes.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.html_image.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.html_image.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.html_options.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.html_options.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.html_radios.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.html_radios.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.html_select_date.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.html_select_date.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.html_select_time.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.html_select_time.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.html_table.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.html_table.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.mailto.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.mailto.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.math.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.math.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.popup.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.popup.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.popup_init.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsfunction.popup_init.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.capitalize.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.capitalize.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.cat.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.cat.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.count_characters.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.count_characters.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.count_paragraphs.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.count_paragraphs.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.count_sentences.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.count_sentences.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.count_words.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.count_words.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.date_format.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.date_format.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.debug_print_var.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.debug_print_var.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.default.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.default.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.escape.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.escape.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.indent.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.indent.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.lower.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.lower.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.nl2br.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.nl2br.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.regex_replace.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.regex_replace.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.replace.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.replace.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.spacify.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.spacify.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.string_format.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.string_format.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.strip.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.strip.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.strip_tags.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.strip_tags.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.truncate.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.truncate.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.upper.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.upper.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.wordwrap.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsmodifier.wordwrap.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="outputfilter.trimwhitespace.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsoutputfilter.trimwhitespace.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="shared.escape_special_chars.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsshared.escape_special_chars.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="shared.make_timestamp.php">
+		<param name="Local" value="__filesource\fsource_Smarty_plugins_smartypluginsshared.make_timestamp.php.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="block.textformat.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_block_textformat_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="compiler.assign.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_compiler_assign_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.assemble_plugin_filepath.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_assemble_plugin_filepath_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.assign_smarty_interface.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_assign_smarty_interface_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.create_dir_structure.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_create_dir_structure_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.display_debug_console.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_display_debug_console_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.get_include_path.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_get_include_path_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.get_microtime.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_get_microtime_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.get_php_resource.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_get_php_resource_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.is_secure.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_is_secure_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.is_trusted.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_is_trusted_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.load_plugins.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_load_plugins_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.load_resource_plugin.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_load_resource_plugin_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.process_cached_inserts.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_process_cached_inserts_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.process_compiled_include.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_process_compiled_include_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.read_cache_file.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_read_cache_file_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.rmdir.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_rmdir_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.rm_auto.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_rm_auto_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.run_insert_handler.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_run_insert_handler_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.smarty_include_php.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_smarty_include_php_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.write_cache_file.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_write_cache_file_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.write_compiled_include.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_write_compiled_include_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.write_compiled_resource.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_write_compiled_resource_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="core.write_file.php">
+		<param name="Local" value="Smarty\plugins\_smarty_internals_core_write_file_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.assign_debug_info.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_assign_debug_info_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.config_load.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_config_load_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.counter.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_counter_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.cycle.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_cycle_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.debug.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_debug_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.eval.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_eval_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.fetch.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_fetch_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.html_checkboxes.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_html_checkboxes_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.html_image.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_html_image_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.html_options.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_html_options_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.html_radios.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_html_radios_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.html_select_date.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_html_select_date_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.html_select_time.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_html_select_time_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.html_table.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_html_table_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.mailto.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_mailto_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.math.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_math_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.popup.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_popup_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="function.popup_init.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_function_popup_init_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.capitalize.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_capitalize_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.cat.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_cat_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.count_characters.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_count_characters_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.count_paragraphs.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_count_paragraphs_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.count_sentences.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_count_sentences_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.count_words.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_count_words_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.date_format.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_date_format_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.debug_print_var.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_debug_print_var_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.default.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_default_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.escape.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_escape_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.indent.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_indent_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.lower.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_lower_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.nl2br.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_nl2br_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.regex_replace.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_regex_replace_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.replace.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_replace_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.spacify.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_spacify_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.string_format.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_string_format_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.strip.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_strip_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.strip_tags.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_strip_tags_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.truncate.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_truncate_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.upper.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_upper_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="modifier.wordwrap.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_modifier_wordwrap_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="outputfilter.trimwhitespace.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_outputfilter_trimwhitespace_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="shared.escape_special_chars.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_shared_escape_special_chars_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="shared.make_timestamp.php">
+		<param name="Local" value="Smarty\plugins\_smarty_plugins_shared_make_timestamp_php.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL>	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Smarty Alphabetical Index">
+		<param name="Local" value="Smarty\elementindex_Smarty.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Smarty Class Trees">
+		<param name="Local" value="classtrees_Smarty.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Classes">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Config_File">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="Smarty\Config_File.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Smarty">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="Smarty\Smarty.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Smarty_Compiler">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="Smarty\Smarty_Compiler.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Index">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Alphabetical Index Of All Elements">
+		<param name="Local" value="elementindex.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Start page">
+		<param name="Local" value="blank.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Manual">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Todo List">
+		<param name="Local" value="todolist.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL>
+</BODY></HTML>

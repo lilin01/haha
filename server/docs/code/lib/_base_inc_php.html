@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs for page base.inc.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name"><img src="../media/images/Page_logo.png" alt="File" style="vertical-align: middle">/base.inc.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">转换数组中所有元素的字符集</p>
+	<ul class="tags">
+				<li><span class="field">filesource:</span> <a href="..//__filesource/fsource_lib__base.inc.php.html">Source Code for this file</a></li>
+				<li><span class="field">author:</span> <p>张立冰(roast) &lt;<a href="mailto:roast@php.net">roast@php.net</a>&gt;</p><p>$Id: base.inc.php 98 2009-05-06 01:53:29Z libing $</p></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionapiXmlToArray" id="functionapiXmlToArray"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Function.png" />
+		<span class="method-title">apiXmlToArray</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__base.inc.php.html#a153">153</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">提供给游戏API返回的XML格式数据转换为数组格式</p>
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			apiXmlToArray
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$list</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">0</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$list</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$count</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionarrayCharsetConvert" id="functionarrayCharsetConvert"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Function.png" />
+		<span class="method-title">arrayCharsetConvert</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__base.inc.php.html#a133">133</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">转换数组中所有元素的字符集</p>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			arrayCharsetConvert
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">&$array</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$to</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$from</span> = <span class="var-default">'GBK'</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$array</span><span class="var-description">: 源数组</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$to</span><span class="var-description">: 目标字符集</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$from</span><span class="var-description">: 源字符集</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiondebug" id="functiondebug"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Function.png" />
+		<span class="method-title">debug</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__base.inc.php.html#a109">109</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Debug 函数,可以包含多个参数,逐个输出变量的值  注: 输出中debug_0代表第一个参数,debug_1代表第二个参数,以此类推.</p>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			debug
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionhead" id="functionhead"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Function.png" />
+		<span class="method-title">head</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__base.inc.php.html#a237">237</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">根据用户的UserId来散列获取头像的绝对路径</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 头像的绝对路径</li>
+				<li><span class="field">author:</span> 陈敬钻 &lt;<a href="mailto:chenjingzuan@corp.the9.com">chenjingzuan@corp.the9.com</a>&gt;</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			head
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$userid_s</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$userid_s</span><span class="var-description">: userid后跟s， 其中s 表示图片的规格， 0表示60×60，1表示80×80，2表示100×100,3表示180×180,4表示15×15</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionheadCut" id="functionheadCut"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Function.png" />
+		<span class="method-title">headCut</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__base.inc.php.html#a264">264</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">该函数仅用于返回裁剪头像时的保存目录</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 头像在本地存放路径</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			headCut
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$user_id</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$userid</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$userid</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionimport" id="functionimport"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Function.png" />
+		<span class="method-title">import</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__base.inc.php.html#a19">19</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">导入文件</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 如果导入成功则返回true，否则返回异常对象</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">Exception</span>
+		<span class="method-name">
+			import
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$classString</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$fileType</span> = <span class="var-default">'class'</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$classString</span><span class="var-description">: 导入文件路径字符串,可以用&quot;.&quot;代替&quot;/&quot;</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fileType</span><span class="var-description">: 导入文件类型的扩展名(带&quot;.&quot;号),也可以是class/inc(简写方式)</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionimportModule" id="functionimportModule"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Function.png" />
+		<span class="method-title">importModule</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__base.inc.php.html#a85">85</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">导入模块文件</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 如果导入成功则返回true，否则返回异常对象</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">Exception</span>
+		<span class="method-name">
+			importModule
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$classString</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$fileType</span> = <span class="var-default">'class'</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$classString</span><span class="var-description">: 导入文件路径字符串,可以用&quot;.&quot;代替&quot;/&quot;</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fileType</span><span class="var-description">: 导入文件类型的扩展名(带&quot;.&quot;号),也可以是class/inc(简写方式)</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionphoto" id="functionphoto"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Function.png" />
+		<span class="method-title">photo</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__base.inc.php.html#a286">286</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">取图片的绝对路径</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 图片绝对路径</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			photo
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$pid</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$server</span> = <span class="var-default">2</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$pid</span><span class="var-description">: 图片的ID</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$type</span><span class="var-description">: 图片类型,0缩略图,1大图</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$server</span><span class="var-description">: 防止block服务器数,默认两台.</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionstripslashesForArray" id="functionstripslashesForArray"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Function.png" />
+		<span class="method-title">stripslashesForArray</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__base.inc.php.html#a57">57</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">为数组中的每个元素取消魔术引用</p>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			stripslashesForArray
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">&$var</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$var</span><span class="var-description">: 要取消魔术引用的变量,可以是数组或字符串</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiontable" id="functiontable"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Function.png" />
+		<span class="method-title">table</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__base.inc.php.html#a212">212</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">根据用户的UserId来散列获取分表名称</p>
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			table
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$user_id</span><span class="var-description">: 用户表中的UserId</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionthrowException" id="functionthrowException"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Function.png" />
+		<span class="method-title">throwException</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__base.inc.php.html#a122">122</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">抛出异常处理</p>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			throwException
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$msg</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$code</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_htmlspecialchars" id="function_htmlspecialchars"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Function.png" />
+		<span class="method-title">_htmlspecialchars</span> (line <span class="line-number"><a href="..//__filesource/fsource_lib__base.inc.php.html#a223">223</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">对Smarty中的html标记添加引号的过滤</p>
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			_htmlspecialchars
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 05 Aug 2009 07:45:25 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</div></body>
+</html>

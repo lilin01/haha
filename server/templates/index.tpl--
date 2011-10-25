@@ -1,0 +1,7 @@
+{section name=item loop=$data}
+	name: {$data[item].name}<br>
+	sex: {$data[item].sex}<br>
+{/section}
+
+
+{$title}

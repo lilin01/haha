@@ -1,0 +1,1970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class FirePHP</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> FirePHP</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sends the given data to the FirePHP Firefox Extension.</p>
+<p class="description"><p>The data can be displayed in the Firebug Console or in the  &quot;Server&quot; request tab.</p><p>For more information see: http://www.firephp.org/</p></p>
+	<ul class="tags">
+				<li><span class="field">license:</span> <a href="http://www.opensource.org/licenses/bsd-license.php">http://www.opensource.org/licenses/bsd-license.php</a></li>
+				<li><span class="field">author:</span> Christoph Dorn &lt;<a href="mailto:christoph@christophdorn.com">christoph@christophdorn.com</a>&gt;</li>
+				<li><span class="field">copyright:</span> Copyright (C) 2007-2008 Christoph Dorn</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_core_FirePHP_class_php.html">/core/FirePHP.class.php</a> (line <span class="field"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a58">58</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#DUMP" title="details" class="const-name">DUMP</a> = 					<span class="var-type"> 'DUMP'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ERROR" title="details" class="const-name">ERROR</a> = 					<span class="var-type"> 'ERROR'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#EXCEPTION" title="details" class="const-name">EXCEPTION</a> = 					<span class="var-type"> 'EXCEPTION'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#GROUP_END" title="details" class="const-name">GROUP_END</a> = 					<span class="var-type"> 'GROUP_END'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#GROUP_START" title="details" class="const-name">GROUP_START</a> = 					<span class="var-type"> 'GROUP_START'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#INFO" title="details" class="const-name">INFO</a> = 					<span class="var-type"> 'INFO'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#LOG" title="details" class="const-name">LOG</a> = 					<span class="var-type"> 'LOG'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#TABLE" title="details" class="const-name">TABLE</a> = 					<span class="var-type"> 'TABLE'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#TRACE" title="details" class="const-name">TRACE</a> = 					<span class="var-type"> 'TRACE'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#VERSION" title="details" class="const-name">VERSION</a> = 					<span class="var-type"> '0.2.0'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#WARN" title="details" class="const-name">WARN</a> = 					<span class="var-type"> 'WARN'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$enabled" title="details" class="var-name">$enabled</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../FirePHP/FirePHP.html">FirePHP</a></span>
+					<a href="#$instance" title="details" class="var-name">$instance</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$messageIndex" title="details" class="var-name">$messageIndex</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$objectFilters" title="details" class="var-name">$objectFilters</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">object</span>
+					<a href="#$objectStack" title="details" class="var-name">$objectStack</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$options" title="details" class="var-name">$options</a>
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">FirePHP</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#detectClientExtension" title="details" class="method-name">detectClientExtension</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">true</span>
+										<a href="#dump" title="details" class="method-name">dump</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$Key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$Variable</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#encodeObject" title="details" class="method-name">encodeObject</a>
+											(<span class="var-type">Object</span>&nbsp;<span class="var-name">$Object</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ObjectDepth</span> = <span class="var-default">1</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ArrayDepth</span> = <span class="var-default">1</span>], <span class="var-type">int</span>&nbsp;<span class="var-name">$Depth</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#encodeTable" title="details" class="method-name">encodeTable</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$Table</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">true</span>
+										<a href="#error" title="details" class="method-name">error</a>
+											(<span class="var-type">mixes</span>&nbsp;<span class="var-name">$Object</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$Label</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#errorHandler" title="details" class="method-name">errorHandler</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$errno</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$errstr</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$errfile</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$errline</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$errcontext</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#exceptionHandler" title="details" class="method-name">exceptionHandler</a>
+											(<span class="var-type">Exception</span>&nbsp;<span class="var-name">$Exception</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">true</span>
+										<a href="#fb" title="details" class="method-name">fb</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$Object</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getEnabled" title="details" class="method-name">getEnabled</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../FirePHP/FirePHP.html">FirePHP</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$AutoCreate</span> = <span class="var-default">false</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string|false</span>
+										<a href="#getUserAgent" title="details" class="method-name">getUserAgent</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">true</span>
+										<a href="#group" title="details" class="method-name">group</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$Name</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">true</span>
+										<a href="#groupEnd" title="details" class="method-name">groupEnd</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">true</span>
+										<a href="#info" title="details" class="method-name">info</a>
+											(<span class="var-type">mixes</span>&nbsp;<span class="var-name">$Object</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$Label</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../FirePHP/FirePHP.html">FirePHP</a></span>
+										<a href="#init" title="details" class="method-name">init</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#is_utf8" title="details" class="method-name">is_utf8</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#jsonEncode" title="details" class="method-name">jsonEncode</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$Object</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$skipObjectEncode</span> = <span class="var-default">false</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">true</span>
+										<a href="#log" title="details" class="method-name">log</a>
+											(<span class="var-type">mixes</span>&nbsp;<span class="var-name">$Object</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$Label</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Exception</span>
+										<a href="#newException" title="details" class="method-name">newException</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$Message</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#registerErrorHandler" title="details" class="method-name">registerErrorHandler</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#registerExceptionHandler" title="details" class="method-name">registerExceptionHandler</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setEnabled" title="details" class="method-name">setEnabled</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$Enabled</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setHeader" title="details" class="method-name">setHeader</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$Name</span>, <span class="var-type">string_type</span>&nbsp;<span class="var-name">$Value</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setObjectFilter" title="details" class="method-name">setObjectFilter</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$Class</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$Filter</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setOptions" title="details" class="method-name">setOptions</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$Options</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setProcessorUrl" title="details" class="method-name">setProcessorUrl</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$URL</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRendererUrl" title="details" class="method-name">setRendererUrl</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$URL</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">true</span>
+										<a href="#table" title="details" class="method-name">table</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$Label</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Table</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">true</span>
+										<a href="#trace" title="details" class="method-name">trace</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$Label</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">true</span>
+										<a href="#warn" title="details" class="method-name">warn</a>
+											(<span class="var-type">mixes</span>&nbsp;<span class="var-name">$Object</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$Label</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#_escapeTrace" title="details" class="method-name">_escapeTrace</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$Trace</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_escapeTraceFile" title="details" class="method-name">_escapeTraceFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$File</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_standardizePath" title="details" class="method-name">_standardizePath</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$Path</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#__sleep" title="details" class="method-name">__sleep</a>
+										()
+									</div>
+							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$enabled" id="$enabled"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$enabled</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a187">187</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Flag to enable/disable logging</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$instance" id="$instance"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../FirePHP/FirePHP.html">FirePHP</a></span>
+			<span class="var-name">$instance</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a152">152</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Singleton instance of FirePHP</p>
+	<ul class="tags">
+				<li><span class="field">static:</span> </li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$messageIndex" id="$messageIndex"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$messageIndex</span>
+			 = <span class="var-default"> 1</span>			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a159">159</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wildfire protocol message index</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$objectFilters" id="$objectFilters"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$objectFilters</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a173">173</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Filters used to exclude object members when encoding</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$objectStack" id="$objectStack"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">object</span>
+			<span class="var-name">$objectStack</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a180">180</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A stack of objects used to detect recursion during object encoding</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$options" id="$options"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$options</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a166">166</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Options for the library</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a192">192</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The object constructor</p>
+	
+	<div class="method-signature">
+		<span class="method-result">FirePHP</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methoddetectClientExtension" id="detectClientExtension"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">detectClientExtension</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a472">472</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check if FirePHP is installed on client</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			detectClientExtension
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methoddump" id="dump"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">dump</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a438">438</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Dumps key and variable to firebug server panel</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">see:</span> <a href="../FirePHP/FirePHP.html#constDUMP">FirePHP::DUMP</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">true</span>
+		<span class="method-name">
+			dump
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$Key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$Variable</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Key</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$Variable</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodencodeObject" id="encodeObject"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">encodeObject</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a858">858</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encodes an object including members with  protected and private visibility</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> All members of the object</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			encodeObject
+		</span>
+					(<span class="var-type">Object</span>&nbsp;<span class="var-name">$Object</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ObjectDepth</span> = <span class="var-default">1</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ArrayDepth</span> = <span class="var-default">1</span>], <span class="var-type">int</span>&nbsp;<span class="var-name">$Depth</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Object</span>
+				<span class="var-name">$Object</span><span class="var-description">: The object to be encoded</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$Depth</span><span class="var-description">: The current traversal depth</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodencodeTable" id="encodeTable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">encodeTable</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a838">838</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encodes a table by encoding each row and column with encodeObject()</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			encodeTable
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$Table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$Table</span><span class="var-description">: The table to be encoded</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methoderror" id="error"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">error</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a425">425</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log object with label to firebug console</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">see:</span> <a href="../FirePHP/FirePHP.html#constERROR">FirePHP::ERROR</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">true</span>
+		<span class="method-name">
+			error
+		</span>
+					(<span class="var-type">mixes</span>&nbsp;<span class="var-name">$Object</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$Label</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixes</span>
+				<span class="var-name">$Object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Label</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methoderrorHandler" id="errorHandler"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">errorHandler</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a304">304</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FirePHP's error handler</p>
+<p class="description"><p>Throws exception for each php error that will occur.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			errorHandler
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$errno</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$errstr</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$errfile</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$errline</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$errcontext</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$errno</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$errstr</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$errfile</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$errline</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$errcontext</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodexceptionHandler" id="exceptionHandler"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">exceptionHandler</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a332">332</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FirePHP's exception handler</p>
+<p class="description"><p>Logs all exceptions to your firebug console and then stops the script.</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> Exception</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			exceptionHandler
+		</span>
+					(<span class="var-type">Exception</span>&nbsp;<span class="var-name">$Exception</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Exception</span>
+				<span class="var-name">$Exception</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodfb" id="fb"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">fb</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a489">489</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log varible to Firebug</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return TRUE if message was added to headers, FALSE otherwise</li>
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">see:</span> <a href="http://www.firephp.org/Wiki/Reference/Fb">http://www.firephp.org/Wiki/Reference/Fb</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">true</span>
+		<span class="method-name">
+			fb
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$Object</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$Object</span><span class="var-description">: The variable to be logged</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetEnabled" id="getEnabled"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getEnabled</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a245">245</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check if logging is enabled</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> TRUE if enabled</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getEnabled
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getInstance</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a214">214</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets singleton instance of FirePHP</p>
+	<ul class="tags">
+				<li><span class="field">static:</span> </li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../FirePHP/FirePHP.html">FirePHP</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$AutoCreate</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$AutoCreate</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetUserAgent" id="getUserAgent"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getUserAgent</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a794">794</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get user agent</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string|false</span>
+		<span class="method-name">
+			getUserAgent
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgroup" id="group"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">group</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a363">363</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Start a group for following messages</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throws:</span> Exception</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">true</span>
+		<span class="method-name">
+			group
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$Name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Name</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgroupEnd" id="groupEnd"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">groupEnd</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a373">373</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Ends a group you have started before</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throws:</span> Exception</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">true</span>
+		<span class="method-name">
+			groupEnd
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodinfo" id="info"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">info</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a399">399</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log object with label to firebug console</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">see:</span> <a href="../FirePHP/FirePHP.html#constINFO">FirePHP::INFO</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">true</span>
+		<span class="method-name">
+			info
+		</span>
+					(<span class="var-type">mixes</span>&nbsp;<span class="var-name">$Object</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$Label</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixes</span>
+				<span class="var-name">$Object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Label</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodinit" id="init"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">init</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a226">226</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates FirePHP object and stores it for singleton access</p>
+	<ul class="tags">
+				<li><span class="field">static:</span> </li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../FirePHP/FirePHP.html">FirePHP</a></span>
+		<span class="method-name">
+			init
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodis_utf8" id="is_utf8"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">is_utf8</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a991">991</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if $string is valid UTF-8 and false otherwise.</p>
+	<ul class="tags">
+				<li><span class="field">static:</span> </li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			is_utf8
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$str</span><span class="var-description">: String to be tested</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodjsonEncode" id="jsonEncode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">jsonEncode</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a817">817</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encode an object into a JSON string</p>
+<p class="description"><p>Uses PHP's jeson_encode() if available</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The JSON string</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			jsonEncode
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$Object</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$skipObjectEncode</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$Object</span><span class="var-description">: The object to be encoded</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodlog" id="log"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">log</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a386">386</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log object with label to firebug console</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">see:</span> <a href="../FirePHP/FirePHP.html#constLOG">FirePHP::LOG</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">true</span>
+		<span class="method-name">
+			log
+		</span>
+					(<span class="var-type">mixes</span>&nbsp;<span class="var-name">$Object</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$Label</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixes</span>
+				<span class="var-name">$Object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Label</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodnewException" id="newException"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">newException</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a805">805</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a new exception</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Exception</span>
+		<span class="method-name">
+			newException
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$Message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Message</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodregisterErrorHandler" id="registerErrorHandler"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">registerErrorHandler</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a283">283</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Register FirePHP as your error handler</p>
+<p class="description"><p>Will throw exceptions for each php error.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			registerErrorHandler
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodregisterExceptionHandler" id="registerExceptionHandler"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">registerExceptionHandler</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a319">319</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Register FirePHP as your exception handler</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			registerExceptionHandler
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodsetEnabled" id="setEnabled"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setEnabled</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a236">236</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Enable and disable logging to Firebug</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setEnabled
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$Enabled</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$Enabled</span><span class="var-description">: TRUE to enable, FALSE to disable</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetHeader" id="setHeader"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setHeader</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a785">785</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Send header</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setHeader
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$Name</span>, <span class="var-type">string_type</span>&nbsp;<span class="var-name">$Value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Name</span>			</li>
+					<li>
+				<span class="var-type">string_type</span>
+				<span class="var-name">$Value</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetObjectFilter" id="setObjectFilter"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setObjectFilter</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a258">258</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Specify a filter to be used when encoding an object</p>
+<p class="description"><p>Filters are used to exclude object members.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setObjectFilter
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$Class</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$Filter</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Class</span><span class="var-description">: The class name of the object</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$Filter</span><span class="var-description">: An array or members to exclude</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetOptions" id="setOptions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setOptions</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a274">274</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set some options for the library</p>
+<p class="description"><p>Options: <ul><li>maxObjectDepth: The maximum depth to traverse objects (default: 10)</li><li>maxArrayDepth: The maximum depth to traverse arrays (default: 20)</li><li>useNativeJsonEncode: If true will use json_encode() (default: true)</li><li>includeLineNumbers: If true will include line numbers and filenames (default: true)</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setOptions
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$Options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$Options</span><span class="var-description">: The options to be set</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetProcessorUrl" id="setProcessorUrl"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setProcessorUrl</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a341">341</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set custom processor url for FirePHP</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setProcessorUrl
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$URL</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$URL</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetRendererUrl" id="setRendererUrl"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setRendererUrl</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a351">351</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set custom renderer url for FirePHP</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRendererUrl
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$URL</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$URL</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodtable" id="table"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">table</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a463">463</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log a table in the firebug console</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">see:</span> <a href="../FirePHP/FirePHP.html#constTABLE">FirePHP::TABLE</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">true</span>
+		<span class="method-name">
+			table
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$Label</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Label</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Table</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodtrace" id="trace"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">trace</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a450">450</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log a trace in the firebug console</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">see:</span> <a href="../FirePHP/FirePHP.html#constTRACE">FirePHP::TRACE</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">true</span>
+		<span class="method-name">
+			trace
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$Label</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Label</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodwarn" id="warn"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">warn</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a412">412</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log object with label to firebug console</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">see:</span> <a href="../FirePHP/FirePHP.html#constWARN">FirePHP::WARN</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">true</span>
+		<span class="method-name">
+			warn
+		</span>
+					(<span class="var-type">mixes</span>&nbsp;<span class="var-name">$Object</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$Label</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixes</span>
+				<span class="var-name">$Object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Label</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="method_escapeTrace" id="_escapeTrace"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">_escapeTrace</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a748">748</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Escape trace path for windows systems</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			_escapeTrace
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$Trace</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$Trace</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="method_escapeTraceFile" id="_escapeTraceFile"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">_escapeTraceFile</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a767">767</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Escape file information of trace for windows systems</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_escapeTraceFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$File</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$File</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="method_standardizePath" id="_standardizePath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">_standardizePath</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a738">738</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Standardizes path for windows systems.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_standardizePath
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$Path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Path</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="method__sleep" id="__sleep"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">__sleep</span> (line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a204">204</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">When the object gets serialized only include specific object members.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			__sleep
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constDUMP" id="DUMP"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">DUMP</span>
+			 = <span class="const-default"> 'DUMP'</span>
+			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a108">108</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Dumps a variable to firebug's server panel</p>
+	
+	
+</div>
+<a name="constERROR" id="ERROR"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ERROR</span>
+			 = <span class="const-default"> 'ERROR'</span>
+			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a101">101</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Firebug ERROR level</p>
+<p class="description"><p>Logs a message to firebug console, displays an error icon before the message and colors the line yellow. Also increments the firebug error count.</p></p>
+	
+	
+</div>
+<a name="constEXCEPTION" id="EXCEPTION"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">EXCEPTION</span>
+			 = <span class="const-default"> 'EXCEPTION'</span>
+			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a124">124</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Displays an exception in firebug console</p>
+<p class="description"><p>Increments the firebug error count.</p></p>
+	
+	
+</div>
+<a name="constGROUP_END" id="GROUP_END"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">GROUP_END</span>
+			 = <span class="const-default"> 'GROUP_END'</span>
+			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a145">145</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Ends a group in firebug console</p>
+	
+	
+</div>
+<a name="constGROUP_START" id="GROUP_START"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">GROUP_START</span>
+			 = <span class="const-default"> 'GROUP_START'</span>
+			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a138">138</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Starts a group in firebug console</p>
+	
+	
+</div>
+<a name="constINFO" id="INFO"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">INFO</span>
+			 = <span class="const-default"> 'INFO'</span>
+			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a83">83</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Firebug INFO level</p>
+<p class="description"><p>Logs a message to firebug console and displays an info icon before the message.</p></p>
+	
+	
+</div>
+<a name="constLOG" id="LOG"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LOG</span>
+			 = <span class="const-default"> 'LOG'</span>
+			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a74">74</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Firebug LOG level</p>
+<p class="description"><p>Logs a message to firebug console.</p></p>
+	
+	
+</div>
+<a name="constTABLE" id="TABLE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">TABLE</span>
+			 = <span class="const-default"> 'TABLE'</span>
+			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a131">131</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Displays an table in firebug console</p>
+	
+	
+</div>
+<a name="constTRACE" id="TRACE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">TRACE</span>
+			 = <span class="const-default"> 'TRACE'</span>
+			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a115">115</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Displays a stack trace in firebug console</p>
+	
+	
+</div>
+<a name="constVERSION" id="VERSION"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">VERSION</span>
+			 = <span class="const-default"> '0.2.0'</span>
+			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a65">65</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FirePHP version</p>
+	
+	
+</div>
+<a name="constWARN" id="WARN"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">WARN</span>
+			 = <span class="const-default"> 'WARN'</span>
+			(line <span class="line-number"><a href="..//__filesource/fsource_FirePHP__coreFirePHP.class.php.html#a92">92</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Firebug WARN level</p>
+<p class="description"><p>Logs a message to firebug console, displays an warning icon before the message and colors the line turquoise.</p></p>
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 05 Aug 2009 07:45:35 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</div></body>
+</html>

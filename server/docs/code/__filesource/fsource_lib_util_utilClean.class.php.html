@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for Clean.class.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file Clean.class.php</h1>
+<p>Documentation is available at <a href="../lib/util/_util_Clean_class_php.html">Clean.class.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?php</span></li>
+<li><a name="a2"></a><span class="src-doc">/**</span></li>
+<li><a name="a3"></a><span class="src-doc"> *  输入输出数据过滤检测类</span></li>
+<li><a name="a4"></a><span class="src-doc"> *</span></li>
+<li><a name="a5"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@package</span><span class="src-doc"> lib</span></li>
+<li><a name="a6"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@subpackage</span><span class="src-doc"> util</span></li>
+<li><a name="a7"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@author</span><span class="src-doc"> 张立冰 &lt;roast@php.net&gt;</span></li>
+<li><a name="a8"></a><span class="src-doc"> *  $Id: Clean.class.php 3286 2009-02-19 03:38:16Z zhuxin $</span></li>
+<li><a name="a9"></a><span class="src-doc"> */</span></li>
+<li><a name="a10"></a>&nbsp;</li>
+<li><a name="a11"></a><span class="src-key">class </span><a href="../lib/util/Clean.html">Clean</a> </li>
+<li><a name="a12"></a><span class="src-sym">{</span></li>
+<li><a name="a13"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a14"></a><span class="src-doc">     * 清除所有的HTML标记，只返回文本    --此函数有待加强</span></li>
+<li><a name="a15"></a><span class="src-doc">     *</span></li>
+<li><a name="a16"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">String </span><span class="src-doc-var">$string </span></li>
+<li><a name="a17"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">String </span></li>
+<li><a name="a18"></a><span class="src-doc">     */</span></li>
+<li><a name="a19"></a>    <span class="src-key">static </span><span class="src-key">public </span><span class="src-key">function </span><a href="../lib/util/Clean.html#methodtext">text</a><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">)</span></li>
+<li><a name="a20"></a>    <span class="src-sym">{</span></li>
+<li><a name="a21"></a>        <span class="src-key">return </span><a href="http://www.php.net/strip_tags">strip_tags</a><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a22"></a>    <span class="src-sym">}</span></li>
+<li><a name="a23"></a>    </li>
+<li><a name="a24"></a>    </li>
+<li><a name="a25"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a26"></a><span class="src-doc">     * 过滤HTML文本中的非法标记等可能存在安全问题的字符</span></li>
+<li><a name="a27"></a><span class="src-doc">     *</span></li>
+<li><a name="a28"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">String </span><span class="src-doc">   </span><span class="src-doc-var">$html </span></li>
+<li><a name="a29"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">String </span></li>
+<li><a name="a30"></a><span class="src-doc">     */</span></li>
+<li><a name="a31"></a>    <span class="src-key">static </span><span class="src-key">public </span><span class="src-key">function </span><a href="../lib/util/Clean.html#methodhtmlSafe">htmlSafe</a><span class="src-sym">(</span><span class="src-var">$html</span><span class="src-sym">)</span></li>
+<li><a name="a32"></a>    <span class="src-sym">{</span></li>
+<li><a name="a33"></a>        <span class="src-comm">//转换&amp;、&lt;、&gt;</span></li>
+<li><a name="a34"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/str_replace">str_replace</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'&amp;amp;'</span><span class="src-sym">, </span><span class="src-str">'&amp;lt;'</span><span class="src-sym">, </span><span class="src-str">'&amp;gt;'</span><span class="src-sym">)</span><span class="src-sym">, </span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'&amp;amp;amp;'</span><span class="src-sym">, </span><span class="src-str">'&amp;amp;lt;'</span><span class="src-sym">, </span><span class="src-str">'&amp;amp;gt;'</span><span class="src-sym">)</span><span class="src-sym">, </span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a35"></a>        </li>
+<li><a name="a36"></a>        <span class="src-comm">//将换行标记进行连接(\n)</span></li>
+<li><a name="a37"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'#(&amp;\#*\w+)[\x00-\x20]+;#u'</span><span class="src-sym">, </span><span class="src-str">&quot;</span><span class="src-str">$1;</span><span class="src-str">&quot;</span><span class="src-sym">, </span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a38"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'#(&amp;\#x*)([0-9A-F]+);*#iu'</span><span class="src-sym">, </span><span class="src-str">&quot;</span><span class="src-str">$1$2;</span><span class="src-str">&quot;</span><span class="src-sym">, </span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">;   </span></li>
+<li><a name="a39"></a>        </li>
+<li><a name="a40"></a>        <span class="src-comm">//进行编码转换</span></li>
+<li><a name="a41"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/html_entity_decode">html_entity_decode</a><span class="src-sym">(</span><span class="src-var">$html</span><span class="src-sym">, </span><span class="src-id">ENT_COMPAT</span><span class="src-sym">, </span><span class="src-str">'UTF-8'</span><span class="src-sym">)</span><span class="src-sym">;  </span></li>
+<li><a name="a42"></a>         </li>
+<li><a name="a43"></a>        <span class="src-comm">//去除所有标签中on开头或者xmlns的属性</span></li>
+<li><a name="a44"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'#(&lt;[^&gt;]+[\x00-\x20\&quot;\'\/])(on|xmlns)[^&gt;]*&gt;#iUu'</span><span class="src-sym">, </span><span class="src-str">&quot;</span><span class="src-str">$1&gt;</span><span class="src-str">&quot;</span><span class="src-sym">, </span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">; </span></li>
+<li><a name="a45"></a>        </li>
+<li><a name="a46"></a>        <span class="src-comm">//去除javascript和vbscript</span></li>
+<li><a name="a47"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'#([a-z]\*)[\x00-\x20]\*=[\x00-\x20]\*([\`\'\&quot;]\*)[\\x00-\x20]\*j[\x00-\x20]\*a[\x00-\x20]\*v[\x00-\x20]\*a[\x00-\x20]\*s[\x00-\x20]\*c[\x00-\x20]\*r[\x00-\x20]\*i[\x00-\x20]\*p[\x00-\x20]\*t[\x00-\x20]\*:#iU'</span><span class="src-sym">,</span><span class="src-str">''</span><span class="src-sym">,</span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a48"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'#([a-z]*)[\x00-\x20\/]*=[\x00-\x20\/]*([\`\'\&quot;]*)[\x00-\x20\/]*j[\x00-\x20]*a[\x00-\x20]*v[\x00-\x20]*a[\x00-\x20]*s[\x00-\x20]*c[\x00-\x20]*r[\x00-\x20]*i[\x00-\x20]*p[\x00-\x20]*t[\x00-\x20]*:#iUu'</span><span class="src-sym">, </span><span class="src-str">''</span><span class="src-sym">, </span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a49"></a>        </li>
+<li><a name="a50"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'#([a-z]\*)[\x00-\x20]\*=([\'\&quot;]\*)[\x00-\x20]\*v[\x00-\x20]\*b[\x00-\x20]\*s[\x00-\x20]\*c[\x00-\x20]\*r[\x00-\x20]\*i[\x00-\x20]\*p[\x00-\x20]\*t[\x00-\x20]\*:#iU'</span><span class="src-sym">,</span><span class="src-str">''</span><span class="src-sym">,</span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a51"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'#([a-z]*)[\x00-\x20\/]*=[\x00-\x20\/]*([\`\'\&quot;]*)[\x00-\x20\/]*v[\x00-\x20]*b[\x00-\x20]*s[\x00-\x20]*c[\x00-\x20]*r[\x00-\x20]*i[\x00-\x20]*p[\x00-\x20]*t[\x00-\x20]*:#iUu'</span><span class="src-sym">, </span><span class="src-str">''</span><span class="src-sym">, </span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a52"></a>        </li>
+<li><a name="a53"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'#([a-z]*)[\x00-\x20\/]*=[\x00-\x20\/]*([\`\'\&quot;]*)[\x00-\x20\/]*-moz-binding[\x00-\x20]*:#Uu'</span><span class="src-sym">, </span><span class="src-str">''</span><span class="src-sym">, </span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a54"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'#([a-z]*)[\x00-\x20\/]*=[\x00-\x20\/]*([\`\'\&quot;]*)[\x00-\x20\/]*data[\x00-\x20]*:#Uu'</span><span class="src-sym">, </span><span class="src-str">''</span><span class="src-sym">, </span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a55"></a>        </li>
+<li><a name="a56"></a>        <span class="src-comm">//将带有注释的Style全部删除</span></li>
+<li><a name="a57"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'#style([a-z]*)[\x00-\x20\/]*=[\'&quot;]*[^\*\/&gt;]*[\*\/]+[^\*\/&gt;]*&gt;#iU'</span><span class="src-sym">,</span><span class="src-str">'&gt;'</span><span class="src-sym">,</span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a58"></a>        </li>
+<li><a name="a59"></a>        <span class="src-comm">//将带有url和expression的样式全部删除</span></li>
+<li><a name="a60"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'#style([a-z]*)[\x00-\x20\/]*=[\'&quot;]*(url|expression)[\'&quot;]*#iU'</span><span class="src-sym">,</span><span class="src-str">''</span><span class="src-sym">,</span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a61"></a>        </li>
+<li><a name="a62"></a>        <span class="src-comm">//移除所有名字空间元素</span></li>
+<li><a name="a63"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'#&lt;\?import[^&gt;]+&gt;#iU'</span><span class="src-sym">,</span><span class="src-str">''</span><span class="src-sym">,</span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a64"></a>        <span class="src-var">$html </span>= <a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'#&lt;\?xml:namespace[^&gt;]+&gt;#iU'</span><span class="src-sym">,</span><span class="src-str">''</span><span class="src-sym">,</span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a65"></a>        </li>
+<li><a name="a66"></a>        <span class="src-comm">//删除不需要的标记</span></li>
+<li><a name="a67"></a>        do <span class="src-sym">{</span></li>
+<li><a name="a68"></a>            <span class="src-var">$o_html </span>= <span class="src-var">$html</span><span class="src-sym">;</span></li>
+<li><a name="a69"></a>            <span class="src-var">$html </span>= <a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'#&lt;/*(applet|meta|xml|blink|link|style|script|iframe|frame|frameset|ilayer|layer|bgsound|title|base|input)[^&gt;]*&gt;#i'</span><span class="src-sym">, </span><span class="src-str">&quot;&quot;</span><span class="src-sym">, </span><span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a70"></a>        <span class="src-sym">} </span><span class="src-key">while </span><span class="src-sym">(</span><span class="src-var">$o_html </span>!= <span class="src-var">$html</span><span class="src-sym">)</span><span class="src-sym">; </span></li>
+<li><a name="a71"></a>               </li>
+<li><a name="a72"></a>        <span class="src-key">return </span><span class="src-var">$html</span><span class="src-sym">;</span></li>
+<li><a name="a73"></a>    <span class="src-sym">}</span></li>
+<li><a name="a74"></a><span class="src-sym">}</span></li>
+<li><a name="a75"></a><span class="src-php">?&gt;</span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 05 Aug 2009 07:45:27 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

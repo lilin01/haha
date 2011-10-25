@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for core.load_plugins.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file core.load_plugins.php</h1>
+<p>Documentation is available at <a href="../Smarty/plugins/_smarty_internals_core_load_plugins_php.html">core.load_plugins.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?php</span></li>
+<li><a name="a2"></a><span class="src-doc">/**</span></li>
+<li><a name="a3"></a><span class="src-doc"> * Smarty plugin</span></li>
+<li><a name="a4"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@package</span><span class="src-doc"> Smarty</span></li>
+<li><a name="a5"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@subpackage</span><span class="src-doc"> plugins</span></li>
+<li><a name="a6"></a><span class="src-doc"> */</span></li>
+<li><a name="a7"></a>&nbsp;</li>
+<li><a name="a8"></a><span class="src-doc">/**</span></li>
+<li><a name="a9"></a><span class="src-doc"> * Load requested plugins</span></li>
+<li><a name="a10"></a><span class="src-doc"> *</span></li>
+<li><a name="a11"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">array </span><span class="src-doc-var">$plugins </span></li>
+<li><a name="a12"></a><span class="src-doc"> */</span></li>
+<li><a name="a13"></a>&nbsp;</li>
+<li><a name="a14"></a><span class="src-comm">// $plugins</span></li>
+<li><a name="a15"></a>&nbsp;</li>
+<li><a name="a16"></a><span class="src-key">function </span><a href="../Smarty/plugins/_smarty_internals_core_load_plugins_php.html#functionsmarty_core_load_plugins">smarty_core_load_plugins</a><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">, </span><span class="src-sym">&amp;</span><span class="src-var">$smarty</span><span class="src-sym">)</span></li>
+<li><a name="a17"></a><span class="src-sym">{</span></li>
+<li><a name="a18"></a>&nbsp;</li>
+<li><a name="a19"></a>    <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'plugins'</span><span class="src-sym">] </span><span class="src-key">as </span><span class="src-var">$_plugin_info</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a20"></a>        list<span class="src-sym">(</span><span class="src-var">$_type</span><span class="src-sym">, </span><span class="src-var">$_name</span><span class="src-sym">, </span><span class="src-var">$_tpl_file</span><span class="src-sym">, </span><span class="src-var">$_tpl_line</span><span class="src-sym">, </span><span class="src-var">$_delayed_loading</span><span class="src-sym">) </span>= <span class="src-var">$_plugin_info</span><span class="src-sym">;</span></li>
+<li><a name="a21"></a>        <span class="src-var">$_plugin </span>= <span class="src-sym">&amp;</span><span class="src-var">$smarty</span><span class="src-sym">-&gt;</span><span class="src-id">_plugins</span><span class="src-sym">[</span><span class="src-var">$_type</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-var">$_name</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a22"></a>&nbsp;</li>
+<li><a name="a23"></a>        <span class="src-comm">/*</span></li>
+<li><a name="a24"></a><span class="src-comm">         * We do not load plugin more than once for each instance of Smarty.</span></li>
+<li><a name="a25"></a><span class="src-comm">         * The following code checks for that. The plugin can also be</span></li>
+<li><a name="a26"></a><span class="src-comm">         * registered dynamically at runtime, in which case template file</span></li>
+<li><a name="a27"></a><span class="src-comm">         * and line number will be unknown, so we fill them in.</span></li>
+<li><a name="a28"></a><span class="src-comm">         *</span></li>
+<li><a name="a29"></a><span class="src-comm">         * The final element of the info array is a flag that indicates</span></li>
+<li><a name="a30"></a><span class="src-comm">         * whether the dynamically registered plugin function has been</span></li>
+<li><a name="a31"></a><span class="src-comm">         * checked for existence yet or not.</span></li>
+<li><a name="a32"></a><span class="src-comm">         */</span></li>
+<li><a name="a33"></a>        <span class="src-key">if </span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$_plugin</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a34"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$_plugin</span><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a35"></a>                <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><a href="http://www.php.net/is_callable">is_callable</a><span class="src-sym">(</span><span class="src-var">$_plugin</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a36"></a>                    <span class="src-var">$smarty</span><span class="src-sym">-&gt;</span><span class="src-id">_trigger_fatal_error</span><span class="src-sym">(</span><span class="src-str">&quot;</span><span class="src-str"><span class="src-sym">[</span><span class="src-id">plugin</span><span class="src-sym">]</span> <span class="src-var">$_type</span> '<span class="src-var">$_name</span>' <span class="src-id">is</span> <span class="src-id">not</span> <span class="src-id">implemented</span></span><span class="src-str">&quot;</span><span class="src-sym">, </span><span class="src-var">$_tpl_file</span><span class="src-sym">, </span><span class="src-var">$_tpl_line</span><span class="src-sym">, </span>__FILE__<span class="src-sym">, </span>__LINE__<span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a37"></a>                <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a38"></a>                    <span class="src-var">$_plugin</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">] </span>= <span class="src-var">$_tpl_file</span><span class="src-sym">;</span></li>
+<li><a name="a39"></a>                    <span class="src-var">$_plugin</span><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">] </span>= <span class="src-var">$_tpl_line</span><span class="src-sym">;</span></li>
+<li><a name="a40"></a>                    <span class="src-var">$_plugin</span><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">] </span>= <span class="src-id">true</span><span class="src-sym">;</span></li>
+<li><a name="a41"></a>                    <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span>isset<span class="src-sym">(</span><span class="src-var">$_plugin</span><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]</span><span class="src-sym">)) </span><span class="src-var">$_plugin</span><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">] </span>= <span class="src-id">true</span><span class="src-sym">; </span><span class="src-comm">/* cacheable */</span></li>
+<li><a name="a42"></a>                <span class="src-sym">}</span></li>
+<li><a name="a43"></a>            <span class="src-sym">}</span></li>
+<li><a name="a44"></a>            <span class="src-key">continue</span><span class="src-sym">;</span></li>
+<li><a name="a45"></a>        <span class="src-sym">} </span><span class="src-key">else </span><span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$_type </span>== <span class="src-str">'insert'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a46"></a>            <span class="src-comm">/*</span></li>
+<li><a name="a47"></a><span class="src-comm">             * For backwards compatibility, we check for insert functions in</span></li>
+<li><a name="a48"></a><span class="src-comm">             * the symbol table before trying to load them as a plugin.</span></li>
+<li><a name="a49"></a><span class="src-comm">             */</span></li>
+<li><a name="a50"></a>            <span class="src-var">$_plugin_func </span>= <span class="src-str">'insert_' </span>. <span class="src-var">$_name</span><span class="src-sym">;</span></li>
+<li><a name="a51"></a>            <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/function_exists">function_exists</a><span class="src-sym">(</span><span class="src-var">$_plugin_func</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a52"></a>                <span class="src-var">$_plugin </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-var">$_plugin_func</span><span class="src-sym">, </span><span class="src-var">$_tpl_file</span><span class="src-sym">, </span><span class="src-var">$_tpl_line</span><span class="src-sym">, </span><span class="src-id">true</span><span class="src-sym">, </span><span class="src-id">false</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a53"></a>                <span class="src-key">continue</span><span class="src-sym">;</span></li>
+<li><a name="a54"></a>            <span class="src-sym">}</span></li>
+<li><a name="a55"></a>        <span class="src-sym">}</span></li>
+<li><a name="a56"></a>&nbsp;</li>
+<li><a name="a57"></a>        <span class="src-var">$_plugin_file </span>= <span class="src-var">$smarty</span><span class="src-sym">-&gt;</span><span class="src-id">_get_plugin_filepath</span><span class="src-sym">(</span><span class="src-var">$_type</span><span class="src-sym">, </span><span class="src-var">$_name</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a58"></a>&nbsp;</li>
+<li><a name="a59"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">! </span><span class="src-var">$_found </span>= <span class="src-sym">(</span><span class="src-var">$_plugin_file </span>!= <span class="src-id">false</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a60"></a>            <span class="src-var">$_message </span>= <span class="src-str">&quot;</span><span class="src-str"><span class="src-id">could</span> <span class="src-id">not</span> <span class="src-id">load</span> <span class="src-id">plugin</span> <span class="src-id">file</span> '<span class="src-var">$_type</span>.<span class="src-var">$_name</span>.<span class="src-id">php</span>'\n</span><span class="src-str">&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a61"></a>        <span class="src-sym">}</span></li>
+<li><a name="a62"></a>&nbsp;</li>
+<li><a name="a63"></a>        <span class="src-comm">/*</span></li>
+<li><a name="a64"></a><span class="src-comm">         * If plugin file is found, it -must- provide the properly named</span></li>
+<li><a name="a65"></a><span class="src-comm">         * plugin function. In case it doesn't, simply output the error and</span></li>
+<li><a name="a66"></a><span class="src-comm">         * do not fall back on any other method.</span></li>
+<li><a name="a67"></a><span class="src-comm">         */</span></li>
+<li><a name="a68"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$_found</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a69"></a>            <span class="src-inc">include_once </span><span class="src-var">$_plugin_file</span><span class="src-sym">;</span></li>
+<li><a name="a70"></a>&nbsp;</li>
+<li><a name="a71"></a>            <span class="src-var">$_plugin_func </span>= <span class="src-str">'smarty_' </span>. <span class="src-var">$_type </span>. <span class="src-str">'_' </span>. <span class="src-var">$_name</span><span class="src-sym">;</span></li>
+<li><a name="a72"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><a href="http://www.php.net/function_exists">function_exists</a><span class="src-sym">(</span><span class="src-var">$_plugin_func</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a73"></a>                <span class="src-var">$smarty</span><span class="src-sym">-&gt;</span><span class="src-id">_trigger_fatal_error</span><span class="src-sym">(</span><span class="src-str">&quot;</span><span class="src-str"><span class="src-sym">[</span><span class="src-id">plugin</span><span class="src-sym">]</span> <span class="src-id">function</span> <span class="src-var">$_plugin_func</span>() <span class="src-id">not</span> <span class="src-id">found</span> <span class="src-id">in</span> <span class="src-var">$_plugin_file</span></span><span class="src-str">&quot;</span><span class="src-sym">, </span><span class="src-var">$_tpl_file</span><span class="src-sym">, </span><span class="src-var">$_tpl_line</span><span class="src-sym">, </span>__FILE__<span class="src-sym">, </span>__LINE__<span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a74"></a>                <span class="src-key">continue</span><span class="src-sym">;</span></li>
+<li><a name="a75"></a>            <span class="src-sym">}</span></li>
+<li><a name="a76"></a>        <span class="src-sym">}</span></li>
+<li><a name="a77"></a>        <span class="src-comm">/*</span></li>
+<li><a name="a78"></a><span class="src-comm">         * In case of insert plugins, their code may be loaded later via</span></li>
+<li><a name="a79"></a><span class="src-comm">         * 'script' attribute.</span></li>
+<li><a name="a80"></a><span class="src-comm">         */</span></li>
+<li><a name="a81"></a>        <span class="src-key">else </span><span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$_type </span>== <span class="src-str">'insert' </span>&amp;&amp; <span class="src-var">$_delayed_loading</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a82"></a>            <span class="src-var">$_plugin_func </span>= <span class="src-str">'smarty_' </span>. <span class="src-var">$_type </span>. <span class="src-str">'_' </span>. <span class="src-var">$_name</span><span class="src-sym">;</span></li>
+<li><a name="a83"></a>            <span class="src-var">$_found </span>= <span class="src-id">true</span><span class="src-sym">;</span></li>
+<li><a name="a84"></a>        <span class="src-sym">}</span></li>
+<li><a name="a85"></a>&nbsp;</li>
+<li><a name="a86"></a>        <span class="src-comm">/*</span></li>
+<li><a name="a87"></a><span class="src-comm">         * Plugin specific processing and error checking.</span></li>
+<li><a name="a88"></a><span class="src-comm">         */</span></li>
+<li><a name="a89"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-var">$_found</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a90"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$_type </span>== <span class="src-str">'modifier'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a91"></a>                <span class="src-comm">/*</span></li>
+<li><a name="a92"></a><span class="src-comm">                 * In case modifier falls back on using PHP functions</span></li>
+<li><a name="a93"></a><span class="src-comm">                 * directly, we only allow those specified in the security</span></li>
+<li><a name="a94"></a><span class="src-comm">                 * context.</span></li>
+<li><a name="a95"></a><span class="src-comm">                 */</span></li>
+<li><a name="a96"></a>                <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$smarty</span><span class="src-sym">-&gt;</span><span class="src-id">security </span>&amp;&amp; <span class="src-sym">!</span><a href="http://www.php.net/in_array">in_array</a><span class="src-sym">(</span><span class="src-var">$_name</span><span class="src-sym">, </span><span class="src-var">$smarty</span><span class="src-sym">-&gt;</span><span class="src-id">security_settings</span><span class="src-sym">[</span><span class="src-str">'MODIFIER_FUNCS'</span><span class="src-sym">]</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a97"></a>                    <span class="src-var">$_message </span>= <span class="src-str">&quot;</span><span class="src-str">(<span class="src-id">secure</span> <span class="src-id">mode</span>) <span class="src-id">modifier</span> '<span class="src-var">$_name</span>' <span class="src-id">is</span> <span class="src-id">not</span> <span class="src-id">allowed</span></span><span class="src-str">&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a98"></a>                <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a99"></a>                    <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><a href="http://www.php.net/function_exists">function_exists</a><span class="src-sym">(</span><span class="src-var">$_name</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a100"></a>                        <span class="src-var">$_message </span>= <span class="src-str">&quot;</span><span class="src-str"><span class="src-id">modifier</span> '<span class="src-var">$_name</span>' <span class="src-id">is</span> <span class="src-id">not</span> <span class="src-id">implemented</span></span><span class="src-str">&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a101"></a>                    <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a102"></a>                        <span class="src-var">$_plugin_func </span>= <span class="src-var">$_name</span><span class="src-sym">;</span></li>
+<li><a name="a103"></a>                        <span class="src-var">$_found </span>= <span class="src-id">true</span><span class="src-sym">;</span></li>
+<li><a name="a104"></a>                    <span class="src-sym">}</span></li>
+<li><a name="a105"></a>                <span class="src-sym">}</span></li>
+<li><a name="a106"></a>            <span class="src-sym">} </span><span class="src-key">else </span><span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$_type </span>== <span class="src-str">'function'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a107"></a>                <span class="src-comm">/*</span></li>
+<li><a name="a108"></a><span class="src-comm">                 * This is a catch-all situation.</span></li>
+<li><a name="a109"></a><span class="src-comm">                 */</span></li>
+<li><a name="a110"></a>                <span class="src-var">$_message </span>= <span class="src-str">&quot;</span><span class="src-str"><span class="src-id">unknown</span> <span class="src-id">tag</span> - '<span class="src-var">$_name</span>'</span><span class="src-str">&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a111"></a>            <span class="src-sym">}</span></li>
+<li><a name="a112"></a>        <span class="src-sym">}</span></li>
+<li><a name="a113"></a>&nbsp;</li>
+<li><a name="a114"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$_found</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a115"></a>            <span class="src-var">$smarty</span><span class="src-sym">-&gt;</span><span class="src-id">_plugins</span><span class="src-sym">[</span><span class="src-var">$_type</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-var">$_name</span><span class="src-sym">] </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-var">$_plugin_func</span><span class="src-sym">, </span><span class="src-var">$_tpl_file</span><span class="src-sym">, </span><span class="src-var">$_tpl_line</span><span class="src-sym">, </span><span class="src-id">true</span><span class="src-sym">, </span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a116"></a>        <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a117"></a>            <span class="src-comm">// output error</span></li>
+<li><a name="a118"></a>            <span class="src-var">$smarty</span><span class="src-sym">-&gt;</span><span class="src-id">_trigger_fatal_error</span><span class="src-sym">(</span><span class="src-str">'[plugin] ' </span>. <span class="src-var">$_message</span><span class="src-sym">, </span><span class="src-var">$_tpl_file</span><span class="src-sym">, </span><span class="src-var">$_tpl_line</span><span class="src-sym">, </span>__FILE__<span class="src-sym">, </span>__LINE__<span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a119"></a>        <span class="src-sym">}</span></li>
+<li><a name="a120"></a>    <span class="src-sym">}</span></li>
+<li><a name="a121"></a><span class="src-sym">}</span></li>
+<li><a name="a122"></a>&nbsp;</li>
+<li><a name="a123"></a><span class="src-comm">/* vim: set expandtab: */</span></li>
+<li><a name="a124"></a>&nbsp;</li>
+<li><a name="a125"></a><span class="src-php">?&gt;</span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 05 Aug 2009 07:45:29 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

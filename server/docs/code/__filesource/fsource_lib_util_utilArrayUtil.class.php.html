@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for ArrayUtil.class.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file ArrayUtil.class.php</h1>
+<p>Documentation is available at <a href="../lib/util/_util_ArrayUtil_class_php.html">ArrayUtil.class.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?php</span></li>
+<li><a name="a2"></a>&nbsp;</li>
+<li><a name="a3"></a><span class="src-doc">/**</span></li>
+<li><a name="a4"></a><span class="src-doc"> *  数组工具类</span></li>
+<li><a name="a5"></a><span class="src-doc"> *</span></li>
+<li><a name="a6"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@package</span><span class="src-doc"> lib</span></li>
+<li><a name="a7"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@subpackage</span><span class="src-doc"> util</span></li>
+<li><a name="a8"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@author</span><span class="src-doc"> 张立冰 &lt;roast@php.net&gt;</span></li>
+<li><a name="a9"></a><span class="src-doc"> */</span></li>
+<li><a name="a10"></a><span class="src-key">class </span><a href="../lib/util/ArrayUtil.html">ArrayUtil</a> <span class="src-sym">{</span></li>
+<li><a name="a11"></a>    </li>
+<li><a name="a12"></a>    <span class="src-key">public </span><span class="src-key">static </span><span class="src-var">$keys</span><span class="src-sym">;</span></li>
+<li><a name="a13"></a>    <span class="src-key">public </span><span class="src-key">static </span><span class="src-var">$order</span><span class="src-sym">;</span></li>
+<li><a name="a14"></a>    </li>
+<li><a name="a15"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a16"></a><span class="src-doc">     * 搜索数组中符合条件的值</span></li>
+<li><a name="a17"></a><span class="src-doc">     * 如果$keys=NULL且$onlyFirst=true的情况建议使用内建函数array_search()代替该方法</span></li>
+<li><a name="a18"></a><span class="src-doc">     *</span></li>
+<li><a name="a19"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">array </span><span class="src-doc-var">$array </span><span class="src-doc">被搜索的数组</span></li>
+<li><a name="a20"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">mixed </span><span class="src-doc-var">$value </span><span class="src-doc">要查询的值</span></li>
+<li><a name="a21"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">mixed </span><span class="src-doc-var">$keys </span><span class="src-doc">深入搜索的键列表,不深入搜索则赋值为NULL,值可以是字符串或字符串数组类型</span></li>
+<li><a name="a22"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">boolean </span><span class="src-doc-var">$onlyFirst </span><span class="src-doc">是否只搜索第一个</span></li>
+<li><a name="a23"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">mixed </span><span class="src-doc">搜索到一个则返回该数组元素,搜索到两个以上则返回结果数组,否则返回-1</span></li>
+<li><a name="a24"></a><span class="src-doc">     */</span></li>
+<li><a name="a25"></a>    <span class="src-key">public </span><span class="src-key">static </span><span class="src-key">function </span><a href="../lib/util/ArrayUtil.html#methodsearch">search</a><span class="src-sym">(</span><span class="src-sym">&amp; </span><span class="src-var">$array</span><span class="src-sym">, </span><span class="src-var">$value</span><span class="src-sym">, </span><span class="src-var">$keys </span>= <span class="src-id">NULL</span><span class="src-sym">, </span><span class="src-var">$onlyFirst </span>= <span class="src-id">false</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a26"></a>        <span class="src-var">$result </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a27"></a>        <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$array </span><span class="src-key">as </span><span class="src-var">$v</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a28"></a>            <span class="src-key">switch </span><span class="src-sym">(</span><a href="http://www.php.net/gettype">gettype</a><span class="src-sym">(</span><span class="src-var">$keys</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a29"></a>                <span class="src-key">case </span><span class="src-str">'string'</span>: <span class="src-var">$arrayValue </span>= <span class="src-var">$v</span><span class="src-sym">[</span><span class="src-var">$keys</span><span class="src-sym">]</span><span class="src-sym">; </span><span class="src-key">break</span><span class="src-sym">;</span></li>
+<li><a name="a30"></a>                <span class="src-key">case </span><span class="src-str">'array'</span>:</li>
+<li><a name="a31"></a>                    <span class="src-var">$arrayValue </span>= <span class="src-var">$v</span><span class="src-sym">;</span></li>
+<li><a name="a32"></a>                    <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$keys </span><span class="src-key">as </span><span class="src-var">$key</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a33"></a>                        <span class="src-var">$arrayValue </span>= <span class="src-var">$arrayValue</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a34"></a>                    <span class="src-sym">}</span></li>
+<li><a name="a35"></a>                    <span class="src-key">break</span><span class="src-sym">;</span></li>
+<li><a name="a36"></a>                <span class="src-key">default</span>: <span class="src-var">$arrayValue </span>= <span class="src-var">$v</span><span class="src-sym">; </span><span class="src-key">break</span><span class="src-sym">;</span></li>
+<li><a name="a37"></a>            <span class="src-sym">}</span></li>
+<li><a name="a38"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$arrayValue </span>== <span class="src-var">$value</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a39"></a>                <span class="src-var">$result</span><span class="src-sym">[</span><span class="src-sym">] </span>= <span class="src-var">$key</span><span class="src-sym">;</span></li>
+<li><a name="a40"></a>                <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$onlyFirst</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a41"></a>                    <span class="src-key">break</span><span class="src-sym">;</span></li>
+<li><a name="a42"></a>                <span class="src-sym">}</span></li>
+<li><a name="a43"></a>            <span class="src-sym">}</span></li>
+<li><a name="a44"></a>        <span class="src-sym">}</span></li>
+<li><a name="a45"></a>        <span class="src-var">$count </span>= <a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$result</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a46"></a>        <span class="src-key">return </span><span class="src-sym">(</span><span class="src-var">$count </span>&lt; <span class="src-num">1</span><span class="src-sym">) </span>? -<span class="src-num">1 </span>: <span class="src-sym">((</span><span class="src-var">$count </span>== <span class="src-num">1</span><span class="src-sym">) </span>? <span class="src-var">$result</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">] </span>: <span class="src-var">$result</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a47"></a>    <span class="src-sym">}</span></li>
+<li><a name="a48"></a>    </li>
+<li><a name="a49"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a50"></a><span class="src-doc">     * 插入指定的$key值前插入数据$value</span></li>
+<li><a name="a51"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">array </span><span class="src-doc-var">$array </span><span class="src-doc">操作的数组</span></li>
+<li><a name="a52"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$key </span><span class="src-doc">键值,设置为NULL可以让数据添加到数组尾部</span></li>
+<li><a name="a53"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">mixed </span><span class="src-doc-var">$value </span><span class="src-doc">值</span></li>
+<li><a name="a54"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">boolean </span><span class="src-doc-var">$before </span><span class="src-doc">是否插入在指定$key之前</span></li>
+<li><a name="a55"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">boolean </span><span class="src-doc">如果找到$key并插入成功则返回true,否则返回false,并把数据添加到数组尾部</span></li>
+<li><a name="a56"></a><span class="src-doc">     */</span></li>
+<li><a name="a57"></a>    <span class="src-key">public </span><span class="src-key">static </span><span class="src-key">function </span><a href="../lib/util/ArrayUtil.html#methodinsert">insert</a><span class="src-sym">(</span><span class="src-sym">&amp; </span><span class="src-var">$array</span><span class="src-sym">, </span><span class="src-var">$key</span><span class="src-sym">, </span><span class="src-var">$newValue</span><span class="src-sym">, </span><span class="src-var">$before </span>= <span class="src-id">true</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a58"></a>        <span class="src-var">$inserted </span>= <span class="src-id">false</span><span class="src-sym">;</span></li>
+<li><a name="a59"></a>        <span class="src-var">$size </span>= <a href="http://www.php.net/sizeof">sizeof</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a60"></a>        <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i</span>&lt;<span class="src-var">$size</span><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a61"></a>            <span class="src-var">$value </span>= <a href="http://www.php.net/array_shift">array_shift</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a62"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$i </span>== <span class="src-var">$key</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a63"></a>                <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$before</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a64"></a>                    <a href="http://www.php.net/array_push">array_push</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">, </span><span class="src-var">$newValue</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a65"></a>                    <a href="http://www.php.net/array_push">array_push</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">, </span><span class="src-var">$value</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a66"></a>                <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a67"></a>                    <a href="http://www.php.net/array_push">array_push</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">, </span><span class="src-var">$value</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a68"></a>                    <a href="http://www.php.net/array_push">array_push</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">, </span><span class="src-var">$newValue</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a69"></a>                <span class="src-sym">}</span></li>
+<li><a name="a70"></a>                <span class="src-var">$inserted </span>= <span class="src-id">true</span><span class="src-sym">;</span></li>
+<li><a name="a71"></a>            <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a72"></a>                <a href="http://www.php.net/array_push">array_push</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">, </span><span class="src-var">$value</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a73"></a>            <span class="src-sym">}</span></li>
+<li><a name="a74"></a>        <span class="src-sym">}</span></li>
+<li><a name="a75"></a>        <span class="src-sym">(</span><span class="src-sym">!</span><span class="src-var">$inserted</span><span class="src-sym">) </span>&amp;&amp; <a href="http://www.php.net/array_push">array_push</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">, </span><span class="src-var">$newValue</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a76"></a>        <span class="src-key">return </span><span class="src-var">$result</span><span class="src-sym">;</span></li>
+<li><a name="a77"></a>    <span class="src-sym">}</span></li>
+<li><a name="a78"></a>    </li>
+<li><a name="a79"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a80"></a><span class="src-doc">     * 删除key为指定的key里的值</span></li>
+<li><a name="a81"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">array </span><span class="src-doc-var">$array </span><span class="src-doc">操作的数组</span></li>
+<li><a name="a82"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$keys </span><span class="src-doc">键值可以是数组</span></li>
+<li><a name="a83"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">void </span></li>
+<li><a name="a84"></a><span class="src-doc">     */</span></li>
+<li><a name="a85"></a>    <span class="src-key">public </span><span class="src-key">static </span><span class="src-key">function </span><a href="../lib/util/ArrayUtil.html#methoddelete">delete</a><span class="src-sym">(</span><span class="src-sym">&amp; </span><span class="src-var">$array</span><span class="src-sym">, </span><span class="src-var">$keys</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a86"></a>        <span class="src-sym">(</span><span class="src-sym">!</span><a href="http://www.php.net/is_array">is_array</a><span class="src-sym">(</span><span class="src-var">$keys</span><span class="src-sym">)) </span>&amp;&amp; <span class="src-var">$keys </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-var">$keys</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a87"></a>        <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$keys </span><span class="src-key">as </span><span class="src-var">$key</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a88"></a>            unset<span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a89"></a>        <span class="src-sym">}</span></li>
+<li><a name="a90"></a>        <span class="src-comm">//$array = array_values($array);</span></li>
+<li><a name="a91"></a>    <span class="src-sym">}</span></li>
+<li><a name="a92"></a>    </li>
+<li><a name="a93"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a94"></a><span class="src-doc">     * 对数组排序,如果做简单排序建议使用PHP内建函数</span></li>
+<li><a name="a95"></a><span class="src-doc">     * </span></li>
+<li><a name="a96"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">array </span><span class="src-doc-var">$array </span><span class="src-doc">操作的数组</span></li>
+<li><a name="a97"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$byKey </span><span class="src-doc">true按键排序,false按值排序,为字符串或数组则作为键名做深入比较按值排序</span></li>
+<li><a name="a98"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$orderBy </span><span class="src-doc">排序方式asc顺序desc逆序</span></li>
+<li><a name="a99"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">void </span></li>
+<li><a name="a100"></a><span class="src-doc">     */</span></li>
+<li><a name="a101"></a>    <span class="src-key">public </span><span class="src-key">static </span><span class="src-key">function </span><a href="../lib/util/ArrayUtil.html#methodsort">sort</a><span class="src-sym">(</span><span class="src-sym">&amp; </span><span class="src-var">$array</span><span class="src-sym">, </span><span class="src-var">$byKey </span>= <span class="src-id">false</span><span class="src-sym">, </span><span class="src-var">$orderBy </span>= <span class="src-str">'asc'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a102"></a>        <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/is_bool">is_bool</a><span class="src-sym">(</span><span class="src-var">$byKey</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a103"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$byKey</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a104"></a>                <span class="src-sym">(</span><span class="src-var">$orderBy </span>== <span class="src-str">'asc'</span><span class="src-sym">) </span>? <a href="http://www.php.net/ksort">ksort</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">) </span>: <a href="http://www.php.net/krsort">krsort</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a105"></a>            <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a106"></a>                <span class="src-sym">(</span><span class="src-var">$orderBy </span>== <span class="src-str">'asc'</span><span class="src-sym">) </span>? <a href="http://www.php.net/asort">asort</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">) </span>: <a href="http://www.php.net/arsort">arsort</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a107"></a>            <span class="src-sym">}</span></li>
+<li><a name="a108"></a>        <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a109"></a>            <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$array </span><span class="src-key">as </span><span class="src-var">$k </span>=&gt; <span class="src-var">$v</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a110"></a>                <span class="src-var">$temp</span><span class="src-sym">[</span><span class="src-var">$k</span><span class="src-sym">] </span>= <span class="src-var">$v</span><span class="src-sym">[</span><span class="src-var">$byKey</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a111"></a>            <span class="src-sym">}</span></li>
+<li><a name="a112"></a>            <span class="src-sym">(</span><span class="src-var">$orderBy </span>== <span class="src-str">'asc'</span><span class="src-sym">) </span>? <a href="http://www.php.net/asort">asort</a><span class="src-sym">(</span><span class="src-var">$temp</span><span class="src-sym">) </span>: <a href="http://www.php.net/arsort">arsort</a><span class="src-sym">(</span><span class="src-var">$temp</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a113"></a>            <span class="src-var">$newarray </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a114"></a>            <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$temp </span><span class="src-key">as </span><span class="src-var">$k </span>=&gt; <span class="src-var">$v</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a115"></a>                <span class="src-var">$newarray</span><span class="src-sym">[</span><span class="src-var">$k</span><span class="src-sym">] </span>= <span class="src-var">$array</span><span class="src-sym">[</span><span class="src-var">$k</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a116"></a>            <span class="src-sym">}</span></li>
+<li><a name="a117"></a>            <span class="src-var">$array </span>= <span class="src-var">$newarray</span><span class="src-sym">;</span></li>
+<li><a name="a118"></a>        <span class="src-sym">}</span></li>
+<li><a name="a119"></a>    <span class="src-sym">}</span></li>
+<li><a name="a120"></a><span class="src-sym">}</span></li>
+<li><a name="a121"></a><span class="src-php">?&gt;</span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 05 Aug 2009 07:45:24 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

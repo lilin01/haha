@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs for page OrmMssqlParser.class.php</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name"><img src="../../media/images/Page_logo.png" alt="File" style="vertical-align: middle">/plugins/orm/parser/OrmMssqlParser.class.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|									<a href="#sec-constants">Constants</a>
+										</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ORM 数据库SQL Server操作类</p>
+	<ul class="tags">
+				<li><span class="field">filesource:</span> <a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html">Source Code for this file</a></li>
+				<li><span class="field">author:</span> 张立冰 &lt;<a href="mailto:roast@php.net">roast@php.net</a>&gt;</li>
+			</ul>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|										<a href="#sec-constants">Constants</a>
+															</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../lib/plugins.orm.parser/MssqlOrmParser.html">MssqlOrmParser</a>
+					</td>
+					<td>
+											ORM sql解析器
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|									<span class="disabled">Constants</span>
+											</div>
+		<div class="info-box-body">	
+			<a name="define_ORM_DT_AUTO"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_AUTO</span> = 'auto'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a62">62</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_DT_BIT"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_BIT</span> = 'bit'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a65">65</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_DT_BLOB"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_BLOB</span> = 'blob'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a73">73</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_DT_BOOLEAN"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_BOOLEAN</span> = 'boolean'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a64">64</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_DT_CHAR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_CHAR</span> = 'char'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a69">69</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_DT_CLOB"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_CLOB</span> = 'clob'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a71">71</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_DT_DATE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_DATE</span> = 'date'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a74">74</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_DT_DATETIME"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_DATETIME</span> = 'datetime'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a76">76</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_DT_DECIMAL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_DECIMAL</span> = 'decimal'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a67">67</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_DT_FLOAT"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_FLOAT</span> = 'float'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a68">68</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_DT_INT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_INT</span> = 'int'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a66">66</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_DT_SQL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_SQL</span> = 'sql'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a61">61</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_DT_TEXT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_TEXT</span> = 'text'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a72">72</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_DT_TIME"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_TIME</span> = 'time'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a75">75</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_DT_VARCHAR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_DT_VARCHAR</span> = 'varchar'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a70">70</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping 文件中的字段数据类型</p>
+	
+		
+</div>
+<a name="define_ORM_FETCH_ASSOC"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_FETCH_ASSOC</span> = 1
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a45">45</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">orm 字段获取方式</p>
+	
+		
+</div>
+<a name="define_ORM_FETCH_BOTH"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_FETCH_BOTH</span> = 3
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a47">47</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">orm 字段获取方式</p>
+	
+		
+</div>
+<a name="define_ORM_FETCH_NUM"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_FETCH_NUM</span> = 2
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a46">46</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">orm 字段获取方式</p>
+	
+		
+</div>
+<a name="define_ORM_FETCH_OBJ"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_FETCH_OBJ</span> = 4
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a48">48</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">orm 字段获取方式</p>
+	
+		
+</div>
+<a name="define_ORM_OP_AND"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_AND</span> = 'AND'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a37">37</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_AS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_AS</span> = 'AS'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a14">14</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">select操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_ASC"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_ASC</span> = 'ASC'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a54">54</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">order操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_AVG"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_AVG</span> = 'AVG'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a18">18</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">select操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_BETWEEN"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_BETWEEN</span> = 'BETWEEN'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a31">31</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_COUNT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_COUNT</span> = 'COUNT'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a19">19</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">select操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_DESC"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_DESC</span> = 'DESC'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a55">55</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">order操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_EQ"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_EQ</span> = '='
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a25">25</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_GE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_GE</span> = '&gt;='
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a29">29</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_GT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_GT</span> = '&gt;'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a27">27</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_IN"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_IN</span> = 'IN'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a35">35</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_ISNOTNULL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_ISNOTNULL</span> = 'IS NOT NULL'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a34">34</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_ISNULL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_ISNULL</span> = 'IS NULL'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a33">33</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_LE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_LE</span> = '&lt;='
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a30">30</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_LIKE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_LIKE</span> = 'LIKE'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a32">32</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_LT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_LT</span> = '&lt;'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a28">28</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_MAX"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_MAX</span> = 'MAX'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a15">15</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">select操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_MIN"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_MIN</span> = 'MIN'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a16">16</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">select操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_NEQ"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_NEQ</span> = '!='
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a26">26</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_NOT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_NOT</span> = 'NOT'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a38">38</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_OR"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_OR</span> = 'OR'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a36">36</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_SQL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_SQL</span> = 'sqlLeash'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a39">39</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">where操作符</p>
+	
+		
+</div>
+<a name="define_ORM_OP_SUM"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_ORM_OP_SUM</span> = 'SUM'
+			(line <span class="line-number"><a href="../..//__filesource/fsource_lib_plugins.orm_pluginsormparserOrmMssqlParser.class.php.html#a17">17</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">select操作符</p>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 05 Aug 2009 07:45:48 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</div></body>
+</html>

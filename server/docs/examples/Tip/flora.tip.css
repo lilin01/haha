@@ -1,0 +1,75 @@
+#tip_position h3,#tip_position p{
+margin:0;
+}
+td{
+	padding:0;
+}
+#tip_position
+{
+	position:absolute;
+	z-index:10000;
+	display:none;
+}
+#tip_mask
+{
+	position:absolute;
+	z-index:9999;
+	display:block;
+	background: url(img/pop_dialog_border.png) repeat;
+	position:absolute;
+	left:0;
+	top:0;
+
+}
+.tip_title{
+	background:#519e2d none repeat scroll 0 0;
+	color:white;
+	float:none !important;
+	font-weight:bold;
+	margin:0;
+	font-size:14px;
+	line-height:1.5;
+}
+.tip_content,.tip_btn{
+	background:#FFF;
+	margin:0;
+}
+.tip_btn{
+	background:#FFF;
+	margin:0;
+	text-align:center;
+}
+.tip_btn button{
+	color:#FFF;
+	background:#519e2d;
+	padding:2px 5px;
+	margin:5px;
+}
+table
+{
+     color: #000000;
+     border-collapse: collapse;
+     margin: 0 auto;
+}
+td.topleft{
+	background:url(img/pop_dialog_top_left.png) no-repeat;
+}
+td.bottomleft{
+	background:url(img/pop_dialog_bottom_left.png) no-repeat;
+}
+td.topright{
+	background:url(img/pop_dialog_top_right.png) no-repeat;
+}
+td.bottomright{
+	background:url(img/pop_dialog_bottom_right.png) no-repeat;
+}
+td.xborder
+{
+	background:url(img/pop_dialog_border.png) repeat-x;
+	height:10px;
+}
+td.yborder
+{
+	background:url(img/pop_dialog_border.png) repeat-y;
+	width:10px;
+}

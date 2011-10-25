@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for OrmQuery.class.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file OrmQuery.class.php</h1>
+<p>Documentation is available at <a href="../lib/plugins.orm/_plugins_orm_OrmQuery_class_php.html">OrmQuery.class.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?php</span></li>
+<li><a name="a2"></a>&nbsp;</li>
+<li><a name="a3"></a><span class="src-doc">/**</span></li>
+<li><a name="a4"></a><span class="src-doc"> *  ORM 数据库连接类</span></li>
+<li><a name="a5"></a><span class="src-doc"> *</span></li>
+<li><a name="a6"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@package</span><span class="src-doc"> lib</span></li>
+<li><a name="a7"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@subpackage</span><span class="src-doc"> plugins.orm</span></li>
+<li><a name="a8"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@author</span><span class="src-doc"> 张立冰 &lt;roast@php.net&gt;</span></li>
+<li><a name="a9"></a><span class="src-doc"> */</span></li>
+<li><a name="a10"></a><span class="src-key">class </span><a href="../lib/plugins.orm/OrmQuery.html">OrmQuery</a> <span class="src-sym">{</span></li>
+<li><a name="a11"></a>&nbsp;</li>
+<li><a name="a12"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a13"></a><span class="src-doc">     * 数据库连接参数</span></li>
+<li><a name="a14"></a><span class="src-doc">     *</span></li>
+<li><a name="a15"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">Array </span></li>
+<li><a name="a16"></a><span class="src-doc">     */</span></li>
+<li><a name="a17"></a>    <span class="src-key">var </span><a href="../lib/plugins.orm/OrmQuery.html#var$params">$params</a><span class="src-sym">;</span></li>
+<li><a name="a18"></a>    </li>
+<li><a name="a19"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a20"></a><span class="src-doc">     * 数据库连接选项</span></li>
+<li><a name="a21"></a><span class="src-doc">     *</span></li>
+<li><a name="a22"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">Array </span></li>
+<li><a name="a23"></a><span class="src-doc">     */</span></li>
+<li><a name="a24"></a>    <span class="src-key">var </span><a href="../lib/plugins.orm/OrmQuery.html#var$options">$options</a><span class="src-sym">;</span></li>
+<li><a name="a25"></a>    </li>
+<li><a name="a26"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a27"></a><span class="src-doc">     * SQL分析句柄</span></li>
+<li><a name="a28"></a><span class="src-doc">     *</span></li>
+<li><a name="a29"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">OrmParser </span></li>
+<li><a name="a30"></a><span class="src-doc">     */</span></li>
+<li><a name="a31"></a>    <span class="src-key">var </span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">$parser</a> = <span class="src-id">null</span><span class="src-sym">;</span></li>
+<li><a name="a32"></a>    </li>
+<li><a name="a33"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a34"></a><span class="src-doc">     * 用于生成SQL语句的条件数组</span></li>
+<li><a name="a35"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">array </span></li>
+<li><a name="a36"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc"> private</span></li>
+<li><a name="a37"></a><span class="src-doc">     */</span></li>
+<li><a name="a38"></a>    <span class="src-key">var </span><span class="src-var">$sql</span><span class="src-sym">;</span></li>
+<li><a name="a39"></a>    </li>
+<li><a name="a40"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a41"></a><span class="src-doc">     * 构造函数(兼容PHP4)</span></li>
+<li><a name="a42"></a><span class="src-doc">     *</span></li>
+<li><a name="a43"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc">    </span><span class="src-doc-type">Array </span><span class="src-doc">    </span><span class="src-doc-var">$params </span><span class="src-doc">       数据库连接参数</span></li>
+<li><a name="a44"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc">    </span><span class="src-doc-type">Array </span><span class="src-doc">   </span><span class="src-doc-var">$options </span><span class="src-doc">   数据库连接选项</span></li>
+<li><a name="a45"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">OrmQuery </span></li>
+<li><a name="a46"></a><span class="src-doc">     */</span></li>
+<li><a name="a47"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodOrmQuery">OrmQuery</a><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">, </span><span class="src-var">$options</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a48"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">, </span><span class="src-var">$options</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a49"></a>    <span class="src-sym">}</span></li>
+<li><a name="a50"></a>    </li>
+<li><a name="a51"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a52"></a><span class="src-doc">     * 构造函数</span></li>
+<li><a name="a53"></a><span class="src-doc">     *</span></li>
+<li><a name="a54"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc">    </span><span class="src-doc-type">Array </span><span class="src-doc">    </span><span class="src-doc-var">$params </span><span class="src-doc">       数据库连接参数</span></li>
+<li><a name="a55"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc">    </span><span class="src-doc-type">Array </span><span class="src-doc">   </span><span class="src-doc-var">$options </span><span class="src-doc">   数据库连接选项</span></li>
+<li><a name="a56"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">OrmQuery </span></li>
+<li><a name="a57"></a><span class="src-doc">     */</span></li>
+<li><a name="a58"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">, </span><span class="src-var">$options</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a59"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$params">params</a> = <span class="src-var">$params</span><span class="src-sym">;</span></li>
+<li><a name="a60"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$options">options</a> = <span class="src-var">$options</span><span class="src-sym">;</span></li>
+<li><a name="a61"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#methodclear">clear</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a62"></a>    <span class="src-sym">}</span></li>
+<li><a name="a63"></a>    </li>
+<li><a name="a64"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a65"></a><span class="src-doc">     * 生成并执行SQL,然后返回结果数据集中的第一行记录的第一格数据</span></li>
+<li><a name="a66"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$sql </span><span class="src-doc">直接执行原生SQL</span></li>
+<li><a name="a67"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span></li>
+<li><a name="a68"></a><span class="src-doc">     */</span></li>
+<li><a name="a69"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodgetValue">getValue</a><span class="src-sym">(</span><span class="src-var">$sql</span>=<span class="src-id">NULL</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a70"></a>        <span class="src-sym">(</span><span class="src-var">$sql</span>===<span class="src-id">NULL</span><span class="src-sym">) </span>&amp;&amp; <span class="src-var">$sql </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#methodasSql">asSql</a><span class="src-sym">(</span><span class="src-str">'select'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a71"></a>        <span class="src-var">$data </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">parser</a><span class="src-sym">-&gt;</span><span class="src-id">getFirst</span><span class="src-sym">(</span><span class="src-var">$sql</span><span class="src-sym">, </span><span class="src-id"><a href="../lib/plugins.orm/_plugins_orm_parser_OrmMssqlParser_class_php.html#define_ORM_FETCH_NUM">_ORM_FETCH_NUM</a></span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a72"></a>        <span class="src-key">return </span><span class="src-var">$data</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a73"></a>    <span class="src-sym">}</span></li>
+<li><a name="a74"></a>    </li>
+<li><a name="a75"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a76"></a><span class="src-doc">     * 生成并执行SQL,然后返回一个数组对象表示结果数据集中的第一行记录</span></li>
+<li><a name="a77"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$sql </span><span class="src-doc">直接执行原生SQL</span></li>
+<li><a name="a78"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">array() </span></li>
+<li><a name="a79"></a><span class="src-doc">     */</span></li>
+<li><a name="a80"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodgetRow">getRow</a><span class="src-sym">(</span><span class="src-var">$sql</span>=<span class="src-id">NULL</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a81"></a>        <span class="src-sym">(</span><span class="src-var">$sql</span>===<span class="src-id">NULL</span><span class="src-sym">) </span>&amp;&amp; <span class="src-var">$sql </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#methodasSql">asSql</a><span class="src-sym">(</span><span class="src-str">'select'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a82"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">parser</a><span class="src-sym">-&gt;</span><span class="src-id">getFirst</span><span class="src-sym">(</span><span class="src-var">$sql</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a83"></a>    <span class="src-sym">}</span></li>
+<li><a name="a84"></a>    </li>
+<li><a name="a85"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a86"></a><span class="src-doc">     * 生成并执行SQL,然后返回一个数组表示结果数据集中的第一列数据</span></li>
+<li><a name="a87"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$sql </span><span class="src-doc">直接执行原生SQL</span></li>
+<li><a name="a88"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">Array </span></li>
+<li><a name="a89"></a><span class="src-doc">     */</span></li>
+<li><a name="a90"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodgetColumn">getColumn</a><span class="src-sym">(</span><span class="src-var">$sql</span>=<span class="src-id">NULL</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a91"></a>        <span class="src-var">$result </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a92"></a>        <span class="src-var">$list </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#methodgetArray">getArray</a><span class="src-sym">(</span><span class="src-var">$sql</span><span class="src-sym">, </span><span class="src-num">0</span><span class="src-sym">, </span>-<span class="src-num">1</span><span class="src-sym">, </span><span class="src-id"><a href="../lib/plugins.orm/_plugins_orm_parser_OrmMssqlParser_class_php.html#define_ORM_FETCH_NUM">_ORM_FETCH_NUM</a></span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a93"></a>        <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$list </span><span class="src-key">as </span><span class="src-var">$item</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a94"></a>            <span class="src-var">$result</span><span class="src-sym">[</span><span class="src-sym">] </span>= <span class="src-var">$item</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a95"></a>        <span class="src-sym">}</span></li>
+<li><a name="a96"></a>        <span class="src-key">return </span><span class="src-var">$result</span><span class="src-sym">;</span></li>
+<li><a name="a97"></a>    <span class="src-sym">}</span></li>
+<li><a name="a98"></a>    </li>
+<li><a name="a99"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a100"></a><span class="src-doc">     * 生成并执行SQL,然后返回一个数组表示一个数据集</span></li>
+<li><a name="a101"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$sql </span><span class="src-doc">直接执行原生SQL</span></li>
+<li><a name="a102"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">int </span><span class="src-doc-var">$offset </span><span class="src-doc">偏移量</span></li>
+<li><a name="a103"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">int </span><span class="src-doc-var">$count </span><span class="src-doc">返回结果集记录条数</span></li>
+<li><a name="a104"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">int </span><span class="src-doc-var">$fetchMode </span><span class="src-doc">记录提取模式 默认字段名(_ORM_FETCH_ASSOC)</span></li>
+<li><a name="a105"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">array </span></li>
+<li><a name="a106"></a><span class="src-doc">     */</span></li>
+<li><a name="a107"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodgetArray">getArray</a><span class="src-sym">(</span><span class="src-var">$sql</span>=<span class="src-id">NULL</span><span class="src-sym">, </span><span class="src-var">$offset</span>=<span class="src-num">0</span><span class="src-sym">, </span><span class="src-var">$count</span>=-<span class="src-num">1</span><span class="src-sym">, </span><span class="src-var">$fetchMode</span>=<span class="src-id">_ORM_FETCH_ASSOC</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a108"></a>        <span class="src-sym">(</span><span class="src-var">$sql</span>===<span class="src-id">NULL</span><span class="src-sym">) </span>&amp;&amp; <span class="src-var">$sql </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#methodasSql">asSql</a><span class="src-sym">(</span><span class="src-str">'select'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a109"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">parser</a><span class="src-sym">-&gt;</span><span class="src-id">getAll</span><span class="src-sym">(</span><span class="src-var">$sql</span><span class="src-sym">, </span><span class="src-var">$offset</span><span class="src-sym">, </span><span class="src-var">$count</span><span class="src-sym">, </span><span class="src-var">$fetchMode</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a110"></a>    <span class="src-sym">}</span></li>
+<li><a name="a111"></a>        </li>
+<li><a name="a112"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a113"></a><span class="src-doc">     * 更新数据库记录,返回受影响的记录数</span></li>
+<li><a name="a114"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">array </span><span class="src-doc-var">$fields </span><span class="src-doc">内容为 字段名=&gt;字段值 或者 array('name'=&gt;字段名,'value'=&gt;字段值,'type'=&gt;字段类型)</span></li>
+<li><a name="a115"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">int </span></li>
+<li><a name="a116"></a><span class="src-doc">     */</span></li>
+<li><a name="a117"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodupdate">update</a><span class="src-sym">(</span><span class="src-var">$fields</span>=<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a118"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$fields</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a119"></a>            <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$fields </span><span class="src-key">as </span><span class="src-var">$name </span>=&gt; <span class="src-var">$value</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a120"></a>                <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/is_numeric">is_numeric</a><span class="src-sym">(</span><span class="src-var">$name</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a121"></a>                    <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#methodaddValue">addValue</a><span class="src-sym">(</span><span class="src-var">$value</span><span class="src-sym">[</span><span class="src-str">'name'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-var">$value</span><span class="src-sym">[</span><span class="src-str">'value'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-var">$value</span><span class="src-sym">[</span><span class="src-str">'type'</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a122"></a>                <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a123"></a>                    <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#methodaddValue">addValue</a><span class="src-sym">(</span><span class="src-var">$name</span><span class="src-sym">, </span><span class="src-var">$value</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a124"></a>                <span class="src-sym">}</span></li>
+<li><a name="a125"></a>            <span class="src-sym">}</span></li>
+<li><a name="a126"></a>        <span class="src-sym">}</span></li>
+<li><a name="a127"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">parser</a><span class="src-sym">-&gt;</span><span class="src-id">execute</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#methodasSql">asSql</a><span class="src-sym">(</span><span class="src-str">'update'</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a128"></a>    <span class="src-sym">}</span></li>
+<li><a name="a129"></a>    </li>
+<li><a name="a130"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a131"></a><span class="src-doc">     * 插入数据库新记录,返回受影响的记录数</span></li>
+<li><a name="a132"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">array </span><span class="src-doc-var">$fields </span><span class="src-doc">内容为 字段名=&gt;字段值 或者 array('name'=&gt;字段名,'value'=&gt;字段值,'type'=&gt;字段类型)</span></li>
+<li><a name="a133"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">int </span></li>
+<li><a name="a134"></a><span class="src-doc">     */</span></li>
+<li><a name="a135"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodinsert">insert</a><span class="src-sym">(</span><span class="src-var">$fields</span>=<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a136"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$fields</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a137"></a>            <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$fields </span><span class="src-key">as </span><span class="src-var">$name </span>=&gt; <span class="src-var">$value</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a138"></a>                <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/is_numeric">is_numeric</a><span class="src-sym">(</span><span class="src-var">$name</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a139"></a>                    <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#methodaddValue">addValue</a><span class="src-sym">(</span><span class="src-var">$value</span><span class="src-sym">[</span><span class="src-str">'name'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-var">$value</span><span class="src-sym">[</span><span class="src-str">'value'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-var">$value</span><span class="src-sym">[</span><span class="src-str">'type'</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a140"></a>                <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a141"></a>                    <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#methodaddValue">addValue</a><span class="src-sym">(</span><span class="src-var">$name</span><span class="src-sym">, </span><span class="src-var">$value</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a142"></a>                <span class="src-sym">}</span></li>
+<li><a name="a143"></a>            <span class="src-sym">}</span></li>
+<li><a name="a144"></a>        <span class="src-sym">}</span></li>
+<li><a name="a145"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">parser</a><span class="src-sym">-&gt;</span><span class="src-id">execute</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#methodasSql">asSql</a><span class="src-sym">(</span><span class="src-str">'insert'</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a146"></a>    <span class="src-sym">}</span></li>
+<li><a name="a147"></a>    </li>
+<li><a name="a148"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a149"></a><span class="src-doc">     * 更新数据库记录,返回受影响的记录数,如果执行失败返回false</span></li>
+<li><a name="a150"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">int </span></li>
+<li><a name="a151"></a><span class="src-doc">     */</span></li>
+<li><a name="a152"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methoddelete">delete</a><span class="src-sym">(</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a153"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">parser</a><span class="src-sym">-&gt;</span><span class="src-id">execute</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#methodasSql">asSql</a><span class="src-sym">(</span><span class="src-str">'delete'</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a154"></a>    <span class="src-sym">}</span></li>
+<li><a name="a155"></a>    </li>
+<li><a name="a156"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a157"></a><span class="src-doc">     * 执行存储过程</span></li>
+<li><a name="a158"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$procedureName </span></li>
+<li><a name="a159"></a><span class="src-doc">     */</span></li>
+<li><a name="a160"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodcall">call</a><span class="src-sym">(</span><span class="src-var">$procedureName</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a161"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">parser</a><span class="src-sym">-&gt;</span><span class="src-id">call</span><span class="src-sym">(</span><span class="src-var">$procedureName</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a162"></a>    <span class="src-sym">}</span></li>
+<li><a name="a163"></a>    </li>
+<li><a name="a164"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a165"></a><span class="src-doc">     * 返回生成的SQL脚本</span></li>
+<li><a name="a166"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span></li>
+<li><a name="a167"></a><span class="src-doc">     */</span></li>
+<li><a name="a168"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodasSql">asSql</a><span class="src-sym">(</span><span class="src-var">$type</span>=<span class="src-str">'select'</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a169"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">sql</span><span class="src-sym">[</span><span class="src-str">'mode'</span><span class="src-sym">] </span>= <span class="src-var">$type</span><span class="src-sym">;</span></li>
+<li><a name="a170"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">parser</a><span class="src-sym">-&gt;</span><span class="src-id">parseSql</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">sql</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a171"></a>    <span class="src-sym">}</span></li>
+<li><a name="a172"></a>    </li>
+<li><a name="a173"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a174"></a><span class="src-doc">     * 清空表,字段,约束</span></li>
+<li><a name="a175"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$part </span><span class="src-doc">要清空的部分,默认清空全部,值可为:'table', 'field', 'value', 'where', 'group', 'order'</span></li>
+<li><a name="a176"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">OrmQuery </span></li>
+<li><a name="a177"></a><span class="src-doc">     */</span></li>
+<li><a name="a178"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodclear">clear</a><span class="src-sym">(</span><span class="src-var">$part</span>=<span class="src-str">''</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a179"></a>        <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/in_array">in_array</a><span class="src-sym">(</span><span class="src-var">$part</span><span class="src-sym">, </span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'table'</span><span class="src-sym">, </span><span class="src-str">'field'</span><span class="src-sym">, </span><span class="src-str">'value'</span><span class="src-sym">, </span><span class="src-str">'where'</span><span class="src-sym">, </span><span class="src-str">'group'</span><span class="src-sym">, </span><span class="src-str">'order'</span><span class="src-sym">))) </span><span class="src-sym">{</span></li>
+<li><a name="a180"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">sql</span><span class="src-sym">[</span><span class="src-var">$part</span><span class="src-sym">] </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a181"></a>        <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a182"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">sql </span>= <span class="src-key">array </span><span class="src-sym">(</span></li>
+<li><a name="a183"></a>                    <span class="src-str">'mode'        </span>=&gt; <span class="src-str">'select'</span><span class="src-sym">,</span></li>
+<li><a name="a184"></a>                    <span class="src-str">'table'        </span>=&gt; <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">,</span></li>
+<li><a name="a185"></a>                    <span class="src-str">'field'        </span>=&gt; <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">,</span></li>
+<li><a name="a186"></a>                    <span class="src-str">'value'        </span>=&gt; <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">,</span></li>
+<li><a name="a187"></a>                    <span class="src-str">'where'        </span>=&gt; <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">,</span></li>
+<li><a name="a188"></a>                    <span class="src-str">'group'        </span>=&gt; <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">,</span></li>
+<li><a name="a189"></a>                    <span class="src-str">'order'        </span>=&gt; <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">,</span></li>
+<li><a name="a190"></a>                    <span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a191"></a>        <span class="src-sym">}</span></li>
+<li><a name="a192"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">;</span></li>
+<li><a name="a193"></a>    <span class="src-sym">}</span></li>
+<li><a name="a194"></a>    </li>
+<li><a name="a195"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a196"></a><span class="src-doc">     * 加入表</span></li>
+<li><a name="a197"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$tableName </span><span class="src-doc">表名</span></li>
+<li><a name="a198"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$alias </span><span class="src-doc">别名</span></li>
+<li><a name="a199"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">OrmQuery </span></li>
+<li><a name="a200"></a><span class="src-doc">     */</span></li>
+<li><a name="a201"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodaddTable">addTable</a><span class="src-sym">(</span><span class="src-var">$tableName</span><span class="src-sym">, </span><span class="src-var">$alias </span>= <span class="src-str">''</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a202"></a>        <span class="src-var">$tableName </span>= <a href="http://www.php.net/trim">trim</a><span class="src-sym">(</span><span class="src-var">$tableName</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a203"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$tableName</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a204"></a>            <a href="../lib/_base_inc_php.html#functionthrowException">throwException</a><span class="src-sym">(</span><span class="src-str">'表名不能为空'</span><span class="src-sym">, </span><span class="src-num">4051</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a205"></a>        <span class="src-sym">}</span></li>
+<li><a name="a206"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">sql</span><span class="src-sym">[</span><span class="src-str">'table'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-sym">] </span>= <span class="src-key">array</span><span class="src-sym">(</span></li>
+<li><a name="a207"></a>                <span class="src-str">'name'    </span>=&gt; <span class="src-var">$tableName</span><span class="src-sym">,</span></li>
+<li><a name="a208"></a>                <span class="src-str">'alias'    </span>=&gt; <span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$alias</span><span class="src-sym">) </span>? <span class="src-var">$tableName </span>: <span class="src-var">$alias</span><span class="src-sym">,</span></li>
+<li><a name="a209"></a>                <span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a210"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">;</span></li>
+<li><a name="a211"></a>    <span class="src-sym">}</span></li>
+<li><a name="a212"></a>    </li>
+<li><a name="a213"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a214"></a><span class="src-doc">     * 加入字段</span></li>
+<li><a name="a215"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$fieldName </span><span class="src-doc">字段名</span></li>
+<li><a name="a216"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$alia </span><span class="src-doc">别名</span></li>
+<li><a name="a217"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$opt </span><span class="src-doc">操作/函数类型</span></li>
+<li><a name="a218"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$fieldType </span><span class="src-doc">字段类型</span></li>
+<li><a name="a219"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">OrmQuery </span></li>
+<li><a name="a220"></a><span class="src-doc">     */</span></li>
+<li><a name="a221"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodaddField">addField</a><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">, </span><span class="src-var">$alias </span>= <span class="src-str">''</span><span class="src-sym">, </span><span class="src-var">$opt </span>= <span class="src-str">''</span><span class="src-sym">, </span><span class="src-var">$fieldType </span>= <span class="src-id">_ORM_DT_AUTO</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a222"></a>        <span class="src-var">$fieldName </span>= <a href="http://www.php.net/trim">trim</a><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a223"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a224"></a>            <a href="../lib/_base_inc_php.html#functionthrowException">throwException</a><span class="src-sym">(</span><span class="src-str">'字段名不能为空'</span><span class="src-sym">, </span><span class="src-num">4052</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a225"></a>        <span class="src-sym">}</span></li>
+<li><a name="a226"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">sql</span><span class="src-sym">[</span><span class="src-str">'field'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-sym">] </span>= <span class="src-key">array</span><span class="src-sym">(</span></li>
+<li><a name="a227"></a>                <span class="src-str">'name'    </span>=&gt; <span class="src-var">$fieldName</span><span class="src-sym">,</span></li>
+<li><a name="a228"></a>                <span class="src-str">'alias'    </span>=&gt; <span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$alias</span><span class="src-sym">) </span>? <span class="src-var">$fieldName </span>: <span class="src-var">$alias</span><span class="src-sym">,</span></li>
+<li><a name="a229"></a>                <span class="src-str">'opt'        </span>=&gt; <span class="src-var">$opt</span><span class="src-sym">,</span></li>
+<li><a name="a230"></a>                <span class="src-str">'type'    </span>=&gt; <span class="src-var">$fieldType</span><span class="src-sym">,</span></li>
+<li><a name="a231"></a>                <span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a232"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">;</span></li>
+<li><a name="a233"></a>    <span class="src-sym">}</span></li>
+<li><a name="a234"></a>    </li>
+<li><a name="a235"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a236"></a><span class="src-doc">     * 加入值</span></li>
+<li><a name="a237"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$fieldName </span><span class="src-doc">字段名</span></li>
+<li><a name="a238"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$fieldValue </span><span class="src-doc">字段值</span></li>
+<li><a name="a239"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$fieldType </span><span class="src-doc">字段类型</span></li>
+<li><a name="a240"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">OrmQuery </span></li>
+<li><a name="a241"></a><span class="src-doc">     */</span></li>
+<li><a name="a242"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodaddValue">addValue</a><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">, </span><span class="src-var">$fieldValue</span><span class="src-sym">, </span><span class="src-var">$fieldType </span>= <span class="src-id">_ORM_DT_AUTO</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a243"></a>        <span class="src-var">$fieldName </span>= <a href="http://www.php.net/trim">trim</a><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a244"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a245"></a>            <a href="../lib/_base_inc_php.html#functionthrowException">throwException</a><span class="src-sym">(</span><span class="src-str">'字段名不能为空'</span><span class="src-sym">, </span><span class="src-num">4052</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a246"></a>        <span class="src-sym">}</span></li>
+<li><a name="a247"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">sql</span><span class="src-sym">[</span><span class="src-str">'value'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-sym">] </span>= <span class="src-key">array</span><span class="src-sym">(</span></li>
+<li><a name="a248"></a>                <span class="src-str">'name'    </span>=&gt; <span class="src-var">$fieldName</span><span class="src-sym">,</span></li>
+<li><a name="a249"></a>                <span class="src-str">'value'    </span>=&gt; <span class="src-var">$fieldValue</span><span class="src-sym">,</span></li>
+<li><a name="a250"></a>                <span class="src-str">'type'    </span>=&gt; <span class="src-var">$fieldType</span><span class="src-sym">,</span></li>
+<li><a name="a251"></a>                <span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a252"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">;</span></li>
+<li><a name="a253"></a>    <span class="src-sym">}</span></li>
+<li><a name="a254"></a>    </li>
+<li><a name="a255"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a256"></a><span class="src-doc">     * 加入约束条件</span></li>
+<li><a name="a257"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$fieldName </span><span class="src-doc">字段名</span></li>
+<li><a name="a258"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">mixed </span><span class="src-doc-var">$value </span><span class="src-doc">字段值</span></li>
+<li><a name="a259"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$opt </span><span class="src-doc">操作符</span></li>
+<li><a name="a260"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$fieldType </span><span class="src-doc">字段类型</span></li>
+<li><a name="a261"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$logical </span><span class="src-doc">逻辑关系操作符</span></li>
+<li><a name="a262"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">OrmQuery </span></li>
+<li><a name="a263"></a><span class="src-doc">     */</span></li>
+<li><a name="a264"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodaddWhere">addWhere</a><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">, </span><span class="src-var">$value </span>= <span class="src-str">''</span><span class="src-sym">, </span><span class="src-var">$opt </span>= <span class="src-id">_ORM_OP_EQ</span><span class="src-sym">, </span></li>
+<li><a name="a265"></a>            <span class="src-var">$fieldType </span>= <span class="src-id">_ORM_DT_AUTO</span><span class="src-sym">, </span><span class="src-var">$logical </span>= <span class="src-id">_ORM_OP_AND</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a266"></a>        <span class="src-var">$fieldName </span>= <a href="http://www.php.net/trim">trim</a><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a267"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a268"></a>            <a href="../lib/_base_inc_php.html#functionthrowException">throwException</a><span class="src-sym">(</span><span class="src-str">'字段名不能为空'</span><span class="src-sym">, </span><span class="src-num">4052</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a269"></a>        <span class="src-sym">}</span></li>
+<li><a name="a270"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">sql</span><span class="src-sym">[</span><span class="src-str">'where'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-sym">] </span>= <span class="src-key">array</span><span class="src-sym">(</span></li>
+<li><a name="a271"></a>                <span class="src-str">'name'        </span>=&gt; <span class="src-var">$fieldName</span><span class="src-sym">,</span></li>
+<li><a name="a272"></a>                <span class="src-str">'value'        </span>=&gt; <span class="src-var">$value</span><span class="src-sym">,</span></li>
+<li><a name="a273"></a>                <span class="src-str">'opt'            </span>=&gt; <span class="src-var">$opt</span><span class="src-sym">,</span></li>
+<li><a name="a274"></a>                <span class="src-str">'type'        </span>=&gt; <span class="src-var">$fieldType</span><span class="src-sym">,</span></li>
+<li><a name="a275"></a>                <span class="src-str">'logical'        </span>=&gt; <span class="src-var">$logical</span><span class="src-sym">,</span></li>
+<li><a name="a276"></a>                <span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a277"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">;</span></li>
+<li><a name="a278"></a>    <span class="src-sym">}</span></li>
+<li><a name="a279"></a>    </li>
+<li><a name="a280"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a281"></a><span class="src-doc">     * 加入分组</span></li>
+<li><a name="a282"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$fieldName </span></li>
+<li><a name="a283"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span></li>
+<li><a name="a284"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">OrmQuery </span></li>
+<li><a name="a285"></a><span class="src-doc">     */</span></li>
+<li><a name="a286"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodaddGroupBy">addGroupBy</a><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a287"></a>        <span class="src-var">$fieldName </span>= <a href="http://www.php.net/trim">trim</a><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a288"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a289"></a>            <a href="../lib/_base_inc_php.html#functionthrowException">throwException</a><span class="src-sym">(</span><span class="src-str">'分组字段名不能为空'</span><span class="src-sym">, </span><span class="src-num">4052</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a290"></a>        <span class="src-sym">}</span></li>
+<li><a name="a291"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">sql</span><span class="src-sym">[</span><span class="src-str">'group'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-sym">] </span>= <span class="src-var">$fieldName</span><span class="src-sym">;</span></li>
+<li><a name="a292"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">;</span></li>
+<li><a name="a293"></a>    <span class="src-sym">}</span></li>
+<li><a name="a294"></a>    </li>
+<li><a name="a295"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a296"></a><span class="src-doc">     * 加入排序</span></li>
+<li><a name="a297"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$fieldName </span><span class="src-doc">字段名</span></li>
+<li><a name="a298"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$orderBy </span><span class="src-doc">排序方式</span></li>
+<li><a name="a299"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">OrmQuery </span></li>
+<li><a name="a300"></a><span class="src-doc">     */</span></li>
+<li><a name="a301"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodaddOrderBy">addOrderBy</a><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">, </span><span class="src-var">$orderBy </span>= <span class="src-id">_ORM_OP_ASC</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a302"></a>        <span class="src-var">$fieldName </span>= <a href="http://www.php.net/trim">trim</a><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a303"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$fieldName</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a304"></a>            <a href="../lib/_base_inc_php.html#functionthrowException">throwException</a><span class="src-sym">(</span><span class="src-str">'排序字段名不能为空'</span><span class="src-sym">, </span><span class="src-num">4052</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a305"></a>        <span class="src-sym">}</span></li>
+<li><a name="a306"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">sql</span><span class="src-sym">[</span><span class="src-str">'order'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-sym">] </span>= <span class="src-key">array</span><span class="src-sym">(</span></li>
+<li><a name="a307"></a>                <span class="src-str">'name'    </span>=&gt; <span class="src-var">$fieldName</span><span class="src-sym">,</span></li>
+<li><a name="a308"></a>                <span class="src-str">'order'    </span>=&gt; <span class="src-var">$orderBy</span><span class="src-sym">,</span></li>
+<li><a name="a309"></a>                <span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a310"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">;</span></li>
+<li><a name="a311"></a>    <span class="src-sym">}</span></li>
+<li><a name="a312"></a>    </li>
+<li><a name="a313"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a314"></a><span class="src-doc">     * 添加直接执行SQL的接口</span></li>
+<li><a name="a315"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">int </span></li>
+<li><a name="a316"></a><span class="src-doc">     */</span></li>
+<li><a name="a317"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodexec">exec</a><span class="src-sym">(</span><span class="src-var">$sql</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a318"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">parser</a><span class="src-sym">-&gt;</span><span class="src-id">execute</span><span class="src-sym">(</span><span class="src-var">$sql</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a319"></a>    <span class="src-sym">}    </span></li>
+<li><a name="a320"></a>    </li>
+<li><a name="a321"></a>    </li>
+<li><a name="a322"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a323"></a><span class="src-doc">     * 获取查询对象同时对查询进行重置</span></li>
+<li><a name="a324"></a><span class="src-doc">     *</span></li>
+<li><a name="a325"></a><span class="src-doc">     */</span></li>
+<li><a name="a326"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodquery">query</a><span class="src-sym">(</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a327"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">parser</a> == <span class="src-id">null</span><span class="src-sym">)</span></li>
+<li><a name="a328"></a>        <span class="src-sym">{</span></li>
+<li><a name="a329"></a>            <a href="../lib/_base_inc_php.html#functionimport">import</a><span class="src-sym">(</span><span class="src-str">'plugins.orm.parser.Orm' </span>. <a href="http://www.php.net/ucfirst">ucfirst</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$params">params</a><span class="src-sym">[</span><span class="src-str">'driver'</span><span class="src-sym">]</span><span class="src-sym">) </span>. <span class="src-str">'Parser'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a330"></a>            <span class="src-var">$parser </span>= <a href="http://www.php.net/ucfirst">ucfirst</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$params">params</a><span class="src-sym">[</span><span class="src-str">'driver'</span><span class="src-sym">]</span><span class="src-sym">) </span>. <span class="src-str">'OrmParser'</span><span class="src-sym">;</span></li>
+<li><a name="a331"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">parser</a> = <span class="src-key">new </span><span class="src-var">$parser</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$params">params</a><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$options">options</a><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a332"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">parser</a><span class="src-sym">-&gt;</span><span class="src-id">connect</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a333"></a>        <span class="src-sym">}</span></li>
+<li><a name="a334"></a>        <span class="src-key">else </span></li>
+<li><a name="a335"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#methodclear">clear</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a336"></a>            </li>
+<li><a name="a337"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">;</span></li>
+<li><a name="a338"></a>    <span class="src-sym">}</span></li>
+<li><a name="a339"></a>    </li>
+<li><a name="a340"></a>    </li>
+<li><a name="a341"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a342"></a><span class="src-doc">     * 获取插入表后的得到的返回的主键编号,仅MySQL具有该功能</span></li>
+<li><a name="a343"></a><span class="src-doc">     *</span></li>
+<li><a name="a344"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">Integer </span></li>
+<li><a name="a345"></a><span class="src-doc">     */</span></li>
+<li><a name="a346"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodgetLastId">getLastId</a><span class="src-sym">(</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a347"></a>        <span class="src-key">return </span><span class="src-id">mysql_insert_id</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">parser</a><span class="src-sym">-&gt;</span><span class="src-id">connect</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a348"></a>    <span class="src-sym">}</span></li>
+<li><a name="a349"></a>    </li>
+<li><a name="a350"></a>    </li>
+<li><a name="a351"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a352"></a><span class="src-doc">     * 查询操作影响到的行数量</span></li>
+<li><a name="a353"></a><span class="src-doc">     *</span></li>
+<li><a name="a354"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">Integer </span></li>
+<li><a name="a355"></a><span class="src-doc">     */</span></li>
+<li><a name="a356"></a>    <span class="src-key">function </span><a href="../lib/plugins.orm/OrmQuery.html#methodgetAffectRows">getAffectRows</a><span class="src-sym">(</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a357"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../lib/plugins.orm/OrmQuery.html#var$parser">parser</a><span class="src-sym">-&gt;</span><span class="src-id">getAffectRows</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a358"></a>    <span class="src-sym">}</span></li>
+<li><a name="a359"></a><span class="src-sym">}</span></li>
+<li><a name="a360"></a><span class="src-php">?&gt;</span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 05 Aug 2009 07:45:53 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

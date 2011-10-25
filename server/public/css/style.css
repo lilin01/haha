@@ -1,0 +1,723 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 14px; BACKGROUND: #a1927f; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #000; PADDING-TOP: 0px; FONT-FAMILY: ����, serif; TEXT-ALIGN: center
+}
+DIV {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+FORM {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+P {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+UL {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+OL {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+LI {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+DL {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+DT {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+DD {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+TABLE {
+	FONT-SIZE: 12px
+}
+TD {
+	FONT-SIZE: 12px
+}
+TR {
+	FONT-SIZE: 12px
+}
+TH {
+	FONT-SIZE: 12px
+}
+TD {
+	VERTICAL-ALIGN: top; TEXT-ALIGN: center
+}
+LI {
+	LIST-STYLE-TYPE: none
+}
+TABLE {
+	MARGIN: 0px auto
+}
+INPUT {
+	FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+SELECT {
+	FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+INPUT.txt {
+	BORDER-RIGHT: #9e754f 1px solid; BORDER-TOP: #9e754f 1px solid; BORDER-LEFT: #9e754f 1px solid; LINE-HEIGHT: 16px; BORDER-BOTTOM: #9e754f 1px solid; HEIGHT: 16px; BACKGROUND-COLOR: #ffffff
+}
+INPUT.btn {
+	BACKGROUND: url(../images/btn_bg01.gif) no-repeat; WIDTH: 75px; CURSOR: pointer; BORDER-TOP-STYLE: none; LINE-HEIGHT: 21px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 21px; BORDER-BOTTOM-STYLE: none
+}
+INPUT.letterCount {
+	BACKGROUND: none transparent scroll repeat 0% 0%; WIDTH: 32px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+A:link {
+	COLOR: #473e34; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #915200; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #a05a00; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #f00
+}
+.red {
+	COLOR: #f00
+}
+A.red {
+	COLOR: #f00; TEXT-DECORATION: underline
+}
+A.red:hover {
+	COLOR: #ff7403
+}
+.fB {
+	FONT-WEIGHT: bold
+}
+.fI {
+	FONT-STYLE: italic
+}
+.f14px {
+	FONT-SIZE: 14px
+}
+.f12px {
+	FONT-SIZE: 12px
+}
+.clear {
+	CLEAR: both; FONT-SIZE: 1px; VISIBILITY: hidden; OVERFLOW: hidden; WIDTH: 1px; HEIGHT: 0px
+}
+.hidden {
+	DISPLAY: none
+}
+.noBorder {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.num {
+	FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: Verdana
+}
+#header {
+	BACKGROUND: url(../images/header_bg_top.gif) #361e12 repeat-x 50% top
+}
+#header .loginInfo {
+	PADDING-RIGHT: 12px; FONT-SIZE: 12px; COLOR: #f8efe3; LINE-HEIGHT: 24px; TEXT-ALIGN: right
+}
+#header .loginInfo A {
+	COLOR: #f8efe3
+}
+#header .loginInfo .userName {
+	FONT-WEIGHT: bold; FONT-FAMILY: Verdana
+}
+#header .loginInfo .num {
+	COLOR: #f3e006
+}
+#header .ban {
+	CLEAR: both; BACKGROUND: url(../images/header_bg.gif) no-repeat center bottom; MARGIN: 0px auto; OVERFLOW: hidden; WIDTH: 960px; HEIGHT: 104px
+}
+#header .ban02 {
+	BACKGROUND: url(../images/header_bg02.gif) no-repeat center bottom
+}
+#header .ban .logo {
+	FLOAT: left; WIDTH: 310px; HEIGHT: 100%
+}
+#header .ban .logo H1 {
+	HEIGHT: 100%
+}
+#header .ban .logo H1 A {
+	DISPLAY: block; TEXT-INDENT: -999em; HEIGHT: 100%
+}
+#header .searchForm {
+	FLOAT: left; MARGIN: 35px 0px 0px
+}
+#header .searchForm .tip {
+	FONT-SIZE: 12px; LINE-HEIGHT: 21px
+}
+#header .searchForm INPUT.txt {
+	FONT-SIZE: 14px; WIDTH: 360px
+}
+#header .bar {
+	CLEAR: both; BACKGROUND: url(../images/bar_bg.gif) #3d2416 repeat-x; HEIGHT: 25px
+}
+#content {
+	MARGIN: 12px auto; WIDTH: 980px
+}
+#content .col1 {
+	FLOAT: left; WIDTH: 230px
+}
+#content .col2 {
+	FLOAT: none; MARGIN: 0px 241px
+}
+#content .col3 {
+	FLOAT: right; WIDTH: 230px
+}
+.block {
+	BORDER-RIGHT: #3d2416 1px solid; BORDER-TOP: #3d2416 1px solid; MARGIN-BOTTOM: 9px; OVERFLOW: hidden; BORDER-LEFT: #3d2416 1px solid; BORDER-BOTTOM: #3d2416 1px solid; HEIGHT: 1%; BACKGROUND-COLOR: #e8ded1
+}
+.block .title {
+	BACKGROUND: url(../images/title_bg.gif) #361e12 repeat-x; LINE-HEIGHT: 27px; HEIGHT: 27px
+}
+.block .title H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; FLOAT: left; COLOR: #f8efe3; TEXT-INDENT: 9px
+}
+.block .title H3 SMALL {
+	PADDING-LEFT: 9px; FONT-WEIGHT: normal; FONT-SIZE: 12px; FONT-FAMILY: Verdana
+}
+.block .title SPAN {
+	FONT-SIZE: 12px; FLOAT: right; MARGIN-RIGHT: 9px
+}
+.block .title SPAN.num {
+	COLOR: #f3e006
+}
+.block .title A {
+	COLOR: #fff
+}
+.count {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 6px; MARGIN: 0px 9px; PADDING-TOP: 9px; BORDER-BOTTOM: #955121 1px dashed; FONT-FAMILY: Verdana
+}
+.count LI {
+	COLOR: #07669d; LINE-HEIGHT: 20px; TEXT-ALIGN: left
+}
+.keyList {
+	MARGIN: 9px; TEXT-ALIGN: left
+}
+.keyList H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 14px; PADDING-BOTTOM: 6px; COLOR: #666666; PADDING-TOP: 6px
+}
+.keyList H5 .num {
+	COLOR: #8d7e77
+}
+.keyList UL {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 9px; OVERFLOW: hidden; PADDING-TOP: 0px; HEIGHT: 1%
+}
+.keyList LI {
+	DISPLAY: inline; FONT-SIZE: 14px; FLOAT: left; LINE-HEIGHT: 22px; MARGIN-RIGHT: 12px; WHITE-SPACE: nowrap
+}
+.subKeyList {
+	MARGIN: 9px 9px 9px 48px
+}
+.subKeyList LI {
+	WIDTH: 96px
+}
+.questionList {
+	MARGIN: 9px 16px
+}
+.questionList UL {
+	CLEAR: both; OVERFLOW: hidden; HEIGHT: 1%
+}
+.questionList LI {
+	FLOAT: left; WIDTH: 100%; LINE-HEIGHT: 24px; TEXT-ALIGN: left
+}
+.questionList LI H6 {
+	FONT-SIZE: 14px; FLOAT: left
+}
+.questionList LI H6 A {
+	PADDING-LEFT: 16px; BACKGROUND: url(../images/li03.gif) no-repeat 0px 1px
+}
+.questionList LI H6 A:hover {
+	BACKGROUND: url(../images/li03.gif) no-repeat 0px -21px
+}
+.questionList LI SPAN {
+	FONT-SIZE: 12px; FLOAT: left; COLOR: #666
+}
+.questionList LI SPAN A {
+	COLOR: #666666
+}
+.noticeList {
+	MARGIN: 3px
+}
+.noticeList LI {
+	PADDING-LEFT: 14px; FONT-SIZE: 12px; BACKGROUND: url(../images/li03.gif) no-repeat 0px -56px; LINE-HEIGHT: 20px; TEXT-ALIGN: left
+}
+.userRank {
+	PADDING-RIGHT: 9px; PADDING-LEFT: 9px; PADDING-BOTTOM: 9px; PADDING-TOP: 9px
+}
+.userRank TH {
+	COLOR: #666666
+}
+.userRank TH {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; FONT-FAMILY: Verdana
+}
+.userRank TD {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; FONT-FAMILY: Verdana
+}
+.otherLink {
+	TEXT-ALIGN: left
+}
+.otherLink LI {
+	PADDING-LEFT: 24px; BACKGROUND: url(../images/li03.gif) no-repeat 9px -38px; LINE-HEIGHT: 23px
+}
+.inLine LI {
+	FLOAT: left
+}
+.cru {
+	MARGIN: 12px auto; WIDTH: 750px; TEXT-ALIGN: left
+}
+.listBody {
+	MARGIN: 0px auto 36px; WIDTH: 750px
+}
+.tags {
+	BACKGROUND: url(../images/dot01.gif) repeat-x 50% bottom
+}
+.tags UL {
+	HEIGHT: 22px
+}
+.tags LI {
+	BACKGROUND: url(../images/tag01.gif) no-repeat 0px bottom; FLOAT: left; WIDTH: 147px; CURSOR: pointer; LINE-HEIGHT: 22px; HEIGHT: 22px
+}
+.tags LI H3 {
+	FONT-WEIGHT: bold; WIDTH: 147px; COLOR: #854b00; HEIGHT: 22px
+}
+.tags LI.on {
+	BACKGROUND-POSITION: 0px 0px
+}
+.pages {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN: 15px; COLOR: #ff6600; FONT-FAMILY: Verdana; LETTER-SPACING: 2px; TEXT-ALIGN: right
+}
+.pages A {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; MARGIN: 0px 2px
+}
+.pages A:hover {
+	TEXT-DECORATION: none
+}
+.listCont {
+	BORDER-RIGHT: #955121 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #955121 1px; PADDING-LEFT: 0px; PADDING-BOTTOM: 12px; BORDER-LEFT: #955121 1px solid; PADDING-TOP: 12px; BORDER-BOTTOM: #955121 1px solid; BACKGROUND-COLOR: #fff
+}
+.listCont TR.bg {
+	BACKGROUND-COLOR: #fff7ef
+}
+.listCont TH {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; FONT-SIZE: 14px; PADDING-BOTTOM: 6px; PADDING-TOP: 6px; BORDER-BOTTOM: #07669d 1px dashed
+}
+.listCont TD {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 4px; PADDING-TOP: 4px
+}
+.listCont TD.num {
+	FONT-SIZE: 11px
+}
+.listCont TD.qstTitle {
+	FONT-SIZE: 14px; LINE-HEIGHT: 20px; TEXT-ALIGN: left
+}
+.listCont TD.qstTitle SMALL {
+	FONT-SIZE: 12px
+}
+SPAN.score {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 12px; FONT-SIZE: 10px; BACKGROUND: url(../images/money.gif) no-repeat left 0px; PADDING-BOTTOM: 0px; COLOR: #ff0000; PADDING-TOP: 0px; FONT-FAMILY: Verdana
+}
+.question {
+	
+}
+.question .head {
+	CLEAR: both; MARGIN: 16px 16px 9px; OVERFLOW: hidden; HEIGHT: 1%
+}
+.question .head H5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; FLOAT: left
+}
+.question .head .operaBtns LI {
+	DISPLAY: inline; FONT-SIZE: 12px; FLOAT: right; MARGIN-LEFT: 6px
+}
+.question .head .operaBtns LI INPUT {
+	BORDER-RIGHT: #fe8102 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #fe8102 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 0px; BORDER-LEFT: #fe8102 1px solid; CURSOR: pointer; PADDING-TOP: 3px; BORDER-BOTTOM: #fe8102 1px solid; BACKGROUND-COLOR: #fafeee
+}
+HTML >  BODY .question .head .operaBtns LI INPUT {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 1px; PADDING-TOP: 2px
+}
+HTML >  BODY .question .head .operaBtns LI INPUT.answerBtn {
+	PADDING-LEFT: 21px
+}
+.question .head .operaBtns LI INPUT.answerBtn {
+	PADDING-LEFT: 15px; BACKGROUND: url(../images/supply.gif) #fafeee no-repeat 3px center
+}
+.question .head .operaBtns LI INPUT:hover {
+	BORDER-LEFT-COLOR: #688f67; BORDER-BOTTOM-COLOR: #688f67; BORDER-TOP-COLOR: #688f67; BACKGROUND-COLOR: #efffe4; TEXT-DECORATION: none; BORDER-RIGHT-COLOR: #688f67
+}
+.question .cont {
+	FONT-SIZE: 14px; MARGIN: 16px; LINE-HEIGHT: 23px; TEXT-ALIGN: left; WORD-WRAP: break-word
+}
+.question .askInfo {
+	FONT-SIZE: 12px; MARGIN: 0px 16px 16px; COLOR: #666; FONT-FAMILY: Verdana; TEXT-ALIGN: left
+}
+.question SPAN.score {
+	FONT-SIZE: 12px
+}
+.containerBg {
+	CLEAR: both; BORDER-RIGHT: #955121 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #955121 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 16px; OVERFLOW: hidden; BORDER-LEFT: #955121 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #955121 1px solid; HEIGHT: 1%; BACKGROUND-COLOR: #fff7ef; TEXT-ALIGN: left
+}
+.containerBg .commt {
+	MARGIN: 16px; COLOR: #955121
+}
+.questionSupply {
+	MARGIN: 16px; TEXT-ALIGN: left; WORD-WRAP: break-word
+}
+.questionSupply H5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN: 12px 0px
+}
+.questionSupply DIV {
+	MARGIN: 0px 36px; LINE-HEIGHT: 23px
+}
+.questionSupply P {
+	FONT-SIZE: 12px; MARGIN: 3px 36px 9px; COLOR: #666; FONT-FAMILY: Verdana
+}
+.containerBg .supply {
+	MARGIN: 16px
+}
+.containerBg .supply H5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN: 12px 0px
+}
+.containerBg .supply P {
+	PADDING-RIGHT: 0px; BORDER-TOP: #955121 1px solid; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 9px; MARGIN: 6px 0px 0px; COLOR: #666; PADDING-TOP: 9px; FONT-FAMILY: Verdana
+}
+.containerBg .supply P.s1 {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.containerBg .supply DIV.s2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 12px; LINE-HEIGHT: 23px; PADDING-TOP: 0px; WORD-WRAP: break-word
+}
+.aswInfo {
+	FONT-SIZE: 12px; COLOR: #666; FONT-FAMILY: Verdana; TEXT-ALIGN: right
+}
+.otherAsw {
+	CLEAR: both; BORDER-TOP: #3d2416 1px solid; OVERFLOW: hidden; HEIGHT: 1%
+}
+.otherAsw .aswInfo {
+	FLOAT: left
+}
+.insertForm {
+	MARGIN: 0px; WIDTH: 612px
+}
+.insertForm .head SELECT {
+	FONT-WEIGHT: normal
+}
+.insertForm SPAN.num {
+	FLOAT: right
+}
+.insertForm .formItem {
+	FONT-SIZE: 12px; MARGIN: 16px; COLOR: #666666
+}
+.insertForm .formItem TEXTAREA {
+	BORDER-RIGHT: #955121 1px solid; BORDER-TOP: #955121 1px solid; FONT-SIZE: 14px; MARGIN-BOTTOM: 12px; BORDER-LEFT: #955121 1px solid; BORDER-BOTTOM: #955121 1px solid; BACKGROUND-COLOR: #fff
+}
+.insertForm .tips {
+	FONT-SIZE: 12px; MARGIN: 16px; COLOR: #ff6c00; LINE-HEIGHT: 20px
+}
+.notice {
+	MARGIN: 16px
+}
+.notice H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 18px; PADDING-BOTTOM: 9px; PADDING-TOP: 9px; BORDER-BOTTOM: #955121 1px solid
+}
+.notice P.num {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 6px; PADDING-TOP: 6px
+}
+.notice .cont {
+	MARGIN: 12px 12px 36px; LINE-HEIGHT: 23px; TEXT-ALIGN: left
+}
+.notice .cont P {
+	MARGIN: 0px 0px 24px; TEXT-INDENT: 2em
+}
+.searchRslt {
+	BORDER-RIGHT: #955121 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #955121 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 9px; BORDER-LEFT: #955121 1px solid; PADDING-TOP: 9px; BORDER-BOTTOM: #955121 1px solid; BACKGROUND-COLOR: #fff7ef
+}
+.searchRslt .title {
+	FONT-WEIGHT: bold; BACKGROUND: none transparent scroll repeat 0% 0%; TEXT-ALIGN: left
+}
+.searchRslt .title A {
+	COLOR: #c00
+}
+.searchRslt #one_center TABLE {
+	MARGIN: 6px 0px
+}
+.searchRslt #one_center TABLE TD {
+	TEXT-ALIGN: left
+}
+.postForms {
+	MARGIN: 16px
+}
+.postForms H5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN: 12px 0px; TEXT-ALIGN: left
+}
+.postForms H5 SPAN {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #666
+}
+.postForms P {
+	MARGIN: 6px 16px; LINE-HEIGHT: 23px; TEXT-ALIGN: left
+}
+.postForms UL {
+	MARGIN: 16px; LINE-HEIGHT: 28px; TEXT-ALIGN: left
+}
+.postForms TD {
+	FONT-SIZE: 14px; VERTICAL-ALIGN: top; TEXT-ALIGN: left
+}
+.postForms .tips {
+	FONT-SIZE: 12px; COLOR: #ff6c00; LINE-HEIGHT: 20px
+}
+.postForms .tips IMG {
+	MARGIN: -3px 0px 0px
+}
+.postForms TD TEXTAREA {
+	FONT-SIZE: 14px
+}
+.postForms .systemInfo {
+	MARGIN: 24px 0px
+}
+.postForms .systemInfo .f12px {
+	MARGIN: 24px 0px 0px; COLOR: #666
+}
+.postForms .systemInfo P {
+	TEXT-ALIGN: center
+}
+.lucky {
+	MARGIN: 16px 36px
+}
+.lucky P {
+	TEXT-INDENT: 2em; LINE-HEIGHT: 23px
+}
+.lucky LI {
+	TEXT-INDENT: 2em; LINE-HEIGHT: 23px
+}
+.lucky .gameArea {
+	MARGIN: 12px auto
+}
+TABLE TD.alignRight {
+	TEXT-ALIGN: right
+}
+.outWrap {
+	CLEAR: both; MARGIN: 12px auto; OVERFLOW: hidden; WIDTH: 960px
+}
+.outWrap .leftMenu {
+	FLOAT: left; WIDTH: 160px
+}
+.outWrap .leftMenu LI {
+	TEXT-INDENT: 36px; LINE-HEIGHT: 28px; TEXT-ALIGN: left
+}
+.outWrap .leftMenu LI A {
+	DISPLAY: block; FONT-SIZE: 14px; BACKGROUND: url(../images/li03.gif) no-repeat 18px -36px; WIDTH: 100%; HEIGHT: 28px
+}
+.outWrap .leftMenu LI A:hover {
+	FONT-WEIGHT: bold; COLOR: #955121
+}
+.outWrap .leftMenu LI A:active {
+	
+}
+.outWrap .leftMenu LI.on A {
+	FONT-WEIGHT: bold; COLOR: #fff; BACKGROUND-COLOR: #3d2416
+}
+.outWrap .leftMenu {
+	
+}
+.outWrap .rightCont {
+	BORDER-RIGHT: #3d2416 9px solid; BORDER-TOP: #3d2416 9px solid; MARGIN-LEFT: 160px; BORDER-LEFT: #3d2416 9px solid; BORDER-BOTTOM: #3d2416 9px solid; BACKGROUND-COLOR: #ffffff
+}
+.rightCont .userInfo {
+	MARGIN: 16px; TEXT-ALIGN: left
+}
+.rightCont .userInfo H5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN: 12px 0px
+}
+.rightCont .tags {
+	MARGIN: 12px 0px 0px; TEXT-ALIGN: center
+}
+.rightCont .listCont TH {
+	TEXT-ALIGN: center
+}
+.rightCont .border {
+	BORDER-RIGHT: #955121 1px solid; BORDER-TOP: #955121 1px solid; BORDER-LEFT: #955121 1px solid; BORDER-BOTTOM: #955121 1px solid
+}
+.listBody .border {
+	BORDER-RIGHT: #955121 1px solid; BORDER-TOP: #955121 1px solid; BORDER-LEFT: #955121 1px solid; BORDER-BOTTOM: #955121 1px solid
+}
+.rightCont .listCont TD.msgCont {
+	PADDING-RIGHT: 136px; PADDING-LEFT: 9px; FONT-SIZE: 12px; PADDING-BOTTOM: 9px; WORD-BREAK: break-all; TEXT-INDENT: 2em; LINE-HEIGHT: 18px; PADDING-TOP: 9px; TEXT-ALIGN: left
+}
+.rightCont .scoreForm P {
+	MARGIN: 0px 0px 12px
+}
+.dataTb01 {
+	MARGIN: 0px; BORDER-COLLAPSE: collapse
+}
+.dataTb01 CAPTION {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 14px; PADDING-BOTTOM: 12px; PADDING-TOP: 12px; TEXT-ALIGN: left
+}
+.dataTb01 TH {
+	BORDER-RIGHT: #955121 1px solid; PADDING-RIGHT: 9px; BORDER-TOP: #955121 1px solid; PADDING-LEFT: 9px; FONT-SIZE: 14px; PADDING-BOTTOM: 6px; BORDER-LEFT: #955121 1px solid; PADDING-TOP: 6px; BORDER-BOTTOM: #955121 1px solid; FONT-FAMILY: Verdana; TEXT-ALIGN: center
+}
+.dataTb01 TD {
+	BORDER-RIGHT: #955121 1px solid; PADDING-RIGHT: 9px; BORDER-TOP: #955121 1px solid; PADDING-LEFT: 9px; FONT-SIZE: 14px; PADDING-BOTTOM: 6px; BORDER-LEFT: #955121 1px solid; PADDING-TOP: 6px; BORDER-BOTTOM: #955121 1px solid; FONT-FAMILY: Verdana; TEXT-ALIGN: center
+}
+.dataTb01 TH {
+	FONT-WEIGHT: normal; BACKGROUND-COLOR: #fff7ef
+}
+.rankBar {
+	BORDER-RIGHT: #9dbea5 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #9dbea5 1px solid; PADDING-LEFT: 1px; FLOAT: left; PADDING-BOTTOM: 1px; OVERFLOW: hidden; BORDER-LEFT: #9dbea5 1px solid; WIDTH: 100px; PADDING-TOP: 1px; BORDER-BOTTOM: #9dbea5 1px solid; HEIGHT: 11px; TEXT-ALIGN: left
+}
+.rightCont .helpInfo {
+	MARGIN: 24px; TEXT-ALIGN: left
+}
+.rightCont .helpInfo H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 14px; PADDING-BOTTOM: 6px; MARGIN: 9px 0px; COLOR: #955121; TEXT-INDENT: 1em; PADDING-TOP: 6px; BORDER-BOTTOM: #955121 1px solid; TEXT-ALIGN: left
+}
+.rightCont .helpInfo P {
+	TEXT-INDENT: 2em; LINE-HEIGHT: 23px
+}
+.rightCont .helpInfo PRE {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.rightCont .helpInfo OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-POSITION: outside; PADDING-BOTTOM: 0px; MARGIN-LEFT: 48px; LINE-HEIGHT: 23px; PADDING-TOP: 0px; FONT-FAMILY: Verdana
+}
+.rightCont .helpInfo OL LI {
+	MARGIN: 0px 0px 12px; COLOR: #333333; LIST-STYLE-TYPE: decimal
+}
+.rightCont .helpInfo OL LI UL {
+	MARGIN-LEFT: 48px
+}
+.rightCont .helpInfo OL LI UL LI {
+	LIST-STYLE-TYPE: upper-alpha
+}
+.rightCont .helpInfo .hilite {
+	BORDER-RIGHT: #ff3300 1px dashed; PADDING-RIGHT: 12px; BORDER-TOP: #ff3300 1px dashed; PADDING-LEFT: 12px; FONT-SIZE: 12px; PADDING-BOTTOM: 6px; MARGIN: 9px 0px; BORDER-LEFT: #ff3300 1px dashed; COLOR: #ff3300; PADDING-TOP: 6px; BORDER-BOTTOM: #ff3300 1px dashed
+}
+.rightCont .helpInfo .hilite LI {
+	MARGIN: 0px; COLOR: #ff3300
+}
+.rightCont .helpInfo .dataTb01 {
+	MARGIN: 12px auto
+}
+.rightCont .helpInfo .dataTb01 TD {
+	TEXT-ALIGN: left
+}
+#footer {
+	PADDING-RIGHT: 0px; BORDER-TOP: #7d6356 6px solid; PADDING-LEFT: 0px; BACKGROUND: url(../images/foot_bg.gif) repeat-x 50% bottom; PADDING-BOTTOM: 12px; PADDING-TOP: 12px
+}
+#footer P {
+	FONT-SIZE: 12px; COLOR: #3d2416; LINE-HEIGHT: 20px
+}
+#loginForm {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; Z-INDEX: 999; LEFT: 0px; BORDER-LEFT: #fff 1px solid; WIDTH: 460px; COLOR: #000000; BORDER-BOTTOM: #fff 1px solid; POSITION: absolute; TOP: 0px; TEXT-ALIGN: left
+}
+#loginForm A:link {
+	COLOR: #473e34; TEXT-DECORATION: none
+}
+#loginForm A:visited {
+	COLOR: #666; TEXT-DECORATION: none
+}
+#loginForm A:hover {
+	COLOR: #f00; TEXT-DECORATION: underline
+}
+#loginForm A:active {
+	COLOR: #f00
+}
+#loginForm .block {
+	FONT-SIZE: 12px; MARGIN: 0px
+}
+#loginForm .block .title {
+	CURSOR: move
+}
+#loginForm .block .title SPAN {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; MARGIN: 6px 6px 0px 0px
+}
+#loginForm .block .title SPAN A {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; DISPLAY: block; OVERFLOW: hidden; BORDER-LEFT: #fff 1px solid; WIDTH: 16px; COLOR: #ffffff; LINE-HEIGHT: 18px; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 16px; BACKGROUND-COLOR: #8d7e77; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#loginForm .block .title SPAN A:hover {
+	BORDER-RIGHT: #3c2116 1px solid; BORDER-TOP: #3c2116 1px solid; BORDER-LEFT: #3c2116 1px solid; COLOR: #3c2116; BORDER-BOTTOM: #3c2116 1px solid; BACKGROUND-COLOR: #ffffff
+}
+#loginForm .formItem {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 64px; PADDING-BOTTOM: 12px; PADDING-TOP: 12px
+}
+#loginForm .formItem LI {
+	LINE-HEIGHT: 28px; HEIGHT: 28px
+}
+#loginForm .formItem LI#checkInfo {
+	PADDING-LEFT: 60px; COLOR: #ff7403
+}
+#loginForm .formItem LI.btns {
+	PADDING-LEFT: 60px
+}
+#loginForm .formItem LI .btn {
+	MARGIN-RIGHT: 36px
+}
+#loginForm .formItem LI .txt {
+	WIDTH: 240px
+}
+#loginForm .tips {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 64px; PADDING-BOTTOM: 18px; COLOR: #666; LINE-HEIGHT: 20px; PADDING-TOP: 0px
+}
+#loginForm .tips LI {
+	HEIGHT: 20px
+}
+.calendar {
+	WIDTH: 242px
+}
+#maincenter {
+	MARGIN: 28px; FONT-FAMILY: Verdana; TEXT-ALIGN: left
+}
+#maincenter .item {
+	MARGIN: 18px 0px; WIDTH: 500px
+}
+#maincenter .item A {
+	COLOR: #666
+}
+#maincenter .item H4 {
+	FONT-SIZE: 16px
+}
+#maincenter .item H4 SMALL {
+	PADDING-LEFT: 12px
+}
+#maincenter .item P {
+	FONT-SIZE: 12px; MARGIN: 0px; LINE-HEIGHT: 18px
+}
+#maincenter .item .summary {
+	FONT-SIZE: 12px; MARGIN: 6px 0px 3px
+}
+#maincenter .item .url {
+	COLOR: #666
+}
+.columnTips {
+	CLEAR: both; BORDER-RIGHT: #ffa922 1px solid; BORDER-TOP: #ffa922 1px solid; MARGIN: 16px; OVERFLOW: hidden; BORDER-LEFT: #ffa922 1px solid; BORDER-BOTTOM: #ffa922 1px solid; POSITION: relative; HEIGHT: 1%; BACKGROUND-COLOR: #fffcea
+}
+.columnTips P {
+	FONT-SIZE: 12px; BACKGROUND: url(../images/notice.gif) no-repeat left -1px; MARGIN: 9px 60px 9px 18px; TEXT-INDENT: 2em; LINE-HEIGHT: 20px; TEXT-ALIGN: left
+}
+.columnTips SPAN {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; RIGHT: 3px; MARGIN: 6px 6px 0px 0px; POSITION: absolute; TOP: 3px
+}
+.columnTips SPAN A {
+	BORDER-RIGHT: #ffa800 1px solid; BORDER-TOP: #ffa800 1px solid; DISPLAY: block; OVERFLOW: hidden; BORDER-LEFT: #ffa800 1px solid; WIDTH: 16px; COLOR: #f49453; LINE-HEIGHT: 18px; BORDER-BOTTOM: #ffa800 1px solid; HEIGHT: 16px; BACKGROUND-COLOR: #faffef; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.columnTips SPAN A:hover {
+	BORDER-RIGHT: #ffa800 1px solid; BORDER-TOP: #ffa800 1px solid; BORDER-LEFT: #ffa800 1px solid; COLOR: #fff; BORDER-BOTTOM: #ffa800 1px solid; BACKGROUND-COLOR: #ffa800
+}

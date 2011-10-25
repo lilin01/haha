@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for function.popup_init.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file function.popup_init.php</h1>
+<p>Documentation is available at <a href="../Smarty/plugins/_smarty_plugins_function_popup_init_php.html">function.popup_init.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?php</span></li>
+<li><a name="a2"></a><span class="src-doc">/**</span></li>
+<li><a name="a3"></a><span class="src-doc"> * Smarty plugin</span></li>
+<li><a name="a4"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@package</span><span class="src-doc"> Smarty</span></li>
+<li><a name="a5"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@subpackage</span><span class="src-doc"> plugins</span></li>
+<li><a name="a6"></a><span class="src-doc"> */</span></li>
+<li><a name="a7"></a>&nbsp;</li>
+<li><a name="a8"></a>&nbsp;</li>
+<li><a name="a9"></a><span class="src-doc">/**</span></li>
+<li><a name="a10"></a><span class="src-doc"> * Smarty {popup_init} function plugin</span></li>
+<li><a name="a11"></a><span class="src-doc"> *</span></li>
+<li><a name="a12"></a><span class="src-doc"> * Type:     function&lt;br&gt;</span></li>
+<li><a name="a13"></a><span class="src-doc"> * Name:     popup_init&lt;br&gt;</span></li>
+<li><a name="a14"></a><span class="src-doc"> * Purpose:  initialize overlib</span></li>
+<li><a name="a15"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@link</span><span class="src-doc"> http://smarty.php.net/manual/en/language.function.popup.init.php {popup_init}</span></li>
+<li><a name="a16"></a><span class="src-doc"> *           (Smarty online manual)</span></li>
+<li><a name="a17"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">array </span></li>
+<li><a name="a18"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">Smarty </span></li>
+<li><a name="a19"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span></li>
+<li><a name="a20"></a><span class="src-doc"> */</span></li>
+<li><a name="a21"></a><span class="src-key">function </span><a href="../Smarty/plugins/_smarty_plugins_function_popup_init_php.html#functionsmarty_function_popup_init">smarty_function_popup_init</a><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">, </span><span class="src-sym">&amp;</span><span class="src-var">$smarty</span><span class="src-sym">)</span></li>
+<li><a name="a22"></a><span class="src-sym">{</span></li>
+<li><a name="a23"></a>    <span class="src-var">$zindex </span>= <span class="src-num">1000</span><span class="src-sym">;</span></li>
+<li><a name="a24"></a>    </li>
+<li><a name="a25"></a>    <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'zindex'</span><span class="src-sym">]</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a26"></a>        <span class="src-var">$zindex </span>= <span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'zindex'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a27"></a>    <span class="src-sym">}</span></li>
+<li><a name="a28"></a>    </li>
+<li><a name="a29"></a>    <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'src'</span><span class="src-sym">]</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a30"></a>        <span class="src-key">return </span><span class="src-str">'&lt;div id=&quot;overDiv&quot; style=&quot;position:absolute; visibility:hidden; z-index:'</span>.<span class="src-var">$zindex</span>.<span class="src-str">';&quot;&gt;&lt;/div&gt;' </span>. <span class="src-str">&quot;\n&quot;</span></li>
+<li><a name="a31"></a>         . <span class="src-str">'&lt;script type=&quot;text/javascript&quot; language=&quot;JavaScript&quot; src=&quot;'</span>.<span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'src'</span><span class="src-sym">]</span>.<span class="src-str">'&quot;&gt;&lt;/script&gt;' </span>. <span class="src-str">&quot;\n&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a32"></a>    <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a33"></a>        <span class="src-var">$smarty</span><span class="src-sym">-&gt;</span><a href="http://www.php.net/trigger_error">trigger_error</a><span class="src-sym">(</span><span class="src-str">&quot;popup_init: missing src parameter&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a34"></a>    <span class="src-sym">}</span></li>
+<li><a name="a35"></a><span class="src-sym">}</span></li>
+<li><a name="a36"></a>&nbsp;</li>
+<li><a name="a37"></a><span class="src-comm">/* vim: set expandtab: */</span></li>
+<li><a name="a38"></a>&nbsp;</li>
+<li><a name="a39"></a><span class="src-php">?&gt;</span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 05 Aug 2009 07:45:39 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

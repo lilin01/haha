@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for constant.inc.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file constant.inc.php</h1>
+<p>Documentation is available at <a href="../lib/plugins.orm/_plugins_orm_constant_inc_php.html">constant.inc.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?php </span></li>
+<li><a name="a2"></a>&nbsp;</li>
+<li><a name="a3"></a><span class="src-doc">/**</span></li>
+<li><a name="a4"></a><span class="src-doc"> *  ORM 数据类型常量定义</span></li>
+<li><a name="a5"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@package</span><span class="src-doc"> lib</span></li>
+<li><a name="a6"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@subpackage</span><span class="src-doc"> plugins.orm</span></li>
+<li><a name="a7"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@author</span><span class="src-doc"> 张立冰 &lt;roast@php.net&gt;</span></li>
+<li><a name="a8"></a><span class="src-doc"> */</span></li>
+<li><a name="a9"></a>&nbsp;</li>
+<li><a name="a10"></a><span class="src-doc-template">/**#@+</span></li>
+<li><a name="a11"></a><span class="src-doc-template"> * Mapping 文件中的字段数据类型</span></li>
+<li><a name="a12"></a><span class="src-doc-template"> */</span></li>
+<li><a name="a13"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_SQL'</span><span class="src-sym">,             </span><span class="src-str">'sql'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a14"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_AUTO'</span><span class="src-sym">,             </span><span class="src-str">'auto'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a15"></a>&nbsp;</li>
+<li><a name="a16"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_BOOLEAN'</span><span class="src-sym">,          </span><span class="src-str">'boolean'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a17"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_BIT'</span><span class="src-sym">,              </span><span class="src-str">'bit'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a18"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_INT'</span><span class="src-sym">,              </span><span class="src-str">'int'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a19"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_DECIMAL'</span><span class="src-sym">,          </span><span class="src-str">'decimal'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a20"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_FLOAT'</span><span class="src-sym">,            </span><span class="src-str">'float'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a21"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_CHAR'</span><span class="src-sym">,             </span><span class="src-str">'char'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a22"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_VARCHAR'</span><span class="src-sym">,         </span><span class="src-str">'varchar'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a23"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_CLOB'</span><span class="src-sym">,             </span><span class="src-str">'clob'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a24"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_TEXT'</span><span class="src-sym">,             </span><span class="src-str">'text'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a25"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_BLOB'</span><span class="src-sym">,             </span><span class="src-str">'blob'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a26"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_DATE'</span><span class="src-sym">,             </span><span class="src-str">'date'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a27"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_TIME'</span><span class="src-sym">,             </span><span class="src-str">'time'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a28"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_ORM_DT_DATETIME'</span><span class="src-sym">,         </span><span class="src-str">'datetime'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a30"></a><span class="src-doc-close-template">/**#@-*/</span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 14 Aug 2008 10:06:35 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

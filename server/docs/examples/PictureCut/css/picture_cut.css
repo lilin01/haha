@@ -1,0 +1,62 @@
+﻿.float_div {
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+	background-color: silver;
+	filter: Alpha(Opacity=60);
+	Opacity: 0.6;
+}
+.select_div {
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	height: 150px;
+	width: 150px;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 100;
+}
+.show_pic {
+	position: absolute;
+	top: 85px;
+	left: 700px;
+	height: 288px;
+	width: 384px;
+	overflow: hidden;
+	z-index: 99;
+}
+.upload {
+	position: absolute;
+	top: 320px;
+	left: 780px;
+}
+.upload_bn {
+	margin-left: 10px;
+	margin-top: 30px;
+}
+.out_frame {
+	width: 500px;
+	height: 500px;
+	padding: 0px;
+	margin: 0px;
+	margin-left: 100px;
+	border: 1px black dotted;
+}
+.span_upload {
+	font-family: fantasy;
+	font-size: 16px;
+	font-weight: bold;
+	color: gray;
+	margin-left: 100px;
+}
+#cut_pic {
+	position: absolute;
+	left: 750px;
+	top: 380px;
+	text-align:center;
+	font-family: fantasy;
+	font-size: 16px;
+	font-weight: bold;
+	color: gray;
+
+}
