@@ -1,0 +1,149 @@
+{
+	"status":1,
+	"data":
+	{
+		"cid":"7633369"
+		,"facebook_id":"100001180085941"
+		,"npc":"0"
+		,"name":"Lin Lee"
+		,"avatar":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/23207_100001180085941_7750_q.jpg"
+		,"formed":"2011-01-08 01:29:55"
+		,"faction":"0"
+		,"gold":6528
+		,"karma":0
+		,"gift_currency":"0"
+		,"relic_slots":"2"
+		,"level":"9"
+		,"exp":"242"
+		,"last_auto_heal":"2011-07-13 05:42:39"
+		,"last_bonus":"2011-07-13 05:42:39"
+		,"leveled_at":"2011-07-11 18:44:22"
+		,"exp_modifier":"1"
+		,"gold_modifier":"1"
+		,"tutorial":"0"	
+		,"currency_provider":"1"
+		,"source":"2005"
+		,"purchased_karma":"0"
+		,"purchased_gold":"0"
+		,"magic":{"sid":0}
+		,"magic_equipped_at":"2011-03-21 04:46:19"
+		,"relics":[
+								{"iid":"15"
+									,"slot":"0"
+									,"name":"Namazu Scale"
+									,"is_plural":"0" 
+									,"description":"Remains of the mighty sea monster from ocean below. +5 power per ninja"
+									,"unique":"0"
+									,"value":"650"
+									,"karma_value":"0"
+									,"type":"2"
+									,"sprite":"1"
+									,"standanimation":"0"
+									,"rarity":"3"
+									,"attributes":{"clan_power":"5","min_level":"2"}
+								}
+							]
+							
+		,"bonus_gold_per_hour":0 
+		,"bonus_karma_per_hour":0
+		,"ninjas":[
+								{
+									"nid":"17566158"
+									,"recruited":"2011-01-08 01:30:45"
+									,"name":"Kaya Togai"
+									,"level":"20"
+									,"weapon":
+														{
+															"iid":"318"
+															,"name":"Lunchbox"
+															,"is_plural":"0"
+															,"description":"It has \"genteiban no genbu-taipu\" printed on the back."
+															,"unique":"0"
+															,"value":"10000"
+															,"karma_value":"0"
+															,"type":"1"
+															,"sprite":"lunchbox"
+															,"runanimation":"2"
+															,"standanimation":"2"
+															,"rarity":"0" 
+															,"attributes":
+																	{
+																		"damage":"5"
+																		,"min_level":"5"
+																		,"speed":56
+																		,"unsellable":"1"
+																		,"base_speed":"56"
+																		,"base_damage":"5"
+																	}
+														}
+									,"max_health":"421"
+									,"power":"97"
+									,"initial_health":"45"
+									,"initial_power":"47"
+									,"gender":"1"
+									,"blood_type":"A+"
+									,"birthdate":{"pretty":"Jan 18, 1386","for_mysql":"1986-01-18"}
+									,"value":"5"
+									,"modified_max_health":433
+									,"modified_power":105
+									,"crit_rate":5
+									,"initial_name":"Kaya Togai"
+									,"armor":0 
+									,"penetration":0
+									,"agility":0 
+									,"health":"433"
+								}
+							]
+		,"exp_to_level":17
+		,"total_exp_to_level":100
+		,"seconds_of_bonus_exp":0
+		,"seconds_of_magic":0
+		,"achievements":[]
+		,"gained_exp":0   //离开的这段时间获得的经验
+		,"gained_karma":0 //离开的这段时间获得的karma
+		,"gained_gold":0  //离开的这段时间获得的gold
+		,"gained_level":0 //离开的这段时间 level
+		,"gained_gift_currency":0 //离开的这段时间获得的token
+		,"inventory": 
+			[
+				{
+					"iid":"62"
+					,"name":"Orchid Blossom"
+					,"is_plural":"0"
+					,"description":"A fossilized blossom from the fields of sanctity.  +3% health, +3% attack speed"
+					,"unique":"0"
+					,"value":"1000"
+					,"karma_value":"0"
+					,"type":"2"
+					,"sprite":"5"
+					,"runanimation":"0"
+					,"standanimation":"0"
+					,"rarity":"3"
+					,"attributes":{"clan_health_pct":"3","clan_speed_pct":"3","min_level":"2"}
+				}
+			]
+		,"flags":[]
+		,"defeated_girl":false
+		,"defeated_genbu":false
+		,"defeated_small_girl":true
+		,"defeated_mechagenbu":false
+		,"allies":
+			[
+				{
+					"cid":"9049908"
+					,"name":"\u803f\u5e05"
+					,"level":"13"
+					,"faction":"1" 
+					,"avatar":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/70924_100001865106886_5007719_q.jpg"
+					,"needs_assistance":1
+				}
+			]
+		,"ally_count":8
+		,"ally_requests":[]
+		,"daimyo_gift":0
+		,"cloud":0
+		,"tournament_in":0 
+		,"horde_in":0
+		,"errors":[]
+	}
+}

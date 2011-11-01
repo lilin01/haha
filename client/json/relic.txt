@@ -1,0 +1,48 @@
+{"iid":"308"
+,"sort_order":"0"
+,"name":"Cobra Kai"
+,"is_plural":"0"
+,"description":"The power of the fist knows no equal. +100 power perninja"
+,"unique":"0"
+,"value":"0"
+,"karma_value":"20"
+,"type":"2"
+,"sprite":"59" 
+,"runanimation":"0"
+,"standanimation":"0"
+,"rarity":"0"
+,"attributes":{
+		"min_level":"25"
+		,"clan_power":"100"
+		}
+}
+
+{"iid":"414"
+,"sort_order":"0"
+,"name":"Shugendo Cloth"
+,"is_plural":"0"
+,"description":"Ancient cloth representing enlightenment and oneness with the universe. +35 gility"
+,"unique":"0"
+,"value":"11000000"
+,"karma_value":"0"
+,"type":"2"
+,"sprite":"81"
+,"runanimation":"0"
+,"standanimation":"0"
+,"rarity":"0"
+,"attributes":{"min_level":"46","clan_agility":"35"}}
+
+{"iid":"414"
+,"sort_order":"0"
+,"name":"Shugendo Cloth"
+,"is_plural":"0"
+,"description":"Ancient cloth representing enlightenment and oneness with the universe. +35 agility"
+,"unique":"0"
+,"value":"11000000"
+,"karma_value":"0"
+,"type":"2"
+,"sprite":"81" //http://ninjacdn.brokenbulbstudios.com/swf/relicshopgfx/81.png
+,"runanimation":"0"
+,"standanimation":"0"
+,"rarity":"0"
+,"attributes":{"min_level":"46","clan_agility":"35"}}

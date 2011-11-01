@@ -1,0 +1,54 @@
+/ 接口编号：1
+// 获取用户信息
+// 参数：1，UserId 用户编号 如果为空或者等于0， 则为自己
+// 接口地址：GetUserInfo
+// 返回数据
+{
+	"status":1,														 // 数据包成功
+	"data":
+	{
+			"UserId":111,                           // 用户编号
+			"NickName":"XX",                        // 昵称
+			"Avatar":"http://xx.com/a.gif",         // 头像地址 50 * 50
+			"Gold":100,                            // 金币
+			"Rmb":1000,                            // 人民币
+			"Token":12			 											 //代金券
+			"Health":1432,                         // 当前的血量
+			"Level":123,													// 玩家等级
+			"CurrExp":456,												//当前的经验                
+			"TotalExp":1000												//本级别升级需要的经验值
+			"ShowSpreadTip":1											//是否显示使用RMB消费提示	1:显示 0:不显示
+			"magicid":1														//魔法编号
+			"districtid":99												//区号
+			"rollid":99														//职业编号
+			"IsFreshMan":1,                           // 是否是新手 1:是， 0：否
+    }
+}
+
+
+/ 接口编号：2
+// 获取用户信息
+// 参数：1，UserId 用户编号 如果为空或者等于0， 则为自己
+// 接口地址：GetUserInfo
+// 返回数据
+{
+	"status":1,                     // 数据包成功
+	"data":
+	{
+			"UserId":111,                           // 用户编号
+			"NickName":"XX",                        // 昵称
+			"Avatar":"http://xx.com/a.gif",         // 头像地址 50 * 50
+			"Gold":100,                            // 金币
+			"Rmb":1000,                            // 人民币
+			"Token":12			 											 //代金券
+			"Health":1432,                         // 当前的血量
+			"Level":123,													// 玩家等级
+			"CurrExp":456,												//当前的经验                
+			"TotalExp":1000												//本级别升级需要的经验值
+			"ShowSpreadTip":1											//是否显示使用RMB消费提示	1:显示 0:不显示
+			"magicid":1														//魔法编号
+			"districtid":99												//区号
+			"rollid":99														//职业编号
+			"FreshMan":1,                           // 是否是新手 1:是， 0：否
+    }
+}

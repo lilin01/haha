@@ -1,0 +1,11 @@
+{"result":"success"
+,"spoils":{"ninja":25300389
+		,"achievements":[{"aid":"11"
+			,"progress":5
+			,"max_progress":"5"
+			,"karma":"2"
+			,"name":"Power Hungry"
+			,"text":"Obtain 5 ninjas that are specced heavily for strength."
+			,"sort_order":"44"}]
+		}
+}

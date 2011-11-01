@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<project name="frameworkswc" default="main" basedir="..">
+
+	<property name="FLEX_HOME" location="C:\Program Files\Adobe\Adobe Flash Builder 4\sdks\4.0.0"/>
+	<target name="main" depends="clean, doc, cleanEnd" description="Clean build of frameworkswc.swc">
+	</target>
+	<echo message="Compiling ${ant.project.name}.swc"/>
+	<target name="clean" depends="">
+		<delete failonerror="false">
+			<fileset dir="${basedir}/bin">
+				<include name="${ant.project.name}.swc"/>
+			</fileset>
+		</delete>
+	</target>
+
+	<!-- 编译swc -->
+	<target name="compile" depends="" description="Compile SWC">
+		
+		<echo message="Compiling ${ant.project.name}.swc"/>
+		<taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar"/>
+		
+		<compc fork="true" output="${basedir}/bin/${ant.project.name}.swc">
+		    <source-path path-element="${basedir}/src"/>
+		    <include-sources dir="${basedir}/src" includes="**/*.as **/*.mxml"/>
+		    <!-- 库文件 -->
+		    <compiler.include-libraries dir="${basedir}/libs" append="true">
+			    <include name="test.swc" />
+			    <include name="tweener.swc" />
+			</compiler.include-libraries>
+		</compc>
+		
+	</target>
+
+	<!-- 文档编译 -->
+	<target name="doc" depends="compile" description="Updates SWC with ASDoc XML">
+
+		<taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar"/>
+		<echo message="Compiling ASDoc for ${ant.project.name}.swc"/>
+		
+		<!-- Call asdoc to generate dita xml files -->
+		<asdoc output="${basedir}/tempDoc" lenient="true" failonerror="true" keep-xml="true" skip-xsl="true" fork="true">
+		    <compiler.source-path path-element="${basedir}/src"/>
+			<doc-sources path-element="${basedir}/src"/>
+			
+			<library-path/>
+			<external-library-path dir="${basedir}/libs">
+		    	<include name="test.swc" />
+		    	<include name="tweener.swc" />
+		    </external-library-path>
+		    
+		    <external-library-path dir="${FLEX_HOME}\frameworks\libs\player\10.0">
+		    	<include name="playerglobal.swc" />
+		    </external-library-path>
+		    
+		</asdoc>
+		
+		<!-- updates ExampleFatSWC.swc with asdoc xml -->
+		<zip destfile="${basedir}/bin/${ant.project.name}.swc" update="true">
+		    <zipfileset dir="${basedir}/tempDoc/tempdita" prefix="docs">
+			    <include name="*.*"/>
+				<exclude name="ASDoc_Config.xml"/>
+				<exclude name="overviews.xml"/>
+		    </zipfileset>
+		</zip>
+	</target>
+			
+	<target name="cleanEnd">
+		<delete dir="${basedir}/tempDoc" failonerror="false" includeEmptyDirs="true"/>
+	</target>
+
+</project>
+
+

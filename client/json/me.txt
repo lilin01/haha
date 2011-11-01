@@ -1,0 +1,122 @@
+{"cid":"9049908"
+,"facebook_id":"100001865106886"
+,"npc":"0"
+,"name":"\u803f\u5e05"
+,"avatar":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/70924_100001865106886_5007719_q.jpg"
+,"formed":"2011-07-07 05:21:25"
+,"faction":"1"
+,"gold":400430
+,"karma":0
+,"gift_currency":"0"
+,"relic_slots":"4"
+,"level":"17"
+,"exp":"11068"
+,"last_auto_heal":"2011-07-22 20:43:59"
+,"last_bonus":"2011-07-22 20:43:59"
+,"leveled_at":"2011-07-19 21:19:07"
+,"exp_modifier":"1"
+,"gold_modifier":"1"
+,"tutorial":"0"
+,"currency_provider":"1"
+,"source":"0"
+,"purchased_karma":"0"
+,"purchased_gold":"0"
+,"magic":{"sid":0}
+,"magic_equipped_at":"0000-00-00 00:00:00"
+,"relics":[
+{"iid":"75"
+,"slot":"0"
+,"name":"Asiatic Flower"
+,"is_plural":"0"
+,"description":"An offensive petal that can slow your foes. +11% attack speed"
+,"unique":"0"
+,"value":"75000"
+,"karma_value":"0"
+,"type":"2"
+,"sprite":"23"
+,"standanimation":"0"
+,"rarity":"3"
+,"attributes":{"clan_speed_pct":"11","min_level":"14"}
+}
+,{"iid":"78","slot":"1","name":"Craven Rock","is_plural":"0","description":"A yellow stone that sends fear into your enemies. +30 power per ninja","unique":"0","value":"100000","karma_value":"0","type":"2","sprite":"26","standanimation":"0","rarity":"3","attributes":{"clan_power":"30","min_level":"16"}},
+
+{"iid":"187","slot":"2","name":"Genbu's Scale","is_plural":"0","description":"Remains of the Giant Genbu you defeated! +8% attack speed, +10% critical hit chance","unique":"0","value":"100000","karma_value":"0","type":"2","sprite":"48","standanimation":"0","rarity":"0","attributes":{"clan_speed_pct":"8","clan_crit":"10","unsellable":"1"}}
+
+,{"iid":"67","slot":"3","name":"Precious Seed","is_plural":"0","description":"A seed from the great trees of life. +10% health","unique":"0","value":"15000","karma_value":"0","type":"2","sprite":"11","standanimation":"0","rarity":"3","attributes":{"clan_health_pct":"10","min_level":"6"}}]
+
+,"bonus_gold_per_hour":0
+,"bonus_karma_per_hour":0
+,"ninjas":[
+{"nid":"24856654","recruited":"2011-07-07 20:24:34","name":"aaaaaa","level":"24","weapon":{"iid":"292","name":"Bladed Fan","is_plural":"0","description":"Known for its beauty, this silent killer often goes unnoticed until it's too late.","unique":"0","value":"0","karma_value":"10","type":"1","sprite":"bladedfan","runanimation":"2","standanimation":"2","rarity":"4","attributes":{"damage":"4.3","speed":27.731092436975,"min_level":"13","base_speed":"33","base_damage":"4.3"}},"max_health":"565","power":"117","initial_health":"45","initial_power":"47","gender":"1","blood_type":"A+","birthdate":{"pretty":"Feb 5, 1393","for_mysql":"1993-02-05"},"value":"1100","modified_max_health":621,"modified_power":147,"crit_rate":15,"initial_name":"aaaaaa","armor":0,"penetration":0,"agility":0,"health":"621"},
+{"nid":"24858158","recruited":"2011-07-07 23:15:31","name":"Miyamoto Sadakata","level":"19","weapon":{"iid":"292","name":"Bladed Fan","is_plural":"0","description":"Known for its beauty, this silent killer often goes unnoticed until it's too late.","unique":"0","value":"0","karma_value":"10","type":"1","sprite":"bladedfan","runanimation":"2","standanimation":"2","rarity":"4","attributes":{"damage":"4.3","speed":27.731092436975,"min_level":"13","base_speed":"33","base_damage":"4.3"}},"max_health":"352","power":"98","initial_health":"41","initial_power":"51","gender":"1","blood_type":"A+","birthdate":{"pretty":"Jun 29, 1393","for_mysql":"1993-06-29"},"value":"4400","modified_max_health":387,"modified_power":128,"crit_rate":15,"initial_name":"Miyamoto Sadakata","armor":0,"penetration":0,"agility":0,"health":"387"},
+{"nid":"24856451","recruited":"2011-07-07 20:03:14","name":"Tomo Asako","level":"15","weapon":{"iid":"292","name":"Bladed Fan","is_plural":"0","description":"Known for its beauty, this silent killer often goes unnoticed until it's too late.","unique":"0","value":"0","karma_value":"10","type":"1","sprite":"bladedfan","runanimation":"2","standanimation":"2","rarity":"4","attributes":{"damage":"4.3","speed":27.731092436975,"min_level":"13","base_speed":"33","base_damage":"4.3"}},"max_health":"294","power":"68","initial_health":"51","initial_power":"41","gender":"0","blood_type":"B+","birthdate":{"pretty":"Nov 18, 1392","for_mysql":"1992-11-18"},"value":"5","modified_max_health":323,"modified_power":98,"crit_rate":15,"initial_name":"Tomo Asako","armor":0,"penetration":0,"agility":0,"health":"323"},
+{"nid":"24872184","recruited":"2011-07-08 21:02:14","name":"Hirayama Sayo","level":"15","weapon":{"iid":"455","name":"Lotus Blade","is_plural":"0","description":"A mystical living blade that gets more powerful as your clan grows.","unique":"0","value":"0","karma_value":"20","type":"1","sprite":"lotusclan3","runanimation":"3","standanimation":"3","rarity":"100","attributes":{"damage":13.5,"speed":75.63025210084,"unsellable":"1","preproc":"anniversaryWeapon","base_speed":90,"base_damage":13.5}},"max_health":"284","power":"69","initial_health":"49","initial_power":"43","gender":"0","blood_type":"A+","birthdate":{"pretty":"Oct 3, 1386","for_mysql":"1986-10-03"},"value":"9900","modified_max_health":312,"modified_power":99,"crit_rate":15,"initial_name":"Hirayama Sayo","armor":0,"penetration":0,"agility":0,"health":"312"},
+{"nid":"24888204","recruited":"2011-07-09 22:26:17","name":"Yamada Takamori","level":"10","weapon":{"iid":"162","name":"Bladed Chakram","is_plural":"0","description":"A bladed ring specialized for close quarters combat.","unique":"0","value":"65000","karma_value":"0","type":"1","sprite":"bladedchakram","runanimation":"0","standanimation":"2","rarity":"1","attributes":{"speed":67.226890756303,"damage":"8","min_level":"15","base_speed":"80","base_damage":"8"}},"max_health":"165","power":"53","initial_health":"51","initial_power":"41","gender":"1","blood_type":"A+","birthdate":{"pretty":"Oct 24, 1395","for_mysql":"1995-10-24"},"value":"17600","modified_max_health":181,"modified_power":83,"crit_rate":15,"initial_name":"Yamada Takamori","armor":0,"penetration":0,"agility":0,"health":"181"},
+{"nid":"24888208","recruited":"2011-07-09 22:26:26","name":"Mochizuki Yaeko","level":"7","weapon":{"iid":"162","name":"Bladed Chakram","is_plural":"0","description":"A bladed ring specialized for close quarters combat.","unique":"0","value":"65000","karma_value":"0","type":"1","sprite":"bladedchakram","runanimation":"0","standanimation":"2","rarity":"1","attributes":{"speed":67.226890756303,"damage":"8","min_level":"15","base_speed":"80","base_damage":"8"}},"max_health":"90","power":"57","initial_health":"42","initial_power":"48","gender":"0","blood_type":"A+","birthdate":{"pretty":"Feb 24, 1392","for_mysql":"1992-02-24"},"value":"25000","modified_max_health":99,"modified_power":87,"crit_rate":15,"initial_name":"Mochizuki Yaeko","armor":0,"penetration":0,"agility":0,"health":"99"},
+{"nid":"24904618","recruited":"2011-07-11 03:16:09","name":"Hachitengu Muramune","level":"7","weapon":{"iid":"162","name":"Bladed Chakram","is_plural":"0","description":"A bladed ring specialized for close quarters combat.","unique":"0","value":"65000","karma_value":"0","type":"1","sprite":"bladedchakram","runanimation":"0","standanimation":"2","rarity":"1","attributes":{"speed":67.226890756303,"damage":"8","min_level":"15","base_speed":"80","base_damage":"8"}},"max_health":"102","power":"55","initial_health":"46","initial_power":"46","gender":"1","blood_type":"B+","birthdate":{"pretty":"Apr 1, 1390","for_mysql":"1990-04-01"},"value":"39600","modified_max_health":112,"modified_power":85,"crit_rate":15,"initial_name":"Hachitengu Muramune","armor":0,"penetration":0,"agility":0,"health":"112"},
+{"nid":"24936650","recruited":"2011-07-13 06:51:02","name":"Nonoyama Yoshikane","level":"6","weapon":{"iid":"238","name":"Bronze Chakram","is_plural":"0","description":"A bladed ring specialized for close quarters combat.","unique":"0","value":"51000","karma_value":"0","type":"1","sprite":"chakram","runanimation":"0","standanimation":"2","rarity":"1","attributes":{"speed":58.823529411765,"damage":"6.4","min_level":"13","base_speed":"70","base_damage":"6.4"}},"max_health":"104","power":"45","initial_health":"52","initial_power":"40","gender":"1","blood_type":"AB+","birthdate":{"pretty":"Aug 8, 1388","for_mysql":"1988-08-08"},"value":"53900","modified_max_health":114,"modified_power":75,"crit_rate":15,"initial_name":"Nonoyama Yoshikane","armor":0,"penetration":0,"agility":0,"health":"114"},
+{"nid":"24978624","recruited":"2011-07-16 01:51:29","name":"Katsura Naomi","level":"6","weapon":{"iid":"238","name":"Bronze Chakram","is_plural":"0","description":"A bladed ring specialized for close quarters combat.","unique":"0","value":"51000","karma_value":"0","type":"1","sprite":"chakram","runanimation":"0","standanimation":"2","rarity":"1","attributes":{"speed":58.823529411765,"damage":"6.4","min_level":"13","base_speed":"70","base_damage":"6.4"}},"max_health":"86","power":"51","initial_health":"45","initial_power":"45","gender":"0","blood_type":"A-","birthdate":{"pretty":"Sep 11, 1390","for_mysql":"1990-09-11"},"value":"64000","modified_max_health":94,"modified_power":81,"crit_rate":15,"initial_name":"Katsura Naomi","armor":0,"penetration":0,"agility":0,"health":"94"},
+{"nid":"25021413","recruited":"2011-07-19 01:52:36","name":"Kido Ichi","level":"6","weapon":{"iid":"240","name":"Starsteel Maul","is_plural":"0","description":"A heavy pointed weapon capable of dealing very strong blows.","unique":"0","value":"86000","karma_value":"0","type":"1","sprite":"starsteelmaul","runanimation":"1","standanimation":"1","rarity":"1","attributes":{"speed":180.67226890756,"damage":"23.7","min_level":"16","base_speed":"215","base_damage":"23.7"}},"max_health":"77","power":"57","initial_health":"40","initial_power":"50","gender":"0","blood_type":"A+","birthdate":{"pretty":"Jul 11, 1387","for_mysql":"1987-07-11"},"value":"81000","modified_max_health":84,"modified_power":87,"crit_rate":15,"initial_name":"Kido Ichi","armor":0,"penetration":0,"agility":0,"health":"84"},
+{"nid":"25034140","recruited":"2011-07-19 21:20:45","name":"Inokuma Kumiko","level":"3","weapon":{"iid":"239","name":"Bronze Halberd","is_plural":"0","description":"A combination blade spearing weapon used by indecisive ninjas.","unique":"0","value":"60000","karma_value":"0","type":"1","sprite":"cblade","runanimation":"3","standanimation":"3","rarity":"1","attributes":{"speed":159.66386554622,"damage":"18","min_level":"14","base_speed":"190","base_damage":"18"}},"max_health":"58","power":"46","initial_health":"46","initial_power":"44","gender":"0","blood_type":"AB+","birthdate":{"pretty":"Aug 13, 1388","for_mysql":"1988-08-13"},"value":"100000","modified_max_health":63,"modified_power":76,"crit_rate":15,"initial_name":"Inokuma Kumiko","armor":0,"penetration":0,"agility":0,"health":"63"},
+{"nid":"25049559","recruited":"2011-07-20 21:35:34","name":"Houjou Fumii","level":"3","weapon":{"iid":"239","name":"Bronze Halberd","is_plural":"0","description":"A combination blade spearing weapon used by indecisive ninjas.","unique":"0","value":"60000","karma_value":"0","type":"1","sprite":"cblade","runanimation":"3","standanimation":"3","rarity":"1","attributes":{"speed":159.66386554622,"damage":"18","min_level":"14","base_speed":"190","base_damage":"18"}},"max_health":"53","power":"53","initial_health":"41","initial_power":"51","gender":"0","blood_type":"O-","birthdate":{"pretty":"Oct 5, 1389","for_mysql":"1989-10-05"},"value":"133100","modified_max_health":58,"modified_power":83,"crit_rate":15,"initial_name":"Houjou Fumii","armor":0,"penetration":0,"agility":0,"health":"58"},
+{"nid":"25049561","recruited":"2011-07-20 21:35:42","name":"Ito Akeha","level":"3","weapon":{"iid":"238","name":"Bronze Chakram","is_plural":"0","description":"A bladed ring specialized for close quarters combat.","unique":"0","value":"51000","karma_value":"0","type":"1","sprite":"chakram","runanimation":"0","standanimation":"2","rarity":"1","attributes":{"speed":58.823529411765,"damage":"6.4","min_level":"13","base_speed":"70","base_damage":"6.4"}},"max_health":"62","power":"42","initial_health":"50","initial_power":"40","gender":"0","blood_type":"AB+","birthdate":{"pretty":"Jul 31, 1391","for_mysql":"1991-07-31"},"value":"144000","modified_max_health":68,"modified_power":72,"crit_rate":15,"initial_name":"Ito Akeha","armor":0,"penetration":0,"agility":0,"health":"68"}]
+,"exp_to_level":303
+,"total_exp_to_level":4096
+,"seconds_of_bonus_exp":0
+,"seconds_of_magic":0
+,"achievements":[]
+,"gained_exp":0
+,"gained_karma":0
+,"gained_gold":0
+,"gained_level":0
+,"gained_gift_currency":0
+,"inventory":[
+{"iid":"178","name":"Bamboo Tonfa","is_plural":"0","description":"Light tonfa used most often against practice dolls.","unique":"0","value":"1000","karma_value":"0","type":"1","sprite":"woodtonfa","runanimation":"2","standanimation":"2","rarity":"1","attributes":{"speed":"120","damage":"5.3","min_level":"2"}}
+
+,{"iid":"23","name":"Emblem of the Lotus Clan","is_plural":"0","description":"The Lotus Clan spend their lives focused on body and soul. This relic adds 3% to your clan's total health.","unique":"0","value":"500","karma_value":"0","type":"2","sprite":"43","runanimation":"0","standanimation":"0","rarity":"0","attributes":{"clan_health_pct":"3","unsellable":"1"}}
+
+,{"iid":"318","name":"Lunchbox","is_plural":"0","description":"It has \"genteiban no genbu-taipu\" printed on the back.","unique":"0","value":"10000","karma_value":"0","type":"1","sprite":"lunchbox","runanimation":"2","standanimation":"2","rarity":"0","attributes":{"damage":"5","min_level":"5","speed":"56","unsellable":"1"}}
+
+,{"iid":"72","name":"Coal Scales","is_plural":"1","description":"Believed to be from the rare Coal Dragon. +8 power per ninja, +8% critical hit chance","unique":"0","value":"50000","karma_value":"0","type":"2","sprite":"19","runanimation":"0","standanimation":"0","rarity":"3","attributes":{"clan_power":"8","clan_crit":"8","min_level":"12"}}
+
+,{"iid":"71","name":"Phoenix Feather","is_plural":"0","description":"A feather from a newly risen Phoenix. +1000 gold per hour","unique":"0","value":"50000","karma_value":"0","type":"2","sprite":"18","runanimation":"0","standanimation":"0","rarity":"3","attributes":{"gold_bonus":"1000","min_level":"12"}}
+
+,{"iid":"238","name":"Bronze Chakram","is_plural":"0","description":"A bladed ring specialized for close quarters combat.","unique":"0","value":"51000","karma_value":"0","type":"1","sprite":"chakram","runanimation":"0","standanimation":"2","rarity":"1","attributes":{"speed":"70","damage":"6.4","min_level":"13"}}
+
+,{"iid":"238","name":"Bronze Chakram","is_plural":"0","description":"A bladed ring specialized for close quarters combat.","unique":"0","value":"51000","karma_value":"0","type":"1","sprite":"chakram","runanimation":"0","standanimation":"2","rarity":"1","attributes":{"speed":"70","damage":"6.4","min_level":"13"}}
+
+,{"iid":"72","name":"Coal Scales","is_plural":"1","description":"Believed to be from the rare Coal Dragon. +8 power per ninja, +8% critical hit chance","unique":"0","value":"50000","karma_value":"0","type":"2","sprite":"19","runanimation":"0","standanimation":"0","rarity":"3","attributes":{"clan_power":"8","clan_crit":"8","min_level":"12"}}
+
+,{"iid":"60","name":"Blowing Leaf","is_plural":"0","description":"A leaf from the wind-swept ash forest. +4% attack speed","unique":"0","value":"650","karma_value":"0","type":"2","sprite":"0","runanimation":"0","standanimation":"0","rarity":"3","attributes":{"clan_speed_pct":"4","min_level":"2"}}
+
+,{"iid":"21","name":"Fire Rubies","is_plural":"1","description":"Originating from a volcano, they pulsate with a powerful red energy. +10 power per ninja","unique":"0","value":"15000","karma_value":"0","type":"2","sprite":"9","runanimation":"0","standanimation":"0","rarity":"3","attributes":{"clan_power":"10","min_level":"7"}}]
+
+,"flags":[]
+,"defeated_girl":false
+,"defeated_genbu":true
+,"defeated_small_girl":true
+,"defeated_mechagenbu":false
+,"allies":[
+{"cid":"4293678","name":"Xiyi Zh","level":"18","faction":"1","avatar":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/27381_1343551259_7522_q.jpg","needs_assistance":1},
+{"cid":"7018963","name":"Samuel Lu","level":"18","faction":"0","avatar":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/hs1245.snc4\/157578_1356740074_5892557_q.jpg","needs_assistance":1}
+
+,{"cid":"7633369","name":"Lin Lee","level":"10","faction":"0","avatar":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/23207_100001180085941_7750_q.jpg","needs_assistance":1}
+
+,{"cid":"9062563","name":"\u803f\u5e05","level":"9","faction":"1","avatar":"http:\/\/profile.ak.fbcdn.net\/static-ak\/rsrc.php\/v1\/yo\/r\/UlIqmHJn-SK.gif","needs_assistance":0},{"cid":"4311643","name":"Ty Long","level":"6","faction":"1","avatar":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/hs459.snc4\/48581_19502621_1254_q.jpg","needs_assistance":0}
+
+,{"cid":"6993093","name":"Phoebe Sun","level":"6","faction":"2","avatar":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/hs621.snc3\/27350_100000110025611_2820_q.jpg","needs_assistance":0}
+
+,{"cid":"7022105","name":"Bob Qu","level":"5","faction":"0","avatar":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/hs641.snc3\/27340_100001229888402_3288_q.jpg","needs_assistance":1}
+
+,{"cid":"8409849","name":"\u6885\u946b","level":"5","faction":"0","avatar":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/49151_713338874_5793_q.jpg","needs_assistance":1}
+
+,{"cid":"5309049","name":"\u5b5f\u674e\u6f47","level":"3","faction":"1","avatar":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/hs626.ash1\/27447_100001337882469_7429_q.jpg","needs_assistance":1}
+
+,{"cid":"4335493","name":"Jason Liu","level":"1","faction":"0","avatar":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/hs624.snc3\/27410_704103813_8245_q.jpg","needs_assistance":0}]
+,"ally_count":10
+,"ally_requests":[]
+,"daimyo_gift":9244
+,"cloud":0
+,"tournament_in":0
+,"horde_in":0
+,"errors":[]}

@@ -1,0 +1,2 @@
+ this.weaponInventory[_loc_1].dps = Math.round(100 / parseInt(this.weaponInventory[_loc_1].attributes.speed) * parseFloat(this.weaponInventory[_loc_1].attributes.damage) * 100) / 100;
+                _
