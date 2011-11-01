@@ -1,0 +1,117 @@
+{"me":
+	{
+		"cid":"7633369"
+		,"facebook_id":"100001180085941"
+		,"npc":"0"
+		,"name":"Lin Lee"
+		,"avatar":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/23207_100001180085941_7750_q.jpg"
+		,"formed":"2011-01-08 01:29:55"
+		,"faction":"0"
+		,"gold":"29685"
+		,"karma":"1"
+		,"gift_currency":"0"
+		,"relic_slots":"3"
+		,"level":"10"
+		,"exp":"340"
+		,"last_auto_heal":"2011-07-20 03:00:22"
+		,"last_bonus":"2011-07-20 03:00:22"
+		,"leveled_at":"2011-07-13 20:55:27"
+		,"exp_modifier":"1"
+		,"gold_modifier":"1"
+		,"tutorial":"0"
+		,"bonus_karma_earned":"0"
+		,"bonus_gold_earned":"0"
+		,"currency_provider":"1"
+		,"source":"2005"
+		,"purchased_karma":"0"
+		,"purchased_gold":"0"
+		,"magic":{
+				"sid":0
+				}
+		,"magic_equipped_at":"2011-03-21 04:46:19"
+		,"relics":[
+			{"iid":"15","slot":"0","name":"Namazu Scale","is_plural":"0","description":"Remains of the mighty sea monster from ocean below. +5 power per ninja","unique":"0","value":"650","karma_value":"0","type":"2","sprite":"1","standanimation":"0","rarity":"3","attributes":{"clan_power":"5","min_level":"2"}}
+			,{"iid":"16","slot":"1","name":"Polished Bubble-Agate","is_plural":"0","description":"A stone filled with bubbles of mystical vespene gas. +3% health, +3 power per ninja","unique":"0","value":"1000","karma_value":"0","type":"2","sprite":"4","standanimation":"0","rarity":"3","attributes":{"clan_power":"3","clan_health_pct":"3","min_level":"2"}}
+			,{"iid":0,"slot":2,"name":"Open","description":"Click here add a relic from your inventory.","attributes":[]}
+		]
+		,"bonus_gold_per_hour":0
+		,"bonus_karma_per_hour":0
+		,"ninjas":[
+			{"nid":"17566158","recruited":"2011-01-08 01:30:45","name":"Kaya Togai","level":"20","weapon":{"iid":"318","name":"Lunchbox","is_plural":"0","description":"It has \"genteiban no genbu-taipu\" printed on the back.","unique":"0","value":"10000","karma_value":"0","type":"1","sprite":"lunchbox","runanimation":"2","standanimation":"2","rarity":"0","attributes":{"damage":"5","min_level":"5","speed":56,"unsellable":"1","base_speed":"56","base_damage":"5"}},"max_health":"421","power":"97","initial_health":"45","initial_power":"47","gender":"1","blood_type":"A+","birthdate":{"pretty":"Jan 18, 1386","for_mysql":"1986-01-18"},"value":"5","modified_max_health":433,"modified_power":105,"crit_rate":5,"initial_name":"Kaya Togai","armor":0,"penetration":0,"agility":0,"health":"433"}
+			,{"nid":"17567130","recruited":"2011-01-08 02:20:12","name":"Takahashi Akiyoshi","level":"12","weapon":{"iid":"454","name":"Shadow Blade","is_plural":"0","description":"A mystical living blade that gets more powerful as your clan grows.","unique":"0","value":"0","karma_value":"20","type":"1","sprite":"shadowclan2","runanimation":"3","standanimation":"3","rarity":"100","attributes":{"damage":9,"speed":100,"unsellable":"1","preproc":"anniversaryWeapon","base_speed":100,"base_damage":9}},"max_health":"170","power":"72","initial_health":"42","initial_power":"50","gender":"1","blood_type":"A+","birthdate":{"pretty":"Jul 25, 1387","for_mysql":"1987-07-25"},"value":"1100","modified_max_health":175,"modified_power":80,"crit_rate":5,"initial_name":"Takahashi Akiyoshi","armor":0,"penetration":0,"agility":0,"health":"175"}
+			,{"nid":"18627061","recruited":"2011-03-21 03:10:50","name":"Monobe Akikazu","level":"10","weapon":{"iid":"234","name":"Razor Flails","is_plural":"0","description":"Wooden and bronze bladed chucks with extreme speed.","unique":"0","value":"14000","karma_value":"0","type":"1","sprite":"bladechucks","runanimation":"2","standanimation":"2","rarity":"1","attributes":{"speed":50,"damage":"3.6","min_level":"7","base_speed":"50","base_damage":"3.6"}},"max_health":"162","power":"56","initial_health":"50","initial_power":"42","gender":"1","blood_type":"A-","birthdate":{"pretty":"Mar 8, 1390","for_mysql":"1990-03-08"},"value":"4400","modified_max_health":166,"modified_power":64,"crit_rate":5,"initial_name":"Monobe Akikazu","armor":0,"penetration":0,"agility":0,"health":"166"}
+			,{"nid":"19329730","recruited":"2011-04-24 00:09:53","name":"Ryojoji Hatsue","level":"10","weapon":{"iid":"234","name":"Razor Flails","is_plural":"0","description":"Wooden and bronze bladed chucks with extreme speed.","unique":"0","value":"14000","karma_value":"0","type":"1","sprite":"bladechucks","runanimation":"2","standanimation":"2","rarity":"1","attributes":{"speed":50,"damage":"3.6","min_level":"7","base_speed":"50","base_damage":"3.6"}},"max_health":"142","power":"64","initial_health":"44","initial_power":"48","gender":"0","blood_type":"B+","birthdate":{"pretty":"Nov 4, 1388","for_mysql":"1988-11-04"},"value":"9900","modified_max_health":146,"modified_power":72,"crit_rate":5,"initial_name":"Ryojoji Hatsue","armor":0,"penetration":0,"agility":0,"health":146}
+		]
+		,"exp_to_level":88
+		,"total_exp_to_level":169
+		,"seconds_of_bonus_exp":0
+		,"seconds_of_magic":0
+		,"ninjacount":4
+		,"total_max_health_before":920
+		,"total_health_before":920
+	}
+
+	,"opponent":
+	{
+		"cid":"7930355"
+		,"facebook_id":"1620600445"
+		,"npc":"0"
+		,"name":"Jacob Stephen"
+		,"avatar":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/41666_1620600445_76_q.jpg"
+		,"formed":"2011-02-06 10:23:51"
+		,"faction":"1"
+		,"gold":"9541480"
+		,"karma":"14"
+		,"gift_currency":"11"
+		,"relic_slots":"4"
+		,"level":"10"
+		,"exp":"289"
+		,"last_auto_heal":"2011-07-18 19:41:11"
+		,"last_bonus":"2011-07-18 19:41:11"
+		,"leveled_at":"2011-05-09 18:30:11"
+		,"exp_modifier":"1"
+		,"gold_modifier":"1"
+		,"tutorial":"0"
+		,"bonus_karma_earned":"0"
+		,"bonus_gold_earned":"0.423"
+		,"currency_provider":"1"
+		,"source":"0"
+		,"purchased_karma":"0"
+		,"purchased_gold":"0"
+		,"magic":{"sid":0}
+		,"magic_equipped_at":"0000-00-00 00:00:00"
+		,"relics":[
+				{"iid":"70","slot":"0","name":"Bloodshot Button","is_plural":"0","description":"A button from the armor of the great Kamakura. +10% health, +10 power per ninja","unique":"0","value":"25000","karma_value":"0","type":"2","sprite":"17","standanimation":"0","rarity":"3","attributes":{"clan_health_pct":"10","clan_power":"10","min_level":"8"}}
+				,{"iid":"64","slot":"1","name":"Small Treasure Stone","is_plural":"0","description":"A brilliant stone discovered deep in the gold mines of the Daimyo. +300 gold per hour","unique":"0","value":"10000","karma_value":"0","type":"2","sprite":"7","standanimation":"0","rarity":"3","attributes":{"gold_bonus":"300","min_level":"5"}}
+				,{"iid":"68","slot":"2","name":"Taurus Plate","is_plural":"0","description":"Crafted during the famous Chanoyu ceremony. +10% health, +3% attack speed","unique":"0","value":"25000","karma_value":"0","type":"2","sprite":"15","standanimation":"0","rarity":"3","attributes":{"clan_health_pct":"10","clan_speed_pct":"3","min_level":"8"}}
+				,{"iid":"67","slot":"3","name":"Precious Seed","is_plural":"0","description":"A seed from the great trees of life. +10% health","unique":"0","value":"15000","karma_value":"0","type":"2","sprite":"11","standanimation":"0","rarity":"3","attributes":{"clan_health_pct":"10","min_level":"6"}}]
+		,"bonus_gold_per_hour":300
+		,"bonus_karma_per_hour":0
+		,"ninjas":[
+				{"nid":"22407027","recruited":"2011-02-06 10:23:56","name":"Mochizuki Arisa","level":"35","weapon":{"iid":"378","name":"Spatha Set","is_plural":"0","description":"The sword and shield of a versatile and agile warrior. +10% armor.","unique":"0","value":"52000","karma_value":"0","type":"1","sprite":"spathashield","runanimation":"3","standanimation":"3","rarity":"1","attributes":{"min_level":"10","speed":145.63106796117,"damage":"21","armor":"10","base_speed":"150","base_damage":"21"}},"max_health":"1227","power":"162","initial_health":"50","initial_power":"40","gender":"0","blood_type":"A+","birthdate":{"pretty":"Feb 9, 1393","for_mysql":"1993-02-09"},"value":"4","modified_max_health":1595,"modified_power":172,"crit_rate":5,"initial_name":"Mochizuki Arisa","armor":16,"penetration":0,"agility":0,"health":1595}
+			]
+		,"exp_to_level":139
+		,"total_exp_to_level":169
+		,"seconds_of_bonus_exp":0
+		,"seconds_of_magic":0
+		,"ninjacount":21
+		,"total_max_health_before":6537
+		,"total_health_before":6537
+	}
+	,"magic":[[],[]]
+	,"battles":[[0,1,2,3],[4,5]]
+	,"fights":[
+		{"my_ninja":1,"opp_ninja":19,"combat":[[0,16,39,0],[1,24,151,0],[0,14,25,0],[1,23,128,0],[0,17,8,0],[0,16,-8,0]],"winner":0}
+		,{"my_ninja":3,"opp_ninja":2,"combat":[[0,7,347,0],[1,23,123,0],[0,6,341,0],[0,6,335,0],[1,21,102,0],[0,8,327,0],[0,6,321,0],[1,52,50,1],[0,7,314,0],[0,6,308,0],[1,20,30,0],[0,6,302,0],[0,6,296,0],[1,24,6,0],[0,6,290,0],[0,6,284,0],[1,25,-19,0]],"winner":1}
+		,{"my_ninja":0,"opp_ninja":10,"combat":[[0,12,210,0],[1,9,424,0],[1,8,416,0],[0,11,199,0],[1,8,408,0],[0,12,187,0],[1,9,399,0],[0,11,176,0],[1,7,392,0],[0,10,166,0],[1,7,385,0],[0,10,156,0],[1,8,377,0],[0,9,147,0],[1,7,370,0],[0,10,137,0],[1,9,361,0],[0,18,119,1],[1,9,352,0],[0,11,108,0],[1,9,343,0],[0,8,100,0],[1,10,333,0],[0,12,88,0],[1,15,318,1],[0,21,67,1],[1,8,310,0],[0,11,56,0],[1,9,301,0],[0,9,47,0],[1,9,292,0],[0,9,38,0],[1,7,285,0],[0,9,29,0],[1,9,276,0],[0,13,16,0],[1,7,269,0],[0,9,7,0],[1,8,261,0],[0,12,-5,0]],"winner":0}
+		,{"my_ninja":2,"opp_ninja":5,"combat":[[0,7,397,0],[1,17,149,0],[0,7,390,0],[0,5,385,0],[1,18,131,0],[0,5,380,0],[0,5,375,0],[1,23,108,0],[0,6,369,0],[0,5,364,0],[1,17,91,0],[0,11,353,1],[1,22,69,0],[0,6,347,0],[0,6,341,0],[1,19,50,0],[0,7,334,0],[0,6,328,0],[1,46,4,1],[0,5,323,0],[0,6,317,0],[1,18,-14,0]],"winner":1}
+		,{"my_ninja":1,"opp_ninja":2,"combat":[[0,15,269,0],[1,20,108,0],[0,17,252,0],[1,23,85,0],[0,16,236,0],[1,48,37,1],[0,16,220,0],[1,25,12,0],[0,15,205,0],[1,25,-13,0]],"winner":1}
+		,{"my_ninja":0,"opp_ninja":5,"combat":[[0,10,307,0],[1,18,243,0],[0,10,297,0],[1,19,224,0],[0,8,289,0],[0,9,280,0],[1,24,200,0],[0,12,268,0],[0,13,255,0],[1,20,180,0],[0,10,245,0],[0,11,234,0],[1,24,156,0],[0,12,222,0],[1,23,133,0],[0,12,210,0],[0,9,201,0],[1,21,112,0],[0,10,191,0],[0,20,171,1],[1,20,92,0],[0,12,159,0],[1,24,68,0],[0,9,150,0],[0,12,138,0],[1,20,48,0],[0,10,128,0],[0,12,116,0],[1,19,29,0],[0,8,108,0],[0,11,97,0],[1,18,11,0],[0,11,86,0],[1,24,-13,0]],"winner":1}
+	]
+	,"spoils":{"gold":"0","items":[],"unlocked":[],"achievements":[]}
+	,"result":"loss"
+	,"leveled":false
+	,"killed":false
+	,"background":2
+	,"tweet":false
+}

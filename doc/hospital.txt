@@ -1,0 +1,3 @@
+{"result":"success","gold_spent":1163}
+
+PHPSESSID	om6kv788aeg3n2pgge1bg2buks4uuoq3
